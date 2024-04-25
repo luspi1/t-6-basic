@@ -6,7 +6,7 @@ import { FormProvider, type SubmitHandler, useForm } from 'react-hook-form'
 import {
 	type EventTimetableInputs,
 	eventTimetableSchema,
-} from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-timetable/schema'
+} from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-timetable-edit/schema'
 import { AdminContent } from 'src/components/admin-content/admin-content'
 import { EventTitle } from 'src/layouts/admin-layout/components/event-title/event-title'
 import { AdminControllers } from 'src/layouts/admin-layout/components/admin-controllers/admin-controllers'
@@ -15,7 +15,7 @@ import { AdminButton } from 'src/UI/AdminButton/AdminButton'
 import { AppRoute } from 'src/routes/main-routes/consts'
 
 import adminStyles from 'src/layouts/admin-layout/index.module.scss'
-export const AdminEventTimetable: FC = () => {
+export const AdminEventTimetableEdit: FC = () => {
 	const methods = useForm<EventTimetableInputs>({
 		mode: 'onBlur',
 		resolver: yupResolver(eventTimetableSchema),

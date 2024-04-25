@@ -23,7 +23,7 @@ export const oneEventTabs: TabNavigationItem[] = [
 	},
 	{
 		title: 'Расписание',
-		link: 'event-timetable',
+		link: 'event-timetable-list',
 	},
 	{
 		title: 'Списки',

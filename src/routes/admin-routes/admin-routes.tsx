@@ -40,8 +40,9 @@ import { AdminEventReg } from 'src/layouts/admin-layout/pages/one-event-layout/p
 import { AdminEventTickets } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-tickets/admin-event-tickets'
 import { AdminEventContent } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-content/admin-event-content'
 import { AdminEventLocations } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-locations/admin-event-locations'
-import { AdminEventTimetable } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-timetable/admin-event-timetable'
+import { AdminEventTimetableList } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-timetable-list/admin-event-timetable-list'
 import { AdminEventRosters } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-rosters/admin-event-rosters'
+import { AdminEventTimetableEdit } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-timetable-edit/admin-event-timetable-edit'
 
 export const AdminRoutes: FC = () => {
 	return (
@@ -79,7 +80,8 @@ export const AdminRoutes: FC = () => {
 					<Route path={AdminRoute.AdminEventTickets} element={<AdminEventTickets />} />
 					<Route path={AdminRoute.AdminEventContent} element={<AdminEventContent />} />
 					<Route path={AdminRoute.AdminEventLocations} element={<AdminEventLocations />} />
-					<Route path={AdminRoute.AdminEventTimetable} element={<AdminEventTimetable />} />
+					<Route path={AdminRoute.AdminEventTimetableList} element={<AdminEventTimetableList />} />
+					<Route path={AdminRoute.AdminEventTimetableEdit} element={<AdminEventTimetableEdit />} />
 					<Route path={AdminRoute.AdminEventRosters} element={<AdminEventRosters />} />
 				</Route>
 				<Route path={AdminRoute.AdminEventNew} element={<OneEventLayout />} />

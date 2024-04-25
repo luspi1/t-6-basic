@@ -1,7 +1,7 @@
 import { type ContentNav } from 'src/types/navigation'
 
 import { Helmet } from 'react-helmet-async'
-import { Navigate, Outlet } from 'react-router-dom'
+import { Navigate, Outlet, useLocation } from 'react-router-dom'
 
 import { TabNavigation } from 'src/layouts/admin-layout/components/tab-navigation/tab-navigation'
 import { oneEventTabs } from 'src/layouts/admin-layout/pages/one-event-layout/consts'
@@ -17,6 +17,9 @@ export const OneEventLayout = () => {
 
 	const [activeTab, setActiveTab] = useState(0)
 
+	const locInfo = useLocation()
+
+	console.log(locInfo)
 	if (matchesLocation) return <Navigate to={AdminRoute.AdminEventProfile} replace />
 	return (
 		<>

@@ -1,0 +1,7 @@
+.departmentTable {
+  grid-template-columns: minmax(40px, 0.5fr) minmax(96px, 1.5fr) minmax(96px, 1.5fr) minmax(390px, 5fr) minmax(130px, 2fr) minmax(130px, 2fr);
+  margin-bottom: 20px;
+  td:nth-child(2) {
+    font-weight: 700;
+  }
+}

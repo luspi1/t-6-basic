@@ -1,0 +1,46 @@
+@import "src/assets/styles/vars";
+
+
+.newsForm {
+  max-width: 1030px;
+
+  h3 {
+    @include opensans-bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.newsFormWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.newsFormFields {
+  flex-grow: 1;
+  max-width: 720px;
+}
+
+.asideSelect {
+  margin-bottom: 37px;
+  @media (max-width: 1024px) {
+    margin-bottom: 20px;
+  }
+  :global {
+    .react-dropdown-select {
+      max-width: 100px;
+    }
+  }
+}
+
+.newsDropzone {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}

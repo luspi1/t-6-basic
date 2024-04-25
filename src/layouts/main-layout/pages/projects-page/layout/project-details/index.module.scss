@@ -1,0 +1,102 @@
+.projectDetailsPage {
+  section {
+    padding: 30px 0 25px;
+    border-bottom: 7px solid #F2F5F8;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .projectListLink {
+    margin-top: 30px;
+    display: block;
+    font-weight: 700;
+  }
+}
+
+.projectStatus {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.projectStatusRow {
+  ul {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    li {
+      a {
+        color: #015DB9;
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.relatedRow {
+  ul {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    @media (max-width: 1024px) {
+      gap: 10px;
+    }
+
+    li {
+      color: #015DB9;
+      max-width: 170px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @media (max-width: 768px) {
+        max-width: 100%;
+        white-space: initial;
+      }
+    }
+  }
+}
+
+
+.descsSection {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.projectGallery {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  @media (max-width: 576px) {
+    justify-content: center;
+  }
+
+  li {
+    width: 164px;
+    height: 127px;
+    border: 7px solid #EBEEF2;
+    @media (max-width: 576px) {
+      width: 90%;
+      height: 160px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+

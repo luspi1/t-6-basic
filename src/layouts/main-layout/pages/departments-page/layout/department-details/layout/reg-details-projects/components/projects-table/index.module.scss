@@ -1,0 +1,27 @@
+.projectsTable {
+    grid-template-columns: minmax(35px, 0.1fr) minmax(480px, 2.5fr) minmax(125px, 0.7fr) minmax(110px, 0.7fr);
+    margin-bottom: 10px;
+
+    td {
+        min-height: 100px;
+    }
+
+    td:nth-child(4) {
+        padding: 0 10px;
+    }
+}
+
+.projectsSearchWrapper {
+    svg {
+        left: 185px;
+        @media (max-width: 768px) {
+            left: 20px;
+        }
+    }
+    input {
+        padding: 6px 20px 6px 190px;
+        @media (max-width: 768px) {
+            padding: 6px 20px 6px 25px;
+        }
+    }
+}

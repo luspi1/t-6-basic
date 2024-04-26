@@ -1,4 +1,4 @@
-import { type FC } from 'react'
+import { type FC, useEffect } from 'react'
 
 import { yupResolver } from '@hookform/resolvers/yup'
 import { FormProvider, type SubmitHandler, useForm } from 'react-hook-form'
@@ -12,10 +12,12 @@ import { EventTitle } from 'src/layouts/admin-layout/components/event-title/even
 import { AdminControllers } from 'src/layouts/admin-layout/components/admin-controllers/admin-controllers'
 import { LocationsSection } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-locations/components/locations-section'
 import { AdminRoute } from 'src/routes/admin-routes/consts'
+import { useActions } from 'src/hooks/actions/actions'
 
 import adminStyles from 'src/layouts/admin-layout/index.module.scss'
 
 export const AdminEventLocations: FC = () => {
+	const { setAdminTitle } = useActions()
 	const methods = useForm<EventLocationsInputs>({
 		mode: 'onBlur',
 		resolver: yupResolver(eventLocationsSchema),
@@ -36,6 +38,13 @@ export const AdminEventLocations: FC = () => {
 	const onSubmit: SubmitHandler<EventLocationsInputs> = (data) => {
 		console.log(data)
 	}
+
+	useEffect(() => {
+		setAdminTitle('Локации')
+		return () => {
+			setAdminTitle(null)
+		}
+	}, [])
 	return (
 		<AdminContent $padding='25px 30px 35px'>
 			<p className={adminStyles.adminPrompt}>

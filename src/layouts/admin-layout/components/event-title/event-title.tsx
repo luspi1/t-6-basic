@@ -8,6 +8,7 @@ type EventTitleInnerProps = {
 }
 type EventTitleProps = {
 	$margin?: string
+	className?: string
 } & React.CSSProperties
 
 const StyledEventTitle = styled.div<EventTitleProps>`
@@ -32,10 +33,11 @@ export const EventTitle: FC<EventTitleProps & EventTitleInnerProps> = ({
 	title,
 	dates,
 	address,
+	className,
 	$margin,
 }) => {
 	return (
-		<StyledEventTitle $margin={$margin}>
+		<StyledEventTitle className={className} $margin={$margin}>
 			<h2>{title}</h2>
 			<p>
 				{dates[0]} — {dates[1]}, {address}

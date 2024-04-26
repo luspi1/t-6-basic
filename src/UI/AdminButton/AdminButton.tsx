@@ -11,12 +11,14 @@ type AdminButtonProps = {
 	$common?: boolean
 	$margin?: string
 	$padding?: string
+	$maxWidth?: string
 	as: 'link' | 'button'
 }
 
 const AdminButtonStyled = styled.button<AdminButtonProps>`
 	padding: ${({ $padding }) => $padding ?? '9.5px 56px'};
 	margin: ${({ $margin }) => $margin ?? '0'};
+	max-width: ${({ $maxWidth }) => $maxWidth ?? 'auto'};
 	display: inline-block;
 	line-height: 1;
 	border-radius: 3px;

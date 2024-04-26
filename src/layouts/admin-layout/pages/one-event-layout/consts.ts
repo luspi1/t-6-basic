@@ -3,7 +3,8 @@ import { type TabNavigationItem } from 'src/types/navigation'
 export const oneEventTabs: TabNavigationItem[] = [
 	{
 		title: 'Профиль события',
-		link: 'event-profile',
+		link: '/admin/event-new',
+		exact: true,
 	},
 	{
 		title: 'Регистрация',
@@ -23,10 +24,22 @@ export const oneEventTabs: TabNavigationItem[] = [
 	},
 	{
 		title: 'Расписание',
-		link: 'event-timetable-list',
+		link: 'event-timetable',
+	},
+	{
+		title: 'Партнеры',
+		link: 'event-partners',
+	},
+	{
+		title: 'Публикация',
+		link: 'event-publication',
 	},
 	{
 		title: 'Списки',
 		link: 'event-rosters',
+	},
+	{
+		title: 'Отчеты',
+		link: 'event-reports',
 	},
 ]

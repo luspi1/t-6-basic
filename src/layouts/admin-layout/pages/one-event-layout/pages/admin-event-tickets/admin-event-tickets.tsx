@@ -1,4 +1,4 @@
-import { type FC } from 'react'
+import { type FC, useEffect } from 'react'
 
 import { FormProvider, type SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -12,11 +12,13 @@ import { AdminContent } from 'src/components/admin-content/admin-content'
 import { EventTitle } from 'src/layouts/admin-layout/components/event-title/event-title'
 import { AdminControllers } from 'src/layouts/admin-layout/components/admin-controllers/admin-controllers'
 import { AdminRoute } from 'src/routes/admin-routes/consts'
+import { TicketsSection } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-tickets/components/tickets-section/tickets-section'
+import { useActions } from 'src/hooks/actions/actions'
 
 import adminStyles from 'src/layouts/admin-layout/index.module.scss'
-import { TicketsSection } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-tickets/components/tickets-section/tickets-section'
 
 export const AdminEventTickets: FC = () => {
+	const { setAdminTitle } = useActions()
 	const methods = useForm<EventTicketsInputs>({
 		mode: 'onBlur',
 		resolver: yupResolver(eventTicketsSchema),
@@ -29,6 +31,13 @@ export const AdminEventTickets: FC = () => {
 	const onSubmit: SubmitHandler<EventTicketsInputs> = (data) => {
 		console.log(data)
 	}
+
+	useEffect(() => {
+		setAdminTitle('Билеты и допуски')
+		return () => {
+			setAdminTitle(null)
+		}
+	}, [])
 	return (
 		<AdminContent $padding='25px 30px 35px'>
 			<p className={adminStyles.adminPrompt}>

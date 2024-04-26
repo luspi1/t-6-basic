@@ -7,11 +7,15 @@ type StyledGridRowProps = {
 	$alignItems?: string
 	$template?: string
 	$maxWidth?: string
+	$padding?: string
+	$borderBottom?: string
 	children: ReactNode
 } & React.CSSProperties
 
 const StyledGridRow = styled.div<StyledGridRowProps>`
 	margin: ${({ $margin }) => $margin ?? '0'};
+	padding: ${({ $padding }) => $padding ?? '0'};
+	border-bottom: ${({ $borderBottom }) => $borderBottom ?? 'none'};
 	display: grid;
 	gap: ${({ $gap }) => $gap ?? '0 10px'};
 	max-width: ${({ $maxWidth }) => $maxWidth ?? '100%'};

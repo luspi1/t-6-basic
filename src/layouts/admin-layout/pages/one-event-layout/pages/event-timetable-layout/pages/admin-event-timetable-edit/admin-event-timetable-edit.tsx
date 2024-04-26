@@ -1,24 +1,38 @@
 import { type FC } from 'react'
+import {
+	type EventTimetableInputs,
+	eventTimetableSchema,
+} from 'src/layouts/admin-layout/pages/one-event-layout/pages/event-timetable-layout/pages/admin-event-timetable-edit/schema'
 
 import { yupResolver } from '@hookform/resolvers/yup'
 import { FormProvider, type SubmitHandler, useForm } from 'react-hook-form'
 
-import {
-	type EventTimetableInputs,
-	eventTimetableSchema,
-} from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-timetable-edit/schema'
 import { AdminContent } from 'src/components/admin-content/admin-content'
 import { EventTitle } from 'src/layouts/admin-layout/components/event-title/event-title'
 import { AdminControllers } from 'src/layouts/admin-layout/components/admin-controllers/admin-controllers'
 import { AdminRoute } from 'src/routes/admin-routes/consts'
 import { AdminButton } from 'src/UI/AdminButton/AdminButton'
 import { AppRoute } from 'src/routes/main-routes/consts'
+import { TimetablesSection } from 'src/layouts/admin-layout/pages/one-event-layout/pages/event-timetable-layout/pages/admin-event-timetable-edit/components/timetables-section/timetables-section'
 
 import adminStyles from 'src/layouts/admin-layout/index.module.scss'
+import styles from './index.module.scss'
 export const AdminEventTimetableEdit: FC = () => {
 	const methods = useForm<EventTimetableInputs>({
 		mode: 'onBlur',
 		resolver: yupResolver(eventTimetableSchema),
+		defaultValues: {
+			timetables: [
+				{
+					title: '',
+					location: '0',
+					dateStart: new Date(),
+					timeStart: new Date(),
+					dateEnd: new Date(),
+					timeEnd: new Date(),
+				},
+			],
+		},
 	})
 
 	const onSubmit: SubmitHandler<EventTimetableInputs> = (data) => {
@@ -39,12 +53,14 @@ export const AdminEventTimetableEdit: FC = () => {
 				поля, отмеченные символом *, обязательны для заполнения
 			</p>
 			<EventTitle
+				className={styles.timetableEditTitle}
 				title='Конференция ВООПИК 2024'
 				dates={['26 августа 2023 года', '28 августа 2023 года']}
 				address='с. Атманов Угол Тамбовской области'
 			/>
 			<FormProvider {...methods}>
 				<form onSubmit={methods.handleSubmit(onSubmit)} noValidate autoComplete='off'>
+					<TimetablesSection />
 					<AdminControllers outLink={`/${AdminRoute.AdminHome}`} variant='2' />
 				</form>
 			</FormProvider>

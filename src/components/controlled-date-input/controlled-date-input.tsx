@@ -1,6 +1,6 @@
 import React, { type FC } from 'react'
 
-import { useFormContext, useController } from 'react-hook-form'
+import { useFormContext, useController, type FieldError } from 'react-hook-form'
 import DatePicker, { registerLocale } from 'react-datepicker'
 import { ErrorMessage } from '@hookform/error-message'
 import ru from 'date-fns/locale/ru'
@@ -20,6 +20,7 @@ type ControlledDateInputProps = {
 	timeFormat?: string
 	placeholder?: string
 	margin?: string
+	dynamicError?: FieldError | undefined
 }
 export const ControlledDateInput: FC<ControlledDateInputProps> = ({
 	name,
@@ -31,6 +32,7 @@ export const ControlledDateInput: FC<ControlledDateInputProps> = ({
 	timeFormat,
 	placeholder,
 	margin,
+	dynamicError,
 	...props
 }) => {
 	const {
@@ -64,6 +66,7 @@ export const ControlledDateInput: FC<ControlledDateInputProps> = ({
 				/>
 			</label>
 
+			{dynamicError && <p className={styles.warningMessage}>{dynamicError.message}</p>}
 			{errors[name] && (
 				<p className={styles.warningMessage}>
 					<ErrorMessage errors={errors} name={name} />

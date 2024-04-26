@@ -1,4 +1,4 @@
-import { type FC } from 'react'
+import { type FC, useEffect } from 'react'
 
 import { FormProvider, type SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -14,10 +14,12 @@ import { PreviewSection } from 'src/layouts/admin-layout/pages/one-event-layout/
 import { DocsSection } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-content/components/docs-section/docs-section'
 import { GallerySection } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-content/components/gallery-section/gallery-section'
 import { AdminRoute } from 'src/routes/admin-routes/consts'
+import { useActions } from 'src/hooks/actions/actions'
 
 import adminStyles from 'src/layouts/admin-layout/index.module.scss'
 
 export const AdminEventContent: FC = () => {
+	const { setAdminTitle } = useActions()
 	const methods = useForm<EventContentInputs>({
 		mode: 'onBlur',
 		resolver: yupResolver(eventContentSchema),
@@ -34,6 +36,14 @@ export const AdminEventContent: FC = () => {
 	const onSubmit: SubmitHandler<EventContentInputs> = (data) => {
 		console.log(data)
 	}
+
+	useEffect(() => {
+		setAdminTitle('Контент')
+		return () => {
+			setAdminTitle(null)
+		}
+	}, [])
+
 	return (
 		<AdminContent $padding='25px 30px 35px'>
 			<p className={adminStyles.adminPrompt}>

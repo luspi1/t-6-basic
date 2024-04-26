@@ -40,9 +40,13 @@ import { AdminEventReg } from 'src/layouts/admin-layout/pages/one-event-layout/p
 import { AdminEventTickets } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-tickets/admin-event-tickets'
 import { AdminEventContent } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-content/admin-event-content'
 import { AdminEventLocations } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-locations/admin-event-locations'
-import { AdminEventTimetableList } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-timetable-list/admin-event-timetable-list'
+import { EventTimetableLayout } from 'src/layouts/admin-layout/pages/one-event-layout/pages/event-timetable-layout/event-timetable-layout'
+import { AdminEventTimetableList } from 'src/layouts/admin-layout/pages/one-event-layout/pages/event-timetable-layout/pages/admin-event-timetable-list/admin-event-timetable-list'
+import { AdminEventTimetableEdit } from 'src/layouts/admin-layout/pages/one-event-layout/pages/event-timetable-layout/pages/admin-event-timetable-edit/admin-event-timetable-edit'
+import { AdminEventPartners } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-partners/admin-event-partners'
+import { AdminEventPublication } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-publication/admin-event-publication'
 import { AdminEventRosters } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-rosters/admin-event-rosters'
-import { AdminEventTimetableEdit } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-timetable-edit/admin-event-timetable-edit'
+import { AdminEventReports } from 'src/layouts/admin-layout/pages/one-event-layout/pages/admin-event-reports/admin-event-reports'
 
 export const AdminRoutes: FC = () => {
 	return (
@@ -75,14 +79,22 @@ export const AdminRoutes: FC = () => {
 				<Route path={AdminRoute.AdminAddProject} element={<AdminAddProject />} />
 
 				<Route path={AdminRoute.AdminEventNew} element={<OneEventLayout />}>
-					<Route index path={AdminRoute.AdminEventProfile} element={<AdminEventProfile />} />
+					<Route index element={<AdminEventProfile />} />
 					<Route path={AdminRoute.AdminEventReg} element={<AdminEventReg />} />
 					<Route path={AdminRoute.AdminEventTickets} element={<AdminEventTickets />} />
 					<Route path={AdminRoute.AdminEventContent} element={<AdminEventContent />} />
 					<Route path={AdminRoute.AdminEventLocations} element={<AdminEventLocations />} />
-					<Route path={AdminRoute.AdminEventTimetableList} element={<AdminEventTimetableList />} />
-					<Route path={AdminRoute.AdminEventTimetableEdit} element={<AdminEventTimetableEdit />} />
+					<Route path={AdminRoute.AdminEventTimetable} element={<EventTimetableLayout />}>
+						<Route index element={<AdminEventTimetableList />} />
+						<Route
+							path={AdminRoute.AdminEventTimetableEdit}
+							element={<AdminEventTimetableEdit />}
+						/>
+					</Route>
+					<Route path={AdminRoute.AdminEventPartners} element={<AdminEventPartners />} />
+					<Route path={AdminRoute.AdminEventPublication} element={<AdminEventPublication />} />
 					<Route path={AdminRoute.AdminEventRosters} element={<AdminEventRosters />} />
+					<Route path={AdminRoute.AdminEventReports} element={<AdminEventReports />} />
 				</Route>
 				<Route path={AdminRoute.AdminEventNew} element={<OneEventLayout />} />
 				<Route path={AdminRoute.AdminEventsList} element={<AdminEventsList />} />

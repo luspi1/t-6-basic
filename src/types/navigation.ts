@@ -15,4 +15,5 @@ export type ContentNav = {
 export type TabNavigationItem = {
 	title: string
 	link: string
+	exact?: boolean
 }

@@ -8,16 +8,16 @@ import styles from './index.module.scss'
 
 type TabNavigationProps = {
 	navItems: TabNavigationItem[]
-	handleActiveTab: (idx: number) => void
 }
-export const TabNavigation: FC<TabNavigationProps> = ({ navItems, handleActiveTab }) => {
+export const TabNavigation: FC<TabNavigationProps> = ({ navItems }) => {
 	return (
 		<ul className={styles.tabNavList}>
-			{navItems?.map((navEl, idx) => (
-				<li key={navEl.title} onClick={() => handleActiveTab(idx)}>
+			{navItems?.map((navEl) => (
+				<li key={navEl.title}>
 					<NavLink
 						className={({ isActive }) => setActive(isActive, styles.activeLink)}
 						to={navEl.link}
+						end={navEl.exact}
 					>
 						{navEl.title}
 					</NavLink>

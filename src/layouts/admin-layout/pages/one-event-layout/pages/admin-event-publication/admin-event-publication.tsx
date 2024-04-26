@@ -3,15 +3,15 @@ import { type FC, useEffect } from 'react'
 import { AdminContent } from 'src/components/admin-content/admin-content'
 import { useActions } from 'src/hooks/actions/actions'
 
-export const AdminEventRosters: FC = () => {
+export const AdminEventPublication: FC = () => {
 	const { setAdminTitle } = useActions()
 
 	useEffect(() => {
-		setAdminTitle('Списки')
+		setAdminTitle('Публикация')
 		return () => {
 			setAdminTitle(null)
 		}
 	}, [])
 
-	return <AdminContent>Списки контент</AdminContent>
+	return <AdminContent>Публикация контент</AdminContent>
 }

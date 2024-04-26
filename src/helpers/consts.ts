@@ -10,6 +10,7 @@ export enum ReducerPath {
 export const ImagesFormat = ['png', 'jpeg', 'jpg', 'webp', 'gif']
 export enum NameSpace {
 	BreadCrumbs = 'BREAD_CRUMBS',
+	AdminTitle = 'ADMIN_TITLE',
 }
 
 export enum DisplayBreakpoints {

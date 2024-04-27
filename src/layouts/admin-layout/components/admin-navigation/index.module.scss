@@ -26,6 +26,12 @@
     flex-direction: column;
     gap: 3px;
 
+    & > li:first-child {
+      padding-bottom: 23px;
+      margin-bottom: 23px;
+      border-bottom: 1px solid rgba(#ffffff, 0.2);
+    }
+
     & > li:nth-last-child(2) {
       padding: 23px 0;
       border-top: 1px solid rgba(#ffffff, 0.2);
@@ -44,6 +50,9 @@
 .activeLink {
   svg {
     opacity: 1;
+    path {
+      fill: #FFFFFF;
+    }
   }
 }
 

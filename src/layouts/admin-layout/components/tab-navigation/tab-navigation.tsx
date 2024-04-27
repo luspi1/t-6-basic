@@ -8,10 +8,11 @@ import styles from './index.module.scss'
 
 type TabNavigationProps = {
 	navItems: TabNavigationItem[]
+	variant?: 'main' | 'sub'
 }
-export const TabNavigation: FC<TabNavigationProps> = ({ navItems }) => {
+export const TabNavigation: FC<TabNavigationProps> = ({ navItems, variant = 'main' }) => {
 	return (
-		<ul className={styles.tabNavList}>
+		<ul className={variant === 'main' ? styles.tabNavList : styles.subtabList}>
 			{navItems?.map((navEl) => (
 				<li key={navEl.title}>
 					<NavLink

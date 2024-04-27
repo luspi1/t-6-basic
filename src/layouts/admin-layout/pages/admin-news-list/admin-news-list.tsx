@@ -5,10 +5,10 @@ import { AdminContent } from 'src/components/admin-content/admin-content'
 
 import { AdminRoute } from 'src/routes/admin-routes/consts'
 
-import styles from './index.module.scss'
 import { MainButton } from 'src/UI/MainButton/MainButton'
 import { PlusIconSvg } from 'src/UI/icons/plusIconSVG'
 import { NewsTable } from 'src/layouts/admin-layout/pages/admin-news-list/components/news-table/news-table'
+import styles from './index.module.scss'
 
 export const AdminNewsList: FC = () => {
 	return (

@@ -10,8 +10,14 @@ import { AdminEventsIconSvg } from 'src/UI/icons/adminEventsIconSVG'
 import { AdminLibraryIconSvg } from 'src/UI/icons/adminLibraryIconSVG'
 import { AdminShopIconSvg } from 'src/UI/icons/adminShopIconSVG'
 import { AdminSettingsIconSvg } from 'src/UI/icons/adminSettingsIconSVG'
+import { AdminProfileIconSvg } from 'src/UI/icons/adminProfileIconSVG'
 
 export const adminMenuItems: NavigationItem[] = [
+	{
+		title: 'Мой профиль',
+		link: 'profile',
+		icon: <AdminProfileIconSvg />,
+	},
 	{
 		title: 'Новости',
 		icon: <AdminNewsIconSvg />,

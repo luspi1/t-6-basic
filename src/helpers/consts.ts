@@ -21,7 +21,4 @@ export enum DisplayBreakpoints {
 	Xxl = 1440,
 }
 
-export const BASE_URL = 'http://localhost:4020/api/v1'
-
-// для виртуальной машины
-// export const BASE_URL = 'http://37.235.172.205:40011/api/v1'
+export const BASE_URL = import.meta.env.VITE_API_URL ?? 4020

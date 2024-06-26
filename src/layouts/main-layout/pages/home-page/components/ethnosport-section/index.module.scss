@@ -1,10 +1,10 @@
 @import "src/assets/styles/vars";
 
-.projectsSection {
+.ethnosportSection {
   padding: 50px 0;
 }
 
-.projectSlider {
+.ethnosportSlider {
   max-width: 1220px;
 }
 
@@ -19,7 +19,7 @@
 
 
 .slideImgWrapper {
-  height: 160px;
+  height: 252px;
   margin-bottom: 20px;
 
   img {
@@ -37,18 +37,4 @@
     font-size: 18px;
     @include ptsans-bold;
   }
-}
-
-.allProjectsLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  border-radius: 3px;
-  background: #DE0008;
-  height: 50px;
-  color: #FFF;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 700;
 }

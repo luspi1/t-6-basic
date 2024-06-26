@@ -2,7 +2,7 @@ import { type NavigationItem } from 'src/types/navigation'
 
 export const MenuItems: NavigationItem[] = [
 	{
-		title: 'воопик',
+		title: 'федерация',
 		link: 'about',
 	},
 	{
@@ -10,13 +10,10 @@ export const MenuItems: NavigationItem[] = [
 		link: 'departments-list',
 	},
 	{
-		title: 'объекты',
-		link: 'objects',
+		title: 'этноспорт',
+		link: 'ethnosport',
 	},
-	{
-		title: 'проекты',
-		link: 'projects',
-	},
+
 	{
 		title: 'участие',
 		link: 'users-list',
@@ -28,10 +25,6 @@ export const MenuItems: NavigationItem[] = [
 	{
 		title: 'события',
 		link: 'events',
-	},
-	{
-		title: 'магазин',
-		link: 'shop',
 		accent: true,
 	},
 ]

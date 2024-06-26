@@ -3,7 +3,7 @@ import { type FC } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 import { SliderSearch } from 'src/layouts/main-layout/pages/home-page/components/slider-search/slider-search'
-import { ProjectsSection } from 'src/layouts/main-layout/pages/home-page/components/projects-section/projects-section'
+import { EthnosportSection } from 'src/layouts/main-layout/pages/home-page/components/ethnosport-section/ethnosport-section'
 import { NewsSection } from 'src/layouts/main-layout/pages/home-page/components/news-section/news-section'
 import { FeedbackSection } from 'src/layouts/main-layout/pages/home-page/components/feedback-section/feedback-section'
 
@@ -15,9 +15,8 @@ export const HomePage: FC = () => {
 			<Helmet>
 				<title>Главная</title>
 			</Helmet>
-			<div className={styles.headerImgWrapper}></div>
 			<SliderSearch />
-			<ProjectsSection />
+			<EthnosportSection />
 			<NewsSection />
 			<FeedbackSection />
 		</div>

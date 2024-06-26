@@ -28,17 +28,8 @@ import { UserEvents } from 'src/layouts/main-layout/pages/participation-page/lay
 import { UserProjects } from 'src/layouts/main-layout/pages/participation-page/layout/user-details/layout/user-projects/user-projects'
 import { UserObjects } from 'src/layouts/main-layout/pages/participation-page/layout/user-details/layout/user-objects/user-objects'
 import { UserGallery } from 'src/layouts/main-layout/pages/participation-page/layout/user-details/layout/user-gallery/user-gallery'
-import { ObjectsLayout } from 'src/layouts/main-layout/pages/objects-page/layout/objects-layout'
-import { ObjectsList } from 'src/layouts/main-layout/pages/objects-page/layout/objects-list/objects-list'
-import { ObjectsAbout } from 'src/layouts/main-layout/pages/objects-page/layout/objects-about/objects-about'
-import { ObjectDetails } from 'src/layouts/main-layout/pages/objects-page/layout/object-details/object-details'
-import { ProjectsLayout } from 'src/layouts/main-layout/pages/projects-page/layout/projects-layout'
-import { ProjectsList } from 'src/layouts/main-layout/pages/projects-page/layout/projects-list/projects-list'
-import { ProjectsAbout } from 'src/layouts/main-layout/pages/projects-page/layout/projects-about/projects-about'
-import { ProjectDetails } from 'src/layouts/main-layout/pages/projects-page/layout/project-details/project-details'
 import { LibraryPage } from 'src/layouts/main-layout/pages/library-page/library-page'
 import { EventsLayout } from 'src/layouts/main-layout/pages/events-page/events-layout'
-import { ShopPage } from 'src/layouts/main-layout/pages/shop-page/shop-page'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { NewsLayout } from 'src/layouts/main-layout/pages/news-page/layout/news-layout'
 import { NewsList } from 'src/layouts/main-layout/pages/news-page/layout/news-list/news-list'
@@ -89,16 +80,6 @@ export const MainRoutes = () => {
 					</Route>
 				</Route>
 
-				<Route path={AppRoute.Objects} element={<ObjectsLayout />}>
-					<Route index element={<ObjectsList />} />
-					<Route path={AppRoute.ObjectsAbout} element={<ObjectsAbout />} />
-					<Route path=':id' element={<ObjectDetails />} />
-				</Route>
-				<Route path={AppRoute.Projects} element={<ProjectsLayout />}>
-					<Route index element={<ProjectsList />} />
-					<Route path={AppRoute.ProjectsAbout} element={<ProjectsAbout />} />
-					<Route path=':id' element={<ProjectDetails />} />
-				</Route>
 				<Route path={AppRoute.News} element={<NewsLayout />}>
 					<Route index element={<NewsList />} />
 					<Route path=':id' element={<NewsDetails />} />
@@ -108,7 +89,6 @@ export const MainRoutes = () => {
 					<Route path=':id' element={<EventDetails />} />
 				</Route>
 				<Route path={AppRoute.Library} element={<LibraryPage />} />
-				<Route path={AppRoute.Shop} element={<ShopPage />} />
 			</Route>
 		</Routes>
 	)

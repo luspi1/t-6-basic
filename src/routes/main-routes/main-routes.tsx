@@ -28,7 +28,6 @@ import { UserEvents } from 'src/layouts/main-layout/pages/participation-page/lay
 import { UserProjects } from 'src/layouts/main-layout/pages/participation-page/layout/user-details/layout/user-projects/user-projects'
 import { UserObjects } from 'src/layouts/main-layout/pages/participation-page/layout/user-details/layout/user-objects/user-objects'
 import { UserGallery } from 'src/layouts/main-layout/pages/participation-page/layout/user-details/layout/user-gallery/user-gallery'
-import { LibraryPage } from 'src/layouts/main-layout/pages/library-page/library-page'
 import { EventsLayout } from 'src/layouts/main-layout/pages/events-page/events-layout'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { NewsLayout } from 'src/layouts/main-layout/pages/news-page/layout/news-layout'
@@ -88,7 +87,6 @@ export const MainRoutes = () => {
 					<Route index element={<EventsList />} />
 					<Route path=':id' element={<EventDetails />} />
 				</Route>
-				<Route path={AppRoute.Library} element={<LibraryPage />} />
 			</Route>
 		</Routes>
 	)

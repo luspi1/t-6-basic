@@ -6,10 +6,11 @@ import { generatePath, Link } from 'react-router-dom'
 import { Container } from 'src/UI/Container/Container'
 
 import { AppRoute } from 'src/routes/main-routes/consts'
+import { SliderBtns } from 'src/components/slider-btns/slider-btns'
+import newsHoverImg from 'src/assets/img/news-slide-hover.jpg'
 
 import styles from './index.module.scss'
 
-import { SliderBtns } from 'src/components/slider-btns/slider-btns'
 import {
 	NewsSliderItems,
 	newsSliderOptions,
@@ -28,12 +29,12 @@ export const NewsSection: FC = () => {
 						<SwiperSlide key={idx}>
 							<Link
 								className={styles.slideItem}
-								to={generatePath('departments-list/:id/departments-details-info', {
+								to={generatePath('news/:id', {
 									id: slideItem.id,
 								})}
 							>
 								<div className={styles.slideImgWrapper}>
-									<img src={slideItem.hoverImg} alt={slideItem.text} />
+									<img src={slideItem?.hoverImg ?? newsHoverImg} alt={slideItem.text} />
 								</div>
 								<p>{slideItem.text}</p>
 								<span>{slideItem.date}</span>

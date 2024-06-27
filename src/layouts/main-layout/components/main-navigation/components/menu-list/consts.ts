@@ -19,8 +19,8 @@ export const MenuItems: NavigationItem[] = [
 		link: 'users-list',
 	},
 	{
-		title: 'библиотека',
-		link: 'library',
+		title: 'новости',
+		link: 'news',
 	},
 	{
 		title: 'события',

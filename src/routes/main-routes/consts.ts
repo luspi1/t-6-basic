@@ -24,6 +24,5 @@ export enum AppRoute {
 	UserObjects = 'user-objects',
 	UserGallery = 'user-gallery',
 	News = 'news',
-	Library = 'library',
 	Events = 'events',
 }

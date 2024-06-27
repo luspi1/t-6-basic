@@ -1,7 +1,7 @@
 @import "src/assets/styles/vars";
 
 .ethnosportSection {
-  padding: 50px 0;
+  padding: 50px 0 19px;
 }
 
 .ethnosportSlider {
@@ -9,6 +9,7 @@
 }
 
 .slideItem {
+  border-radius: 10px;
   padding: 23px 23px 15px 23px;
   background-color: #fff;
   border: 2px solid #E1E0E8;
@@ -20,7 +21,7 @@
 
 .slideImgWrapper {
   height: 252px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   img {
     height: 100%;

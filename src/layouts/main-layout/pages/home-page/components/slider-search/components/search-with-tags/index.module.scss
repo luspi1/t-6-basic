@@ -8,6 +8,7 @@
   top: 50%;
   transform: translateY(-50%);
   right: 10px;
+  border-radius: 10px;
 }
 
 .tagsList {
@@ -17,19 +18,19 @@
   gap: 10px;
 
   li {
-    padding: 9px 10px;
+    padding: 10px 14px;
     @include opensans-bold;
-    border-radius: 3px;
+    border-radius: 10px;
     color: #ffffff;
     cursor: pointer;
-    border: 2px solid #679ED5;
+    border: 2px solid rgba(#ffffff, 0.6);
     text-align: center;
     @media (max-width: 768px) {
       padding: 7px 10px;
     }
 
     &:hover {
-      border-color: #ffffff;
+      border: 2px solid rgba(#ffffff, 1);
     }
   }
 }
@@ -38,7 +39,8 @@
   input {
     @include opensans-medium;
     font-size: 20px;
-    padding: 20.5px 22px;
+    padding: 18.5px 22px;
+    border-radius: 10px;
 
     &::placeholder {
       color: #ACACAC;

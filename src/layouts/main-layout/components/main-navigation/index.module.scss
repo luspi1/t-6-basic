@@ -1,19 +1,20 @@
 @import "src/assets/styles/vars";
 
 .mainNav {
-  padding: 8px 0;
+  padding: 20px 0;
   background-color: #fff;
 }
 
 .logoWrapper {
-  width: 115px;
+  width: 100px;
+  height: 100px;
 }
 
 .navContainer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 45px;
+  gap: 58px;
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 20px;
@@ -28,7 +29,6 @@
   @include ptsans-bold;
   font-size: 16px;
   text-transform: uppercase;
-  padding-bottom: 8px;
 
   @media (max-width: 768px) {
     margin-left: 0;

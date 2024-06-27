@@ -29,7 +29,7 @@ export const SearchWithTags: FC = () => {
 						<ControlledInput
 							className={styles.searchInput}
 							name='search'
-							placeholder='Я хочу найти...'
+							placeholder='Введите запрос...'
 							required
 						/>
 						<MainButton className={styles.searchBtn} as='button' type='submit'>

@@ -15,7 +15,7 @@ export const RegionSlider: FC = () => {
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 
 	return (
-		<Container $margin='0 auto 70px auto' $width='1300px'>
+		<Container $margin='0 auto 75px auto' $width='1300px'>
 			<Swiper className={styles.regionSlider} {...regionSliderOptions} ref={swiperRef}>
 				{RegionSliderItems?.map((slideItem, idx) => (
 					<SwiperSlide key={idx}>

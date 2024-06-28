@@ -13,18 +13,18 @@ export const FeedbackAddress: FC = () => {
 	return (
 		<div className={styles.feedbackAddress}>
 			<RegionSelection className={styles.feedbackSelectRegion} />
-			<ContactsMap points={[55.745032, 37.599139]} />
+			<ContactsMap points={[52.75655, 41.432753]} />
 			<ul className={styles.contactsList}>
 				<li>
 					<AddressIconSvg />
-					119019, Москва, Гагаринский пер., 4/2
+					392003, г. Тамбов, б-р Энтузиастов, д. 2А, этаж 4
 				</li>
 				<li>
-					<PhoneIconSvg />8 (495) 695-07-06
+					<PhoneIconSvg />8 (999) 999-99-99
 				</li>
 				<li>
 					<MailIconSvg />
-					<a href='mailto:csvoopik@mail.ru'>csvoopik@mail.ru</a>
+					<a href='mailto:npotau@npotau.ru'>npotau@npotau.ru</a>
 				</li>
 			</ul>
 			<p className={styles.feedbackSocialsTitle}>Мы в социальных сетях</p>

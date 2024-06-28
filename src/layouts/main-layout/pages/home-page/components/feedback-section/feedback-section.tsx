@@ -1,10 +1,10 @@
 import { type FC } from 'react'
 
 import { Container } from 'src/UI/Container/Container'
-
-import styles from './index.module.scss'
 import { FeedbackAddress } from 'src/layouts/main-layout/pages/home-page/components/feedback-section/components/feedbackAddress/feedbackAddress'
 import { FeedbackForm } from 'src/layouts/main-layout/pages/home-page/components/feedback-section/components/feedbackForm/feedbackForm'
+
+import styles from './index.module.scss'
 export const FeedbackSection: FC = () => {
 	return (
 		<section className={styles.feedbackSection}>

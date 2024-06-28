@@ -1,13 +1,14 @@
 .feedbackSection {
   background-color: #fff;
   padding: 47px 0 35px;
+  h4.feedbackTitle {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
 }
 
-h4.feedbackTitle {
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 15px;
-}
+
 
 .feedbackDesc {
   font-size: 20px;

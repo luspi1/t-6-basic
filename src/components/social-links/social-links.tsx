@@ -3,8 +3,8 @@ import { type FC } from 'react'
 import cn from 'classnames'
 
 import { VkSocialSvg } from 'src/UI/icons/vkSocialSVG'
-import { OkSocialSvg } from 'src/UI/icons/okSocialSVG'
 import { TelegramSocialSvg } from 'src/UI/icons/telegramSocialSVG'
+import { RutubeSocialSvg } from 'src/UI/icons/rutubeSocialSVG'
 
 import styles from './index.module.scss'
 
@@ -21,12 +21,12 @@ export const SocialLinks: FC<SocialLinksProps> = ({ className }) => {
 			</li>
 			<li>
 				<a href='#'>
-					<OkSocialSvg />
+					<TelegramSocialSvg />
 				</a>
 			</li>
 			<li>
 				<a href='#'>
-					<TelegramSocialSvg />
+					<RutubeSocialSvg />
 				</a>
 			</li>
 		</ul>

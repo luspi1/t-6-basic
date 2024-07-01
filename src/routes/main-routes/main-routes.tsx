@@ -4,7 +4,7 @@ import { MainLayout } from 'src/routes/main-layout/main-layout'
 
 import { HomePage } from 'src/pages/home-page/home-page'
 
-import { AboutLayout } from 'src/pages/about-page/layout/about-layout'
+import { AboutLayout } from 'src/pages/about-page/about-layout'
 import { AboutGeneral } from 'src/pages/about-page/layout/about-general/about-general'
 import { AboutHistory } from 'src/pages/about-page/layout/about-history/about-history'
 import { AboutDirection } from 'src/pages/about-page/layout/about-direction/about-direction'
@@ -16,6 +16,9 @@ import { DepartmentsLayout } from 'src/pages/departments-page/layout/departments
 import { DepartmentsList } from 'src/pages/departments-page/layout/departments-list/departments-list'
 import { DepartmentsAbout } from 'src/pages/departments-page/layout/departments-about/departments-about'
 import { DepartmentDetailsLayout } from 'src/pages/departments-page/layout/department-details/layout/department-details-layout'
+
+import { EthnosportLayout } from 'src/pages/ethnosport-page/ethnosport-layout'
+import { EthnoGeneral } from 'src/pages/ethnosport-page/layout/ethno-general/ethno-general'
 
 import { RegDetailsInfo } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/reg-details-info'
 import { RegDetailsParticipants } from 'src/pages/departments-page/layout/department-details/layout/reg-details-participants/reg-details-participants'
@@ -72,6 +75,10 @@ export const MainRoutes = () => {
 						<Route path={AppRoute.DepartmentsDetailsProjects} element={<RegDetailsProjects />} />
 						<Route path={AppRoute.DepartmentsDetailsGallery} element={<RegDetailsGallery />} />
 					</Route>
+				</Route>
+
+				<Route path={AppRoute.Ethnosport} element={<EthnosportLayout />}>
+					<Route index element={<EthnoGeneral />} />
 				</Route>
 
 				<Route path={AppRoute.Users} element={<ParticipationLayout />}>

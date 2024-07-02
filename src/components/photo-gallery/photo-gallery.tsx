@@ -9,20 +9,21 @@ type PhotoGalleryItem = {
 }
 type PhotoGalleryProps = {
 	title?: string
-	photos: PhotoGalleryItem[]
+	photos?: PhotoGalleryItem[]
+	className?: string
 }
-export const PhotoGallery: FC<PhotoGalleryProps> = ({ title, photos }) => {
+export const PhotoGallery: FC<PhotoGalleryProps> = ({ title, photos = [], className }) => {
 	if (photos?.length < 1) return null
 	return (
-		<div>
+		<div className={className}>
 			{title && <h4>{title}</h4>}
 			<ul className={styles.gallery}>
 				{photos?.map((item) => (
 					<li key={item.id}>
-						<figure className={styles.image}>
+						<div className={styles.imageWrapper}>
 							<img src={item.photoUrl} alt={item.description} />
-							<figcaption>{item.description}</figcaption>
-						</figure>
+						</div>
+						<p>{item.description}</p>
 					</li>
 				))}
 			</ul>

@@ -11,3 +11,8 @@ export type LinkItem = {
 	type?: 'doc' | 'pdf'
 	label?: ReactNode | ReactNode[]
 }
+
+export type SimpleLink = {
+	title: string
+	link: string
+}

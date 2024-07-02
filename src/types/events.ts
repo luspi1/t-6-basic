@@ -1,3 +1,5 @@
+import { type SimpleLink } from 'src/types/global'
+
 export type EventsItem = {
 	id: string
 	title: string
@@ -8,4 +10,6 @@ export type EventsItem = {
 	dates: [string, string]
 	type: string
 	desc: string
+	organizerLinks: SimpleLink[]
+	tags: string[]
 }

@@ -1,0 +1,36 @@
+.directionsSection {
+  h5 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #9D9D9D;
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+}
+
+.directionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  li {
+    background: #F2F5F8;
+    padding: 20px 15px;
+    h6 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+.directionItemBottom {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}

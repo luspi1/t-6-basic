@@ -9,6 +9,7 @@ type CustomTextProps = {
 	$padding?: string
 	$fontSize?: string
 	$fontWeight?: string
+	$lineHeight?: string
 } & React.CSSProperties
 
 const StyledCustomText = styled.p<CustomTextProps>`
@@ -16,6 +17,7 @@ const StyledCustomText = styled.p<CustomTextProps>`
 	padding: ${({ $padding }) => $padding ?? '0'};
 	font-size: ${({ $fontSize }) => $fontSize ?? '14px'};
 	font-weight: ${({ $fontWeight }) => $fontWeight ?? '400'};
+	line-height: ${({ $lineHeight }) => $lineHeight};
 `
 
 export const CustomText: FC<CustomTextProps> = ({ children, className, ...props }) => {

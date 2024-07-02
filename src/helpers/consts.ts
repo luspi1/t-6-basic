@@ -1,7 +1,7 @@
 export enum ReducerPath {
 	Regions = 'regions/api',
 	Users = 'users/api',
-	Objects = 'objects/api',
+	Ethnosport = 'ethnosport/api',
 	Projects = 'projects/api',
 	News = 'news/api',
 	Events = 'events/api',

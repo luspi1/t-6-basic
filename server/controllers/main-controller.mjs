@@ -4,6 +4,7 @@ import { objects } from '../mockData/objects.mjs'
 import { projects } from '../mockData/projects.mjs'
 import { news } from '../mockData/news.mjs'
 import { events } from '../mockData/events.mjs'
+import { ethnosport } from '../mockData/ethnosport.mjs'
 
 export const getRegions = (req, res) => {
 	const { q } = req.query
@@ -242,4 +243,15 @@ export const getEventById = (req, res) => {
 	const foundEvent = events.find((eventItem) => eventItem.id === eventId)
 
 	res.status(200).json(foundEvent)
+}
+
+export const getEthnosportGlobal = (req, res) => {
+	res.status(200).json(ethnosport)
+}
+
+export const getEthnosportById = (req, res) => {
+	const ethnoId = req.params.id
+	const foundEthno = ethnosport.directions.find((ethno) => ethno.id === ethnoId)
+
+	res.status(200).json(foundEthno)
 }

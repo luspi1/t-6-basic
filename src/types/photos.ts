@@ -4,3 +4,9 @@ export type PhotoItem = {
 	date: string
 	url: string
 }
+
+export type GalleryPhoto = {
+	id: string
+	description: string
+	photoUrl: string
+}

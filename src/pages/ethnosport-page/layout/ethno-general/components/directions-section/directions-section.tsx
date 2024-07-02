@@ -18,6 +18,12 @@ export const DirectionsSection: FC<DirectionsSectionProps> = ({ directionsList =
 						<p>{directionItem.mainDesc}</p>
 						<div className={styles.directionItemBottom}>
 							<Link to={directionItem.id}>Перейти на страницу направления</Link>
+							<div className={styles.directionItemInfo}>
+								<span>Дисциплин: {directionItem.disciplines?.length ?? '0'}</span>
+								<span>Отделений: 7</span>
+								<span>Участников: {directionItem.participants?.length ?? '0'}</span>
+								<span>Событий: {directionItem.events?.length ?? '0'}</span>
+							</div>
 						</div>
 					</li>
 				))}

@@ -6,11 +6,10 @@ import { Helmet } from 'react-helmet-async'
 
 import { PageContent } from 'src/components/page-content/page-content'
 import { useLocationMatch } from 'src/hooks/location-match'
-
 import { AppRoute } from 'src/routes/main-routes/consts'
-
 import { UserInfo } from 'src/pages/participation-page/layout/user-details/components/user-info/user-info'
-import { NavUserInfo } from 'src/pages/participation-page/layout/user-details/components/nav-user-info/nav-user-info'
+import { TabNav } from 'src/components/tab-nav/tab-nav'
+import { UserInfoNavItems } from 'src/pages/participation-page/layout/user-details/layout/consts'
 
 import styles from './index.module.scss'
 export const UserDetailsLayout: FC = () => {
@@ -24,7 +23,7 @@ export const UserDetailsLayout: FC = () => {
 			</Helmet>
 			<UserInfo />
 			<h3>Информация</h3>
-			<NavUserInfo />
+			<TabNav navItems={UserInfoNavItems} />
 			<Outlet />
 			<Link className={styles.usersListLink} to={`/${AppRoute.Users}`}>
 				На страницу списка Пользователей

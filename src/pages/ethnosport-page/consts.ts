@@ -4,7 +4,7 @@ import { type ShortDocument } from 'src/types/document'
 export const EthnosportMenuItems: NavigationItem[] = [
 	{
 		title: 'Об этноспорте',
-		link: '/ethnosport',
+		link: 'ethnosport',
 	},
 	{
 		title: 'Русский этноспорт',

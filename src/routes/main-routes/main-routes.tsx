@@ -19,6 +19,7 @@ import { DepartmentDetailsLayout } from 'src/pages/departments-page/layout/depar
 
 import { EthnosportLayout } from 'src/pages/ethnosport-page/ethnosport-layout'
 import { EthnoGeneral } from 'src/pages/ethnosport-page/layout/ethno-general/ethno-general'
+import { EthnoDetails } from 'src/pages/ethnosport-page/layout/ethno-details/ethno-details'
 
 import { RegDetailsInfo } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/reg-details-info'
 import { RegDetailsParticipants } from 'src/pages/departments-page/layout/department-details/layout/reg-details-participants/reg-details-participants'
@@ -79,6 +80,7 @@ export const MainRoutes = () => {
 
 				<Route path={AppRoute.Ethnosport} element={<EthnosportLayout />}>
 					<Route index element={<EthnoGeneral />} />
+					<Route path=':id' element={<EthnoDetails />} />
 				</Route>
 
 				<Route path={AppRoute.Users} element={<ParticipationLayout />}>

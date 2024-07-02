@@ -17,8 +17,8 @@ export const EthnoGeneral: FC = () => {
 	if (isLoading) return <Loader />
 
 	return (
-		<div>
-			<PageContent $padding='30px 65px 100px 30px' $margin='0'>
+		<div className={styles.ethnoPageContent}>
+			<PageContent className={styles.ethnoPageContent} $padding='30px 65px 100px 30px' $margin='0'>
 				<Helmet>
 					<title>Об этноспорте</title>
 				</Helmet>

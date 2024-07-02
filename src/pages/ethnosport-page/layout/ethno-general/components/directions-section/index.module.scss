@@ -1,3 +1,5 @@
+@import "src/assets/styles/vars";
+
 .directionsSection {
   h5 {
     font-size: 14px;
@@ -15,14 +17,15 @@
   gap: 15px;
   li {
     background: #F2F5F8;
-    padding: 20px 15px;
+    padding: 16px 15px 17px 15px;
     h6 {
       font-size: 22px;
       font-weight: 700;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
     p {
       font-size: 16px;
+      margin-bottom: 12px;
     }
   }
 }
@@ -33,4 +36,16 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  a {
+    color: #DE0008;
+  }
+}
+.directionItemInfo {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  span {
+    @include ptsans-italic;
+    font-size: 14px;
+  }
 }

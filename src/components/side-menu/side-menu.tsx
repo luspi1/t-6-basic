@@ -18,7 +18,7 @@ export const SideMenu: FC<SideMenuProps> = ({ sideItems, className }) => {
 		<ul className={cn(styles.sideMenu, className)}>
 			{sideItems?.map((menuItem) => (
 				<li className={styles.menuItem} key={menuItem.link}>
-					<NavLink className={setActive} to={menuItem.link} end>
+					<NavLink className={setActive} to={menuItem.link} end={menuItem.exact ?? true}>
 						{menuItem.title}
 					</NavLink>
 				</li>

@@ -1,10 +1,14 @@
+@import "src/assets/styles/vars";
+
+
 .disciplinesList {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  li {
+  margin-top: 30px;
+  & > li {
     background: #F2F5F8;
-    padding: 18px 16px;
+    padding: 15px 20px 20px 17px;
     display: flex;
     gap: 27px;
   }
@@ -15,7 +19,7 @@
   h5 {
     font-size: 22px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 }
 
@@ -24,8 +28,10 @@
   gap: 5px;
   margin-bottom: 10px;
   span {
+    @include ptsans-italic;
+    font-size: 14px;
     &:not(:last-child) {
-      padding-right: 10px;
+      padding-right: 9px;
       position: relative;
       &::after {
         content: '';
@@ -40,7 +46,12 @@
       }
     }
   }
+}
 
+.disciplineElDesc {
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 17px;
 }
 
 .disciplineElImg {
@@ -51,5 +62,25 @@
   img {
     width: 100%;
     height: 100%;
+  }
+}
+
+.disciplineElBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  a {
+    font-size: 16px;
+    color: #DE0008;
+  }
+  ul {
+    display: flex;
+    gap: 11px;
+    li {
+      @include ptsans-italic;
+      font-size: 14px;
+    }
   }
 }

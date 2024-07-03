@@ -1,5 +1,5 @@
 import { type FC } from 'react'
-import { type NavigationItem } from 'src/types/navigation'
+import { type TabNavigationItem } from 'src/types/navigation'
 
 import { Outlet } from 'react-router-dom'
 
@@ -16,10 +16,11 @@ import styles from './index.module.scss'
 export const EthnosportLayout: FC = () => {
 	const { data: ethnoInfo } = useGetEthnosportGlobalQuery(null)
 
-	const directionsMenuItems: NavigationItem[] = ethnoInfo
+	const directionsMenuItems: TabNavigationItem[] = ethnoInfo
 		? ethnoInfo.directions.map((directionItem) => ({
 				title: directionItem.title,
-				link: directionItem.id,
+				link: `${directionItem.id}`,
+				exact: false,
 			}))
 		: []
 

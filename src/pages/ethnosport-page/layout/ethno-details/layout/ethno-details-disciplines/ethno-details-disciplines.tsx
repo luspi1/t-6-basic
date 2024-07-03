@@ -25,7 +25,14 @@ export const EthnoDetailsDisciplines: FC = () => {
 								))}
 							</div>
 							<p className={styles.disciplineElDesc}>{disciplineEl.mainDesc}</p>
-							<Link to={`/disciplines/${disciplineEl.id}`}>Перейти на страницу дисциплины</Link>
+							<div className={styles.disciplineElBottom}>
+								<Link to={`/disciplines/${disciplineEl.id}`}>Перейти на страницу дисциплины</Link>
+								<ul>
+									<li>Отделений: 7</li>
+									<li>Участников: 20</li>
+									<li>Событий: 19</li>
+								</ul>
+							</div>
 						</div>
 						<div className={styles.disciplineElImg}>
 							<img src={disciplineEl.imgUrl} alt={disciplineEl.title} />

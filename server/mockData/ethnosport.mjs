@@ -102,7 +102,7 @@ export let ethnosport =
           {
             id: '1',
             title: 'Кила',
-            categories: ['борьба', 'традиционная'],
+            categories: ['командная', 'игровой вид', 'восстановленная'],
             imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Das_Ballspiel.jpg/640px-Das_Ballspiel.jpg',
             mainDesc: 'Несколько слов о дисциплине в свободном формате. Несколько слов о дисциплине в свободном формате. Несколько слов о дисциплине в свободном формате. Несколько слов о дисциплине в свободном формате.',
           }
@@ -110,7 +110,7 @@ export let ethnosport =
         events: [
           {
             id: '0',
-            dates: ['2024.03.24', '2024.03.26'],
+            dates: ['24 мар', '26 мар 2024'],
             location: 'Россия, Тамбовская обл.',
             title: 'Какое-то длинное название события, которое пишется строго в одну строку',
             preview: 'https://media.nazaccent.ru/cache/ef/80/ef80f06fb61905ab45cb60cf4cbf4d1c.jpg',
@@ -129,7 +129,7 @@ export let ethnosport =
           },
           {
             id: '1',
-            dates: ['2024.04.12', '2024.04.19'],
+            dates: ['12 апр', '19 апр 2024'],
             location: 'Россия, Тамбовская обл.',
             title: 'Какое-то длинное название события, которое пишется строго в одну строку',
             preview: 'https://bigasia.ru/wp-content/uploads/2023/04/698cb37115a265e0758553a5481a8971.jpg',
@@ -144,7 +144,7 @@ export let ethnosport =
           },
           {
             id: '2',
-            dates: ['2024.05.02','2024.05.10'],
+            dates: ['24 мар', '26 мар 2024'],
             location: 'Россия, Тамбовская обл.',
             title: 'Какое-то длинное название события, которое пишется строго в одну строку',
             preview: 'https://vestitambov.ru/wp-content/uploads/2022/08/kulachki.jpg',
@@ -240,7 +240,7 @@ export let ethnosport =
           {
             id: '1',
             title: 'Кила',
-            categories: ['борьба', 'традиционная'],
+            categories: ['командная', 'игровой вид', 'восстановленная'],
             imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Das_Ballspiel.jpg/640px-Das_Ballspiel.jpg',
             mainDesc: 'Несколько слов о дисциплине в свободном формате. Несколько слов о дисциплине в свободном формате. Несколько слов о дисциплине в свободном формате. Несколько слов о дисциплине в свободном формате.',
           }
@@ -248,7 +248,7 @@ export let ethnosport =
         events: [
           {
             id: '0',
-            dates: ['2024.03.24', '2024.03.26'],
+            dates: ['24 мар', '26 мар 2024'],
             location: 'Россия, Тамбовская обл.',
             title: 'Какое-то длинное название события, которое пишется строго в одну строку',
             preview: 'https://media.nazaccent.ru/cache/ef/80/ef80f06fb61905ab45cb60cf4cbf4d1c.jpg',
@@ -267,7 +267,7 @@ export let ethnosport =
           },
           {
             id: '1',
-            dates: ['2024.04.12', '2024.04.19'],
+            dates: ['12 апр', '19 апр 2024'],
             location: 'Россия, Тамбовская обл.',
             title: 'Какое-то длинное название события, которое пишется строго в одну строку',
             preview: 'https://bigasia.ru/wp-content/uploads/2023/04/698cb37115a265e0758553a5481a8971.jpg',
@@ -282,7 +282,7 @@ export let ethnosport =
           },
           {
             id: '2',
-            dates: ['2024.05.02','2024.05.10'],
+            dates: ['24 мар', '26 мар 2024'],
             location: 'Россия, Тамбовская обл.',
             title: 'Какое-то длинное название события, которое пишется строго в одну строку',
             preview: 'https://vestitambov.ru/wp-content/uploads/2022/08/kulachki.jpg',
@@ -378,7 +378,7 @@ export let ethnosport =
           {
             id: '1',
             title: 'Кила',
-            categories: ['борьба', 'традиционная'],
+            categories: ['командная', 'игровой вид', 'восстановленная'],
             imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Das_Ballspiel.jpg/640px-Das_Ballspiel.jpg',
             mainDesc: 'Несколько слов о дисциплине в свободном формате. Несколько слов о дисциплине в свободном формате. Несколько слов о дисциплине в свободном формате. Несколько слов о дисциплине в свободном формате.',
           }
@@ -386,7 +386,7 @@ export let ethnosport =
         events: [
           {
             id: '0',
-            dates: ['2024.03.24', '2024.03.26'],
+            dates: ['24 мар', '26 мар 2024'],
             location: 'Россия, Тамбовская обл.',
             title: 'Какое-то длинное название события, которое пишется строго в одну строку',
             preview: 'https://media.nazaccent.ru/cache/ef/80/ef80f06fb61905ab45cb60cf4cbf4d1c.jpg',
@@ -405,7 +405,7 @@ export let ethnosport =
           },
           {
             id: '1',
-            dates: ['2024.04.12', '2024.04.19'],
+            dates: ['12 апр', '19 апр 2024'],
             location: 'Россия, Тамбовская обл.',
             title: 'Какое-то длинное название события, которое пишется строго в одну строку',
             preview: 'https://bigasia.ru/wp-content/uploads/2023/04/698cb37115a265e0758553a5481a8971.jpg',
@@ -420,7 +420,7 @@ export let ethnosport =
           },
           {
             id: '2',
-            dates: ['2024.05.02','2024.05.10'],
+            dates: ['24 мар', '26 мар 2024'],
             location: 'Россия, Тамбовская обл.',
             title: 'Какое-то длинное название события, которое пишется строго в одну строку',
             preview: 'https://vestitambov.ru/wp-content/uploads/2022/08/kulachki.jpg',
@@ -524,7 +524,7 @@ export let ethnosport =
         events: [
           {
             id: '0',
-            dates: ['2024.03.24', '2024.03.26'],
+            dates: ['24 мар', '26 мар 2024'],
             location: 'Россия, Тамбовская обл.',
             title: 'Какое-то длинное название события, которое пишется строго в одну строку',
             preview: 'https://media.nazaccent.ru/cache/ef/80/ef80f06fb61905ab45cb60cf4cbf4d1c.jpg',
@@ -543,7 +543,7 @@ export let ethnosport =
           },
           {
             id: '1',
-            dates: ['2024.04.12', '2024.04.19'],
+            dates: ['12 апр', '19 апр 2024'],
             location: 'Россия, Тамбовская обл.',
             title: 'Какое-то длинное название события, которое пишется строго в одну строку',
             preview: 'https://bigasia.ru/wp-content/uploads/2023/04/698cb37115a265e0758553a5481a8971.jpg',
@@ -558,7 +558,7 @@ export let ethnosport =
           },
           {
             id: '2',
-            dates: ['2024.05.02','2024.05.10'],
+            dates: ['24 мар', '26 мар 2024'],
             location: 'Россия, Тамбовская обл.',
             title: 'Какое-то длинное название события, которое пишется строго в одну строку',
             preview: 'https://vestitambov.ru/wp-content/uploads/2022/08/kulachki.jpg',

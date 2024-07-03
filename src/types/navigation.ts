@@ -6,6 +6,7 @@ export type NavigationItem = {
 	accent?: boolean
 	icon?: ReactNode
 	childItems?: NavigationItem[]
+	exact?: boolean
 }
 
 export type ContentNav = {

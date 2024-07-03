@@ -1,0 +1,55 @@
+.disciplinesList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  li {
+    background: #F2F5F8;
+    padding: 18px 16px;
+    display: flex;
+    gap: 27px;
+  }
+}
+
+.disciplineElContent {
+  flex-grow: 1;
+  h5 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+}
+
+.disciplineElCategories {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+  span {
+    &:not(:last-child) {
+      padding-right: 10px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #000000;
+      }
+    }
+  }
+
+}
+
+.disciplineElImg {
+  width: 132px;
+  height: 132px;
+  min-width: 132px;
+  border: 7px solid #ffffff;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

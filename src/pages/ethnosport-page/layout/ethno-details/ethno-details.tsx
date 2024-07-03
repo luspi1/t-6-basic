@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { useParams } from 'react-router-dom'
+import { Outlet, useParams } from 'react-router-dom'
 
 import { useGetEthnosportByIdQuery } from 'src/store/ethnosport/ethnosport.api'
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
@@ -33,6 +33,7 @@ export const EthnoDetails: FC = () => {
 				<p>{ethnoDetails.mainDesc}</p>
 			</div>
 			<TabNav navItems={EthnoDetailsNavItems} />
+			<Outlet />
 		</PageContent>
 	)
 }

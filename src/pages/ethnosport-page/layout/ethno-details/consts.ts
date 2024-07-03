@@ -1,9 +1,10 @@
-import { type NavigationItem } from 'src/types/navigation'
+import { type TabNavigationItem } from 'src/types/navigation'
 
-export const EthnoDetailsNavItems: NavigationItem[] = [
+export const EthnoDetailsNavItems: TabNavigationItem[] = [
 	{
 		title: 'информация',
-		link: 'ethno-info',
+		link: '',
+		exact: true,
 	},
 	{
 		title: 'история',

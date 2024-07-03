@@ -20,6 +20,11 @@ import { DepartmentDetailsLayout } from 'src/pages/departments-page/layout/depar
 import { EthnosportLayout } from 'src/pages/ethnosport-page/ethnosport-layout'
 import { EthnoGeneral } from 'src/pages/ethnosport-page/layout/ethno-general/ethno-general'
 import { EthnoDetails } from 'src/pages/ethnosport-page/layout/ethno-details/ethno-details'
+import { EthnoDetailsInfo } from 'src/pages/ethnosport-page/layout/ethno-details/layout/ethno-details-info/ethno-details-info'
+import { EthnoDetailsHistory } from 'src/pages/ethnosport-page/layout/ethno-details/layout/ethno-details-history/ethno-details-history'
+import { EthnoDetailsDisciplines } from 'src/pages/ethnosport-page/layout/ethno-details/layout/ethno-details-disciplines/ethno-details-disciplines'
+import { EthnoDetailsEvents } from 'src/pages/ethnosport-page/layout/ethno-details/layout/ethno-details-events/ethno-details-events'
+import { EthnoDetailsParticipants } from 'src/pages/ethnosport-page/layout/ethno-details/layout/ethno-details-participants/ethno-details-participants'
 
 import { RegDetailsInfo } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/reg-details-info'
 import { RegDetailsParticipants } from 'src/pages/departments-page/layout/department-details/layout/reg-details-participants/reg-details-participants'
@@ -80,7 +85,13 @@ export const MainRoutes = () => {
 
 				<Route path={AppRoute.Ethnosport} element={<EthnosportLayout />}>
 					<Route index element={<EthnoGeneral />} />
-					<Route path=':id' element={<EthnoDetails />} />
+					<Route path=':id' element={<EthnoDetails />}>
+						<Route index element={<EthnoDetailsInfo />} />
+						<Route path={AppRoute.EthnoHistory} element={<EthnoDetailsHistory />} />
+						<Route path={AppRoute.EthnoDisciplines} element={<EthnoDetailsDisciplines />} />
+						<Route path={AppRoute.EthnoEvents} element={<EthnoDetailsEvents />} />
+						<Route path={AppRoute.EthnoParticipants} element={<EthnoDetailsParticipants />} />
+					</Route>
 				</Route>
 
 				<Route path={AppRoute.Users} element={<ParticipationLayout />}>

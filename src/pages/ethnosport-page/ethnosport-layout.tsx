@@ -8,7 +8,7 @@ import { BreadCrumbs } from 'src/modules/bread-crumbs/bread-crumbs'
 import { SideMenu } from 'src/components/side-menu/side-menu'
 import { AsideDocuments } from 'src/components/aside-documents/aside-documents'
 
-import { EthnosportMenuItems, ethnosportPageDocuments } from './consts'
+import { ethnosportPageDocuments } from './consts'
 import { useGetEthnosportGlobalQuery } from 'src/store/ethnosport/ethnosport.api'
 
 import styles from './index.module.scss'
@@ -26,7 +26,14 @@ export const EthnosportLayout: FC = () => {
 	return (
 		<div>
 			<Container>
-				<BreadCrumbs crumbsLinksMap={EthnosportMenuItems} />
+				<BreadCrumbs
+					crumbsLinksMap={[
+						{
+							title: 'Об этноспорте',
+							link: 'ethnosport',
+						},
+					]}
+				/>
 				<div className={styles.ethnosportContentWrapper}>
 					<Outlet />
 					<div>

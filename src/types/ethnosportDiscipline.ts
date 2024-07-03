@@ -3,4 +3,5 @@ export type EthnosportDisciplineItem = {
 	title: string
 	categories: string[]
 	mainDesc: string
+	imgUrl: string
 }

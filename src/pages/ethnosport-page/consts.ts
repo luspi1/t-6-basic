@@ -1,28 +1,4 @@
-import { type NavigationItem } from 'src/types/navigation'
 import { type ShortDocument } from 'src/types/document'
-
-export const EthnosportMenuItems: NavigationItem[] = [
-	{
-		title: 'Об этноспорте',
-		link: 'ethnosport',
-	},
-	{
-		title: 'Русский этноспорт',
-		link: 'ethno-rus',
-	},
-	{
-		title: 'Башкирский этноспорт',
-		link: 'ethno-bashkiria',
-	},
-	{
-		title: 'Бурятский этноспорт',
-		link: 'ethno-bur',
-	},
-	{
-		title: 'Ханты-мансийский этноспорт',
-		link: 'ethno-khant',
-	},
-]
 
 export const ethnosportPageDocuments: ShortDocument[] = [
 	{

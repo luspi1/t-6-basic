@@ -23,3 +23,14 @@
     line-height: 1;
   }
 }
+
+.blockquoteImg {
+  width: 125px;
+  min-width: 125px ;
+  height: 157px;
+  border: 7px solid #EBEEF2;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

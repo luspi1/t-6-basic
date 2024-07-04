@@ -3,7 +3,7 @@ import { type ShortDocument } from 'src/types/document'
 
 export const AboutMenuItems: NavigationItem[] = [
 	{
-		title: 'История Общества',
+		title: 'История Федерации',
 		link: 'about-history',
 	},
 	{
@@ -15,7 +15,7 @@ export const AboutMenuItems: NavigationItem[] = [
 		link: 'about-contacts',
 	},
 	{
-		title: 'Документы Общества',
+		title: 'Документы Федерации',
 		link: 'about-documents',
 	},
 	{

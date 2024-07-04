@@ -7,12 +7,11 @@ import styles from './index.module.scss'
 export const RenovatedObjectsSection: FC = () => {
 	return (
 		<section>
-			<h4>Объекты культурного наследия, которые отреставрированы за счет средств общества</h4>
+			<h4>Крупнейшие этноспортивные направления России</h4>
 			<ul className={styles.linkList}>
-				{' '}
 				{renovatedObject.map((item) => (
 					<li key={item.id}>
-						<a href='#'>{item.title}</a>
+						<a href={item.link}>{item.title}</a>
 					</li>
 				))}
 			</ul>

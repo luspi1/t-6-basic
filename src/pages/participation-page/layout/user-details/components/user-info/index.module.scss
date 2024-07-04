@@ -34,9 +34,13 @@
 
 .infoBlock {
   flex-grow: 1;
-  p {
-    line-height: 1.5;
+  & > {
+    p {
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
   }
+
 }
 
 .avatarWrapper {

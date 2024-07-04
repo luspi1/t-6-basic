@@ -7,25 +7,27 @@ import groupImage from 'src/assets/img/history-group.jpg'
 export const renovatedObject = [
 	{
 		id: '0',
-		title:
-			'Пенза. Памятник деревянной архитектуры, в котором располагается областное отделение ВООПИиК',
+		title: 'Русский Этноспорт: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet',
+		link: '#',
 	},
 
 	{
 		id: '1',
-		title: 'Архангельский музей деревянного зодчества «Малые Корелы»',
+		title: 'Бурятский Этноспорт: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet',
+		link: '#',
 	},
 
 	{
 		id: '2',
-		title:
-			'Государственный Бородинский военно-исторический музей-заповедник. Спасо-Бородинский монастырь',
+		title: 'Башкирский Этноспорт: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet',
+		link: '#',
 	},
 
 	{
 		id: '3',
 		title:
-			'Ансамбль Крутицкого подворья XY-XYII веков. Реставрационные работы проводились под руководством П.Д.Барановского. В Успенском Соборе находились реставрационные мастерские ВООПИиК',
+			'Ханты-Мансийский Этноспорт: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. Nam interdum, tellus nec fringilla commodo, lacus velit posuere turpis, dignissim convallis purus erat non erat. ',
+		link: '#',
 	},
 ]
 

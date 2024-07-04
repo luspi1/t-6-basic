@@ -1,24 +1,31 @@
 import { type FC } from 'react'
-import authorImage from 'src/assets/img/chairmans-malanicheva.jpg'
+
 import styles from './index.module.scss'
 
 export const BlockquoteSection: FC = () => {
 	return (
 		<section className={styles.blockquote}>
-			<img src={authorImage} alt='Г. И.Маланичева, Почетный Председатель ВООПИиК' />
+			<div className={styles.blockquoteImg}>
+				<img
+					src='https://s0.bloknottambov.ru/thumb/850x0xcut/upload/iblock/965/1e45k21exoxsxxtpq3kt73ej8giexulo/Predsedatel-federatsii-etnosporta-Rossii_-osnovatel-_Atmanovskikh-kulachek_-Anatoliy-Tedoradze-otmechaet-den-rozhdeniya.jpg'
+					alt='А.С. Тедорадзе, должность в Федерации Этноспорта России'
+				/>
+			</div>
 
 			<blockquote>
 				<p className={styles.blockquoteText}>
-					«Одно из незабываемых воспоминаний моей жизни. Представьте: русская глубинка семидесятых
-					годов, в центре села — старая деревянная церковь, а в воздухе разливается фольклорная
-					песня. Ощущение непередаваемое — ощущение праздника, я тогда поняла, что вот оно, родное,
-					настоящее, подлинное. Такое ощущение у меня возникало и еще один раз — в Замоскворечье, в
-					восьмидесятых. Я почувствовала непрерывность времен, и это просто потрясло меня. Спасая
-					церкви, усадьбы, документы, мы сохраняем нечто большее, чем просто стены, убранство,
-					памятники материальной культуры, мы сохраняем русскую душу. И это самое главное».
+					Nam interdum, tellus nec fringilla commodo, lacus velit posuere turpis, dignissim
+					convallis purus erat non erat. Vestibulum ante ipsum primis in faucibus orci luctus et
+					ultrices posuere cubilia curae; Vestibulum molestie risus vitae nulla fermentum luctus.
+					Pellentesque quis nulla ut ligula condimentum accumsan id vitae risus. In rutrum
+					ullamcorper mollis.
+				</p>
+				<p className={styles.blockquoteText}>
+					Curabitur sit amet eros nec erat volutpat posuere. Orci varius natoque penatibus et magnis
+					dis parturient montes, nascetur ridiculus mus. Sed vel aliquet est.
 				</p>
 
-				<footer>Г. И.Маланичева, Почетный Председатель ВООПИиК</footer>
+				<footer>А.С. Тедорадзе, должность в Федерации Этноспорта России</footer>
 			</blockquote>
 		</section>
 	)

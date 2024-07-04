@@ -12,8 +12,7 @@ export const ContactsInfo: FC = () => {
 			<div className={styles.contactsBlock}>
 				<h4>Телефоны</h4>
 				<p>
-					Демидов Артём Геннадьевич <br /> Председатель Центрального совета <br />
-					<a href='tel:+74956950706'>8 (495) 695-07-06 </a>
+					Демидов Артём Геннадьевич <br /> Председатель Центрального совета <br />8 (495) 695-07-06
 					(приемная)
 				</p>
 			</div>
@@ -26,13 +25,10 @@ export const ContactsInfo: FC = () => {
 				</p>
 			</div>
 
-			<p>
+			<div className={styles.contactsLinks}>
 				<a href='#'>Центральный Совет ВООПИиК</a>
-			</p>
-
-			<p>
 				<a href='#'>Региональные отделения</a>
-			</p>
+			</div>
 		</>
 	)
 }

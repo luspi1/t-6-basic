@@ -1,8 +1,11 @@
 ul.linkList {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 17px;
+  margin-bottom: 27px;
+  li {
+    line-height: 1.2;
+  }
   a {
     line-height: 1.12;
   }

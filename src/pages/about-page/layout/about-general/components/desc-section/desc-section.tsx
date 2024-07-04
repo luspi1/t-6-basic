@@ -1,9 +1,10 @@
 import { type FC } from 'react'
 
+import styles from './index.module.scss'
 export const DescSection: FC = () => {
 	return (
-		<section>
-			<h4>Что такое ВООПИиК?</h4>
+		<section className={styles.descSection}>
+			<h4>Что такое Федерация?</h4>
 
 			<p>
 				Всероссийское общество охраны памятников истории и культуры— добровольная самоуправляемая

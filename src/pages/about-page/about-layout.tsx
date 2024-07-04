@@ -21,7 +21,7 @@ export const AboutLayout: FC = () => {
 					crumbsLinksMap={[
 						...AboutMenuItems,
 						{
-							title: 'Об Обществе',
+							title: 'О Федерации',
 							link: 'about',
 						},
 					]}
@@ -29,7 +29,16 @@ export const AboutLayout: FC = () => {
 				<div className={styles.aboutContentWrapper}>
 					<Outlet />
 					<div>
-						<SideMenu className={styles.aboutSideMenu} sideItems={AboutMenuItems} />
+						<SideMenu
+							className={styles.aboutSideMenu}
+							sideItems={[
+								{
+									title: 'О Федерации',
+									link: '/about',
+								},
+								...AboutMenuItems,
+							]}
+						/>
 						{pathname === '/about' && <AsideDocuments documents={aboutPageDocuments} />}
 					</div>
 				</div>

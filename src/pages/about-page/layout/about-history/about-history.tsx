@@ -7,12 +7,12 @@ import { PageContent } from 'src/components/page-content/page-content'
 
 export const AboutHistory: FC = () => {
 	return (
-		<PageContent $padding='30px 70px 45px 30px'>
+		<PageContent className={styles.historyPageContent} $padding='30px 70px 45px 30px'>
 			<Helmet>
-				<title>Об Обществе – История Общества</title>
+				<title>История Федерации</title>
 			</Helmet>
 
-			<h2>История Общества</h2>
+			<h2>История Федерации</h2>
 			<p>
 				Инициаторами создания ВООПИиК выступили заместитель председателя Совета министров РСФСР
 				Вячеслав Иванович Кочемасов, ставший первым председателем ВООПИиК, писатель Леонид

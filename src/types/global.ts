@@ -16,3 +16,11 @@ export type SimpleLink = {
 	title: string
 	link: string
 }
+
+export type SourceLink = {
+	id: string
+	title: string
+	link: string
+	date: string
+	source: string
+}

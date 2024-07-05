@@ -7,6 +7,7 @@ import { regionsApi } from 'src/store/regions/regions.api'
 import { newsApi } from 'src/store/news/news.api'
 import { eventsApi } from 'src/store/events/events.api'
 import { ethnosportApi } from 'src/store/ethnosport/ethnosport.api'
+import { disciplinesApi } from 'src/store/disciplines/disciplines.api'
 
 import { NameSpace } from 'src/helpers/consts'
 
@@ -18,6 +19,7 @@ export const store = configureStore({
 		[newsApi.reducerPath]: newsApi.reducer,
 		[eventsApi.reducerPath]: eventsApi.reducer,
 		[ethnosportApi.reducerPath]: ethnosportApi.reducer,
+		[disciplinesApi.reducerPath]: disciplinesApi.reducer,
 	},
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware({ serializableCheck: false }).concat(
@@ -26,6 +28,7 @@ export const store = configureStore({
 			newsApi.middleware,
 			eventsApi.middleware,
 			ethnosportApi.middleware,
+			disciplinesApi.middleware,
 		),
 })
 

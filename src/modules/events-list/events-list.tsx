@@ -1,5 +1,6 @@
 import React, { type FC } from 'react'
 import { type EventSearchInputs } from 'src/modules/events-list/schema'
+import { type EventsItem } from 'src/types/events'
 import { FormProvider, type SubmitHandler, useForm } from 'react-hook-form'
 import cn from 'classnames'
 
@@ -7,16 +8,14 @@ import { ControlledSelect } from 'src/components/controlled-select/controlled-se
 import { ControlledInput } from 'src/components/controlled-input/controlled-input'
 import { MainButton } from 'src/UI/MainButton/MainButton'
 import { Link } from 'react-router-dom'
-import { useGetEthnosportByIdQuery } from 'src/store/ethnosport/ethnosport.api'
-import { Loader } from 'src/components/loader/loader'
 
 import styles from './index.module.scss'
 
 type EventsListProps = {
-	id?: string
+	eventsData?: EventsItem[]
 	className?: string
 }
-export const EventsList: FC<EventsListProps> = ({ id, className }) => {
+export const EventsList: FC<EventsListProps> = ({ eventsData, className }) => {
 	const methods = useForm<EventSearchInputs>({
 		mode: 'onBlur',
 	})
@@ -24,11 +23,8 @@ export const EventsList: FC<EventsListProps> = ({ id, className }) => {
 	const onSubmit: SubmitHandler<EventSearchInputs> = (data) => {
 		console.log(data)
 	}
-	const { data: ethnoDetails, isLoading } = useGetEthnosportByIdQuery(id ?? '')
 
-	if (isLoading) return <Loader />
-	if (!ethnoDetails) return null
-	const { events: directionEvents } = ethnoDetails
+	if (!eventsData?.length) return null
 
 	return (
 		<div className={cn(styles.eventsListWrapper, className)}>
@@ -63,7 +59,7 @@ export const EventsList: FC<EventsListProps> = ({ id, className }) => {
 				</form>
 			</FormProvider>
 			<ul className={styles.eventsList}>
-				{directionEvents?.map((eventEl) => (
+				{eventsData?.map((eventEl) => (
 					<li key={eventEl.id}>
 						<div className={styles.eventElInfo}>
 							<p>

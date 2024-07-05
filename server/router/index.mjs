@@ -24,7 +24,7 @@ import {
 	getNewsById,
 	getEvents,
 	getEventById,
-	getEthnosportGlobal, getEthnosportById
+	getEthnosportGlobal, getEthnosportById, getAllDisciplines, getDisciplineById
 } from '../controllers/main-controller.mjs'
 import { Router } from 'express'
 
@@ -57,3 +57,5 @@ router.get('/events', getEvents)
 router.get('/events/:id', getEventById)
 router.get('/ethnosport', getEthnosportGlobal)
 router.get('/ethnosport/:id', getEthnosportById)
+router.get('/disciplines', getAllDisciplines)
+router.get('/disciplines/:id', getDisciplineById)

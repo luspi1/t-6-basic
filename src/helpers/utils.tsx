@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react'
-import { type LinkItem, type RelatedLink } from 'src/types/global'
+import { type LinkItem, type RelatedLink, type SourceLink } from 'src/types/global'
 import { type ShortDocument } from 'src/types/document'
 import { type SelOption } from 'src/types/select'
 import { type DateTimeFormatOptions } from 'src/types/date'
@@ -100,6 +100,17 @@ export const formatDocumentLinks = (data: ShortDocument[] | undefined): LinkItem
 		titleLink: docItem.title,
 		type: docItem.type,
 		label: [`${docItem.type}-файл`, docItem.size],
+	}))
+}
+
+// Форматирование ссылок с источником
+export const formatSourceLinks = (data: SourceLink[] | undefined): LinkItem[] | undefined => {
+	if (!data) return undefined
+	return data.map((sourceLinkItem) => ({
+		id: sourceLinkItem.id,
+		link: sourceLinkItem.link,
+		titleLink: sourceLinkItem.title,
+		label: [sourceLinkItem.date, sourceLinkItem.source],
 	}))
 }
 

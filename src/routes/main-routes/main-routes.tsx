@@ -26,6 +26,13 @@ import { EthnoDetailsDisciplines } from 'src/pages/ethnosport-page/layout/ethno-
 import { EthnoDetailsEvents } from 'src/pages/ethnosport-page/layout/ethno-details/layout/ethno-details-events/ethno-details-events'
 import { EthnoDetailsParticipants } from 'src/pages/ethnosport-page/layout/ethno-details/layout/ethno-details-participants/ethno-details-participants'
 
+import { DisciplinesLayout } from 'src/pages/disciplines-page/disciplines-layout'
+import { Disciplines } from 'src/pages/disciplines-page/layout/disciplines/disciplines'
+import { DisciplineDetails } from 'src/pages/disciplines-page/layout/discipline-details/discipline-details'
+import { DisDetailsInfo } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-info/dis-details-info'
+import { DisDetailsEvents } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-events/dis-details-events'
+import { DisDetailsGallery } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-gallery/dis-details-gallery'
+
 import { RegDetailsInfo } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/reg-details-info'
 import { RegDetailsParticipants } from 'src/pages/departments-page/layout/department-details/layout/reg-details-participants/reg-details-participants'
 import { RegDetailsEvents } from 'src/pages/departments-page/layout/department-details/layout/reg-details-events/reg-details-events'
@@ -91,6 +98,15 @@ export const MainRoutes = () => {
 						<Route path={AppRoute.EthnoDisciplines} element={<EthnoDetailsDisciplines />} />
 						<Route path={AppRoute.EthnoEvents} element={<EthnoDetailsEvents />} />
 						<Route path={AppRoute.EthnoParticipants} element={<EthnoDetailsParticipants />} />
+					</Route>
+				</Route>
+
+				<Route path={AppRoute.Disciplines} element={<DisciplinesLayout />}>
+					<Route index element={<Disciplines />} />
+					<Route path=':id' element={<DisciplineDetails />}>
+						<Route index element={<DisDetailsInfo />} />
+						<Route path={AppRoute.DisEvents} element={<DisDetailsEvents />} />
+						<Route path={AppRoute.DisGallery} element={<DisDetailsGallery />} />
 					</Route>
 				</Route>
 

@@ -20,6 +20,8 @@ export enum AppRoute {
 	EthnoEvents = 'ethno-events',
 	EthnoParticipants = 'ethno-participants',
 	Disciplines = 'disciplines',
+	DisEvents = 'dis-events',
+	DisGallery = 'dis-gallery',
 	Users = 'users-list',
 	UserInfo = 'user-info',
 	UserGroups = 'user-groups',

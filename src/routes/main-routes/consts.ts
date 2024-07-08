@@ -22,6 +22,7 @@ export enum AppRoute {
 	Disciplines = 'disciplines',
 	DisEvents = 'dis-events',
 	DisGallery = 'dis-gallery',
+	DisGalleryVideos = 'videos',
 	Users = 'users-list',
 	UserInfo = 'user-info',
 	UserGroups = 'user-groups',

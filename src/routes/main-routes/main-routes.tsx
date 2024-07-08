@@ -32,6 +32,8 @@ import { DisciplineDetails } from 'src/pages/disciplines-page/layout/discipline-
 import { DisDetailsInfo } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-info/dis-details-info'
 import { DisDetailsEvents } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-events/dis-details-events'
 import { DisDetailsGallery } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-gallery/dis-details-gallery'
+import { DisGalleryPhotos } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-gallery/layout/dis-gallery-photos/dis-gallery-photos'
+import { DisGalleryVideos } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-gallery/layout/dis-gallery-videos/dis-gallery-videos'
 
 import { RegDetailsInfo } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/reg-details-info'
 import { RegDetailsParticipants } from 'src/pages/departments-page/layout/department-details/layout/reg-details-participants/reg-details-participants'
@@ -106,7 +108,10 @@ export const MainRoutes = () => {
 					<Route path=':id' element={<DisciplineDetails />}>
 						<Route index element={<DisDetailsInfo />} />
 						<Route path={AppRoute.DisEvents} element={<DisDetailsEvents />} />
-						<Route path={AppRoute.DisGallery} element={<DisDetailsGallery />} />
+						<Route path={AppRoute.DisGallery} element={<DisDetailsGallery />}>
+							<Route index element={<DisGalleryPhotos />} />
+							<Route path={AppRoute.DisGalleryVideos} element={<DisGalleryVideos />} />
+						</Route>
 					</Route>
 				</Route>
 

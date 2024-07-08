@@ -9,6 +9,7 @@ type TabNavProps = {
 	navItems: TabNavigationItem[]
 	isTitle?: boolean
 	className?: string
+	customLocations?: string[]
 }
 export const TabNav: FC<TabNavProps> = ({ navItems, isTitle = false, className }) => {
 	const location = useLocation()
@@ -19,13 +20,20 @@ export const TabNav: FC<TabNavProps> = ({ navItems, isTitle = false, className }
 
 	useEffect(() => {
 		if (isTitle) {
-			const currentLocation = location.pathname.split('/').at(-1)
-			const currentNavItem = navItems.find((item) => item.link === currentLocation)
-			if (currentNavItem) {
-				setActiveTitle(currentNavItem.title)
-			} else {
-				setActiveTitle(navItems[0].title)
-			}
+			const currentLocations = [...location.pathname.split('/')]
+			const navLinks = navItems.reduce((acc: string[], el) => {
+				if (el.link) {
+					acc.push(el.link)
+				}
+				return acc
+			}, [])
+			currentLocations.forEach((el) => {
+				if (navLinks.includes(el)) {
+					setActiveTitle(el)
+				} else {
+					setActiveTitle(navItems[0].title)
+				}
+			})
 		}
 	}, [location.pathname])
 

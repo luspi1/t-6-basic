@@ -59,7 +59,9 @@ export const VideoGallery: FC<VideoGalleryProps> = ({
 							></iframe>
 							{item.thumbnail && <img src={item.thumbnail} alt={item.title} />}
 						</StyledVideo>
-						<a href={item.url}>{item.title}</a>
+						<a href={item.url} target='_blank' rel='noreferrer'>
+							{item.title}
+						</a>
 						<p>
 							{customFormatDate(item?.date, { day: 'numeric', month: 'long', year: 'numeric' })}
 						</p>

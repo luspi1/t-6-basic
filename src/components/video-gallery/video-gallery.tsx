@@ -1,10 +1,12 @@
 import React, { type FC } from 'react'
 import { type VideoItem } from 'src/types/videos'
-
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import styles from './index.module.scss'
 import { customFormatDate } from 'src/helpers/utils'
+import { AppRoute } from 'src/routes/main-routes/consts'
+
+import styles from './index.module.scss'
 
 type VideoGalleryProps = {
 	title?: string
@@ -60,9 +62,7 @@ export const VideoGallery: FC<VideoGalleryProps> = ({
 							></iframe>
 							{item.thumbnail && <img src={item.thumbnail} alt={item.title} />}
 						</StyledVideo>
-						<a href={item.url} target='_blank' rel='noreferrer'>
-							{item.title}
-						</a>
+						<Link to={`/${AppRoute.News}/${AppRoute.NewsVideo}/${item.id}`}>{item.title}</Link>
 						<p>
 							{customFormatDate(item?.date, { day: 'numeric', month: 'long', year: 'numeric' })}
 						</p>

@@ -55,10 +55,12 @@ import { UserGallery } from 'src/pages/participation-page/layout/user-details/la
 
 import { NewsLayout } from 'src/pages/news-page/layout/news-layout'
 import { NewsList } from 'src/pages/news-page/layout/news-list/news-list'
+import { NewsVideos } from 'src/pages/news-page/layout/news-videos/news-videos'
 import { NewsDetails } from 'src/pages/news-page/layout/news-details/news-details'
+import { NewsVideoDetails } from 'src/pages/news-page/layout/news-video-details/news-video-details'
 
 import { EventsLayout } from 'src/pages/events-page/events-layout'
-import { EventsList } from 'src/pages/events-page/layout/events-list/events-list'
+import { EventsListPage } from 'src/pages/events-page/layout/events-list-page/events-list-page'
 import { EventDetails } from 'src/pages/events-page/layout/events-details/event-details'
 
 export const MainRoutes = () => {
@@ -129,10 +131,12 @@ export const MainRoutes = () => {
 
 				<Route path={AppRoute.News} element={<NewsLayout />}>
 					<Route index element={<NewsList />} />
+					<Route path={AppRoute.NewsVideo} element={<NewsVideos />} />
+					<Route path={`${AppRoute.NewsVideo}/:id`} element={<NewsVideoDetails />} />
 					<Route path=':id' element={<NewsDetails />} />
 				</Route>
 				<Route path={AppRoute.Events} element={<EventsLayout />}>
-					<Route index element={<EventsList />} />
+					<Route index element={<EventsListPage />} />
 					<Route path=':id' element={<EventDetails />} />
 				</Route>
 			</Route>

@@ -9,6 +9,7 @@ import { Loader } from 'src/components/loader/loader'
 import { DatedItem } from 'src/components/dated-item/dated-item'
 import { Pagination } from 'src/components/pagination/pagination'
 import { MainSelect } from 'src/UI/MainSelect/MainSelect'
+import { NewsNavigation } from 'src/pages/news-page/components/news-navigation/news-navigation'
 
 import styles from './index.module.scss'
 
@@ -49,6 +50,7 @@ export const NewsList: FC = () => {
 					className={styles.newsYearsSelect}
 					items={[{ label: 'Все годы', value: '' }, ...yearsOptions]}
 				/>
+				<NewsNavigation activeLink='news' />
 			</div>
 			{isLoading || !newsList ? (
 				<Loader />

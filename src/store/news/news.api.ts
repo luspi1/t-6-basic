@@ -1,4 +1,5 @@
 import { type NewsItem } from 'src/types/news'
+import { type VideoItem } from 'src/types/videos'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
@@ -34,7 +35,22 @@ export const newsApi = createApi({
 			}),
 			invalidatesTags: ['News'],
 		}),
+		getNewsVideos: build.query<VideoItem[], null>({
+			query: () => ({
+				url: `news-videos`,
+			}),
+		}),
+		getNewsVideoById: build.query<VideoItem, string>({
+			query: (videoId) => ({
+				url: `news-videos/${videoId}`,
+			}),
+		}),
 	}),
 })
 
-export const { useGetAllNewsQuery, useGetNewsByIdQuery, useDeleteNewsByIdMutation } = newsApi
+export const {
+	useGetAllNewsQuery,
+	useGetNewsByIdQuery,
+	useGetNewsVideosQuery,
+	useGetNewsVideoByIdQuery,
+} = newsApi

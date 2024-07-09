@@ -22,9 +22,13 @@ import {
 	getNews,
 	deleteNews,
 	getNewsById,
+	getNewsVideos,
 	getEvents,
 	getEventById,
-	getEthnosportGlobal, getEthnosportById, getAllDisciplines, getDisciplineById
+	getEthnosportGlobal,
+	getEthnosportById,
+	getAllDisciplines,
+	getDisciplineById, getNewsVideoById
 } from '../controllers/main-controller.mjs'
 import { Router } from 'express'
 
@@ -51,6 +55,8 @@ router.get('/objects/:id', getObjectById)
 router.get('/projects', getProjects)
 router.get('/projects/:id', getProjectById)
 router.get('/news', getNews)
+router.get('/news-videos', getNewsVideos)
+router.get('/news-videos/:id', getNewsVideoById)
 router.get('/news/:id', getNewsById)
 router.delete('/newsDelete/:id', deleteNews)
 router.get('/events', getEvents)

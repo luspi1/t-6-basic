@@ -6,6 +6,7 @@ import { news } from '../mockData/news.mjs'
 import { events } from '../mockData/events.mjs'
 import { ethnosport } from '../mockData/ethnosport.mjs'
 import { disciplines } from '../mockData/disciplines.mjs'
+import { newsVideos } from '../mockData/newsVideos.mjs'
 
 export const getRegions = (req, res) => {
 	const { q } = req.query
@@ -202,6 +203,16 @@ export const getNews = (req, res) => {
 	res.status(200).json(filteredNews)
 }
 
+export const getNewsVideos= (req, res) => {
+	res.status(200).json(newsVideos)
+}
+
+export const getNewsVideoById = (req, res) => {
+	const newsId = req.params.id
+	const foundVideoNews = newsVideos.find((newsItem) => newsItem.id === newsId )
+
+	res.status(200).json(foundVideoNews)
+}
 
 export const getNewsById = (req, res) => {
 	const newsId = req.params.id

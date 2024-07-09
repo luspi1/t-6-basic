@@ -3,4 +3,5 @@ export type VideoItem = {
 	title: string
 	date: string
 	url: string
+	thumbnail: string
 }

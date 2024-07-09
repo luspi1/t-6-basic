@@ -1,18 +1,8 @@
 .gallery {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 27px 12px;
 
-  .imageWrapper {
-    width: 164px;
-    height: 127px;
-    border: 7px solid #EBEEF2;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
 
   li {
     p {

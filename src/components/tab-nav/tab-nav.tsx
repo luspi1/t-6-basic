@@ -27,12 +27,15 @@ export const TabNav: FC<TabNavProps> = ({ navItems, isTitle = false, className }
 				}
 				return acc
 			}, [])
-			currentLocations.forEach((el) => {
+
+			currentLocations.some((el) => {
 				if (navLinks.includes(el)) {
-					setActiveTitle(el)
-				} else {
-					setActiveTitle(navItems[0].title)
+					const currentNavItem = navItems.find((item) => item.link === el) ?? navItems[0]
+					setActiveTitle(currentNavItem.title)
+					return true
 				}
+				setActiveTitle(navItems[0].title)
+				return false
 			})
 		}
 	}, [location.pathname])

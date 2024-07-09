@@ -1,4 +1,4 @@
-export let disciplines =[
+export let disciplines = [
   {
     id: '0',
     title: 'Борьба-за-вороток',
@@ -21,7 +21,7 @@ export let disciplines =[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
           link: '#',
           date: '26 марта 2023 года',
-          source: 'журнал «Прораб Перестройки», стр. 21-24',
+          source: 'журнал «Прораб Перестройки», стр. 21-24'
         },
 
         {
@@ -30,7 +30,7 @@ export let disciplines =[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
           link: '#',
           date: '26 марта 2023 года',
-          source: 'Интернет-портал «Наш Край Тамбов»',
+          source: 'Интернет-портал «Наш Край Тамбов»'
         },
 
         {
@@ -39,8 +39,8 @@ export let disciplines =[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
           link: '#',
           date: '26 марта 2023 года',
-          source: 'Интернет-портал «Наш Край Тамбов»',
-        },
+          source: 'Интернет-портал «Наш Край Тамбов»'
+        }
       ],
       documents: [
         {
@@ -49,7 +49,7 @@ export let disciplines =[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
           link: '#',
           type: 'pdf',
-          size: '68.5 Кбайт',
+          size: '68.5 Кбайт'
         },
 
         {
@@ -58,7 +58,7 @@ export let disciplines =[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
           link: '#',
           type: 'pdf',
-          size: '68.5 Кбайт',
+          size: '68.5 Кбайт'
         },
 
         {
@@ -67,9 +67,9 @@ export let disciplines =[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
           link: '#',
           type: 'doc',
-          size: '68.5 Кбайт',
-        },
-      ],
+          size: '68.5 Кбайт'
+        }
+      ]
     },
     events: [
       {
@@ -81,12 +81,12 @@ export let disciplines =[
         organizerLinks: [
           {
             title: 'Федерация Этноспорта России',
-            link: 'http://ethnosport.ru/',
+            link: 'http://ethnosport.ru/'
           },
           {
             title: 'Общество ТОЛК',
-            link: 'http://ru.ethnosport.org/',
-          },
+            link: 'http://ru.ethnosport.org/'
+          }
         ],
         desc: 'посвящена ли программа кому-нибудь или чему-нибудь, чему смогут научиться посетители, для какой возрастной категории предназначается и т. д.',
         tags: ['Спортивные соревнования', 'Публичное событие', 'Региональный уровень']
@@ -100,8 +100,8 @@ export let disciplines =[
         organizerLinks: [
           {
             title: 'Федерация Этноспорта России',
-            link: 'http://ethnosport.ru/',
-          },
+            link: 'http://ethnosport.ru/'
+          }
         ],
         desc: 'посвящена ли программа кому-нибудь или чему-нибудь, чему смогут научиться посетители, для какой возрастной категории предназначается и т. д.',
         tags: ['Спортивные соревнования', 'Региональный уровень']
@@ -115,13 +115,91 @@ export let disciplines =[
         organizerLinks: [
           {
             title: 'Общество ТОЛК',
-            link: 'http://ru.ethnosport.org/',
-          },
+            link: 'http://ru.ethnosport.org/'
+          }
         ],
         desc: 'посвящена ли программа кому-нибудь или чему-нибудь, чему смогут научиться посетители, для какой возрастной категории предназначается и т. д.',
         tags: ['Региональный уровень']
-      },
+      }
     ],
+    photos: [
+      {
+        id: '1',
+        description: 'Малые Корелы',
+        photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg'
+      },
+      {
+        id: '2',
+        description: 'Спасо-Бородинский монастырь',
+        photoUrl: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg'
+      },
+      {
+        id: '3',
+        description: 'Крутицкий теремок',
+        photoUrl: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg'
+      },
+      {
+        id: '4',
+        description: 'Пензенское отделение федерации',
+        photoUrl: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg'
+      },
+      {
+        id: '5',
+        description: '',
+        photoUrl: 'https://voopik.ru/upload/iblock/614/3110-1.jpg'
+      },
+      {
+        id: '6',
+        description: 'Малые Корелы',
+        photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg'
+      },
+      {
+        id: '7',
+        description: 'Спасо-Бородинский монастырь',
+        photoUrl: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg'
+      },
+      {
+        id: '8',
+        description: 'Крутицкий теремок',
+        photoUrl: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg'
+      },
+      {
+        id: '9',
+        description: 'Пензенское отделение федерации',
+        photoUrl: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg'
+      },
+      {
+        id: '10',
+        description: '',
+        photoUrl: 'https://voopik.ru/upload/iblock/614/3110-1.jpg'
+      },
+      {
+        id: '11',
+        description: '',
+        photoUrl: 'https://voopik.ru/upload/iblock/614/3110-1.jpg'
+      },
+      {
+        id: '12',
+        description: 'Малые Корелы',
+        photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg'
+      }
+    ],
+    videos: [
+      {
+        id: '1',
+        title: 'Атмановские кулачки',
+        url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+        thumbnail: 'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+        date: '2022.12.23'
+      },
+      {
+        id: '2',
+        title: 'Сколот - Атмановские Кулачки (Live "Наследие 2022")',
+        url: 'https://vk.com/video_ext.php?oid=-973262&id=456239864&hd=2',
+        thumbnail: '',
+        date: '2020.07.22'
+      },
+    ]
   },
   {
     id: '1',
@@ -145,7 +223,7 @@ export let disciplines =[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
           link: '#',
           date: '26 марта 2023 года',
-          source: 'журнал «Прораб Перестройки», стр. 21-24',
+          source: 'журнал «Прораб Перестройки», стр. 21-24'
         },
 
         {
@@ -154,7 +232,7 @@ export let disciplines =[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
           link: '#',
           date: '26 марта 2023 года',
-          source: 'Интернет-портал «Наш Край Тамбов»',
+          source: 'Интернет-портал «Наш Край Тамбов»'
         },
 
         {
@@ -163,8 +241,8 @@ export let disciplines =[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
           link: '#',
           date: '26 марта 2023 года',
-          source: 'Интернет-портал «Наш Край Тамбов»',
-        },
+          source: 'Интернет-портал «Наш Край Тамбов»'
+        }
       ],
       documents: [
         {
@@ -173,7 +251,7 @@ export let disciplines =[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
           link: '#',
           type: 'pdf',
-          size: '68.5 Кбайт',
+          size: '68.5 Кбайт'
         },
 
         {
@@ -182,7 +260,7 @@ export let disciplines =[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
           link: '#',
           type: 'pdf',
-          size: '68.5 Кбайт',
+          size: '68.5 Кбайт'
         },
 
         {
@@ -191,9 +269,9 @@ export let disciplines =[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
           link: '#',
           type: 'doc',
-          size: '68.5 Кбайт',
-        },
-      ],
+          size: '68.5 Кбайт'
+        }
+      ]
     },
     events: [
       {
@@ -205,12 +283,12 @@ export let disciplines =[
         organizerLinks: [
           {
             title: 'Федерация Этноспорта России',
-            link: 'http://ethnosport.ru/',
+            link: 'http://ethnosport.ru/'
           },
           {
             title: 'Общество ТОЛК',
-            link: 'http://ru.ethnosport.org/',
-          },
+            link: 'http://ru.ethnosport.org/'
+          }
         ],
         desc: 'посвящена ли программа кому-нибудь или чему-нибудь, чему смогут научиться посетители, для какой возрастной категории предназначается и т. д.',
         tags: ['Спортивные соревнования', 'Публичное событие', 'Региональный уровень']
@@ -224,8 +302,8 @@ export let disciplines =[
         organizerLinks: [
           {
             title: 'Федерация Этноспорта России',
-            link: 'http://ethnosport.ru/',
-          },
+            link: 'http://ethnosport.ru/'
+          }
         ],
         desc: 'посвящена ли программа кому-нибудь или чему-нибудь, чему смогут научиться посетители, для какой возрастной категории предназначается и т. д.',
         tags: ['Спортивные соревнования', 'Региональный уровень']
@@ -239,12 +317,90 @@ export let disciplines =[
         organizerLinks: [
           {
             title: 'Общество ТОЛК',
-            link: 'http://ru.ethnosport.org/',
-          },
+            link: 'http://ru.ethnosport.org/'
+          }
         ],
         desc: 'посвящена ли программа кому-нибудь или чему-нибудь, чему смогут научиться посетители, для какой возрастной категории предназначается и т. д.',
         tags: ['Региональный уровень']
-      },
+      }
     ],
+    photos: [
+      {
+        id: '1',
+        description: 'Малые Корелы',
+        photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg'
+      },
+      {
+        id: '2',
+        description: 'Спасо-Бородинский монастырь',
+        photoUrl: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg'
+      },
+      {
+        id: '3',
+        description: 'Крутицкий теремок',
+        photoUrl: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg'
+      },
+      {
+        id: '4',
+        description: 'Пензенское отделение федерации',
+        photoUrl: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg'
+      },
+      {
+        id: '5',
+        description: '',
+        photoUrl: 'https://voopik.ru/upload/iblock/614/3110-1.jpg'
+      },
+      {
+        id: '6',
+        description: 'Малые Корелы',
+        photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg'
+      },
+      {
+        id: '7',
+        description: 'Спасо-Бородинский монастырь',
+        photoUrl: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg'
+      },
+      {
+        id: '8',
+        description: 'Крутицкий теремок',
+        photoUrl: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg'
+      },
+      {
+        id: '9',
+        description: 'Пензенское отделение федерации',
+        photoUrl: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg'
+      },
+      {
+        id: '10',
+        description: '',
+        photoUrl: 'https://voopik.ru/upload/iblock/614/3110-1.jpg'
+      },
+      {
+        id: '11',
+        description: '',
+        photoUrl: 'https://voopik.ru/upload/iblock/614/3110-1.jpg'
+      },
+      {
+        id: '12',
+        description: 'Малые Корелы',
+        photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg'
+      }
+    ],
+    videos: [
+      {
+        id: '1',
+        title: 'Атмановские кулачки',
+        url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+        thumbnail: 'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+        date: '2022.12.23'
+      },
+      {
+        id: '2',
+        title: 'Сколот - Атмановские Кулачки (Live "Наследие 2022")',
+        url: 'https://vk.com/video_ext.php?oid=-973262&id=456239864&hd=2',
+        thumbnail: '',
+        date: '2020.07.22'
+      },
+    ]
   }
 ]

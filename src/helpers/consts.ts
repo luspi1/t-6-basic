@@ -1,4 +1,5 @@
 export enum ReducerPath {
+	Home = 'home/api',
 	Regions = 'regions/api',
 	Users = 'users/api',
 	Ethnosport = 'ethnosport/api',
@@ -23,3 +24,4 @@ export enum DisplayBreakpoints {
 }
 
 export const BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:4020/api/v1'
+export const HOME_URL = 'https://t6api.npotau.ru'

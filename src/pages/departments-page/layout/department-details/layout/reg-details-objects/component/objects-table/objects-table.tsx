@@ -1,7 +1,6 @@
-import { type ObjectItem } from 'src/types/objects'
-
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { type ObjectItem } from 'src/types/objects'
 
 import { CustomTable } from 'src/components/custom-table/custom-table'
 import { TableSearch } from 'src/modules/table-search/table-search'

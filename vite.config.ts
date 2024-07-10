@@ -9,4 +9,14 @@ export default defineConfig({
 			src: '/src',
 		},
 	},
+	server: {
+		host: '192.168.1.241',
+		port: 5666,
+		open: true,
+		cors: {
+			origin: '*',
+			methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+			allowedHeaders: ['Content-Type', 'Authorization'],
+		},
+	},
 })

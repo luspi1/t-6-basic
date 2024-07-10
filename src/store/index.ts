@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
 
 import { breadCrumbsReducer } from 'src/modules/bread-crumbs/store/bread-crumbs.slice'
+import { homeApi } from 'src/store/home/home.api'
 import { usersApi } from 'src/store/users/users.api'
 import { regionsApi } from 'src/store/regions/regions.api'
 import { newsApi } from 'src/store/news/news.api'
@@ -20,6 +21,7 @@ export const store = configureStore({
 		[eventsApi.reducerPath]: eventsApi.reducer,
 		[ethnosportApi.reducerPath]: ethnosportApi.reducer,
 		[disciplinesApi.reducerPath]: disciplinesApi.reducer,
+		[homeApi.reducerPath]: homeApi.reducer,
 	},
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware({ serializableCheck: false }).concat(
@@ -29,6 +31,7 @@ export const store = configureStore({
 			eventsApi.middleware,
 			ethnosportApi.middleware,
 			disciplinesApi.middleware,
+			homeApi.middleware,
 		),
 })
 

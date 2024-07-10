@@ -12,7 +12,7 @@ export const homeApi = createApi({
 	endpoints: (build) => ({
 		getHomeRegions: build.query<HomeRegion[], null>({
 			query: () => ({
-				url: `regions/list`,
+				url: `regions/list/`,
 			}),
 		}),
 	}),

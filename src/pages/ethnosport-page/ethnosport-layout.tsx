@@ -40,9 +40,7 @@ export const EthnosportLayout: FC = () => {
 					<div>
 						<SideMenu
 							className={styles.ethnosportSideMenu}
-							sideItems={
-								[{ title: 'Об этноспорте', link: '/ethnosport' }, ...directionsMenuItems] ?? []
-							}
+							sideItems={[{ title: 'Об этноспорте', link: '/ethnosport' }, ...directionsMenuItems]}
 						/>
 						<AsideDocuments documents={ethnosportPageDocuments} />
 					</div>

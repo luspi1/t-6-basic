@@ -4,12 +4,15 @@ import { Swiper, type SwiperRef, SwiperSlide } from 'swiper/react'
 
 import { SliderBtns } from 'src/components/slider-btns/slider-btns'
 import { Container } from 'src/UI/Container/Container'
+import { useGetHomeEthnoQuery } from 'src/store/home/home.api'
 
-import { EthnosportSliderItems, ethnosportSliderOptions } from './consts'
+import { ethnosportSliderOptions } from './consts'
 
 import styles from './index.module.scss'
 
 export const EthnosportSection: FC = () => {
+	const { data: ethnosportData } = useGetHomeEthnoQuery(null)
+
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 
 	return (
@@ -19,14 +22,14 @@ export const EthnosportSection: FC = () => {
 			</Container>
 			<Container $margin='0 auto 28px auto' $width='1300px'>
 				<Swiper className={styles.ethnosportSlider} {...ethnosportSliderOptions} ref={swiperRef}>
-					{EthnosportSliderItems?.map((slideItem, idx) => (
+					{ethnosportData?.map((slideItem, idx) => (
 						<SwiperSlide key={idx}>
 							<div className={styles.slideItem}>
 								<div className={styles.slideImgWrapper}>
-									<img src={slideItem.img} alt={slideItem.title} />
+									<img src={slideItem.image_url} alt={slideItem.name} />
 								</div>
 								<div className={styles.slideTitleWrapper}>
-									<a href='#'>{slideItem.title}</a>
+									<a href='#'>{slideItem.name}</a>
 								</div>
 							</div>
 						</SwiperSlide>

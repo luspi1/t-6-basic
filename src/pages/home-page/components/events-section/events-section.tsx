@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { Container } from 'src/UI/Container/Container'
-import { EventsItems } from './consts'
-import { EventsList } from 'src/pages/home-page/components/events-section/components/events-list/events-list'
+import { HomeEventsList } from 'src/pages/home-page/components/events-section/components/home-events-list/home-events-list'
 
 import styles from './index.module.scss'
 
@@ -14,7 +13,7 @@ export const EventsSection: FC = () => {
 		<section className={styles.eventsSection}>
 			<Container>
 				<h4>События</h4>
-				<EventsList eventsItems={EventsItems} />
+				<HomeEventsList />
 				<Link className={styles.allEventsLink} to={AppRoute.Events}>
 					Все события
 				</Link>

@@ -4,6 +4,9 @@ import { type ShortDocument } from 'src/types/document'
 import { type SelOption } from 'src/types/select'
 import { type DateTimeFormatOptions } from 'src/types/date'
 
+import { format } from 'date-fns'
+import { ru } from 'date-fns/locale'
+
 import { Link } from 'react-router-dom'
 
 // утилитарная функция для кастомного селекта
@@ -124,4 +127,21 @@ export const defineFileFormat = (fileName: string) => {
 	const formatFileArr = fileName.split('.')
 	if (formatFileArr.length < 2) return ''
 	return formatFileArr[formatFileArr.length - 1]
+}
+
+// функция форматирования даты с локализацией
+export const mainFormatDate = (date: Date, dateFormat = 'dd MMMM yyyy'): string => {
+	return format(date, dateFormat, { locale: ru })
+}
+
+export const formatDateRange = ([startDate, endDate]: [Date, Date]): string => {
+	const startMonth = format(startDate, 'MMMM', { locale: ru })
+	const endMonth = format(endDate, 'MMMM', { locale: ru })
+	const startYear = format(startDate, 'yyyy', { locale: ru })
+	const endYear = format(endDate, 'yyyy', { locale: ru })
+
+	if (startMonth === endMonth && startYear === endYear) {
+		return `${format(startDate, 'd', { locale: ru })} — ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
+	}
+	return `${format(startDate, 'd MMMM yyyy', { locale: ru })} — ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
 }

@@ -9,9 +9,9 @@ import { useDebounce } from 'src/hooks/debounce/debounce'
 import { MainSelect } from 'src/UI/MainSelect/MainSelect'
 import { Loader } from 'src/components/loader/loader'
 import { useGetAllUsersQuery } from 'src/store/users/users.api'
+import { customFormatDate } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
-import { customFormatDate } from 'src/helpers/utils'
 export const UsersTable = () => {
 	const [searchUser, setSearchUser] = useState<string>('')
 	const debouncedSearch = useDebounce(searchUser)

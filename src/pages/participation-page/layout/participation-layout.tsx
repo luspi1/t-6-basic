@@ -12,7 +12,7 @@ export const ParticipationLayout: FC = () => {
 				<BreadCrumbs
 					crumbsLinksMap={[
 						{
-							title: 'Список пользователей',
+							title: 'Все участники',
 							link: 'users-list',
 						},
 					]}

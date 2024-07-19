@@ -8,9 +8,9 @@ export const UsersList: FC = () => {
 	return (
 		<PageContent $padding='30px 30px 300px 30px'>
 			<Helmet>
-				<title>Список пользователей</title>
+				<title>Все участники</title>
 			</Helmet>
-			<h2>Список пользователей</h2>
+			<h2>Все участники</h2>
 			<UsersTable />
 			<Pagination pagesCount={7} activePage={2} />
 		</PageContent>

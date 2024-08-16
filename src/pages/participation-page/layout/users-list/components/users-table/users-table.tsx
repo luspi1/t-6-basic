@@ -6,10 +6,9 @@ import { Link } from 'react-router-dom'
 import { CustomTable } from 'src/components/custom-table/custom-table'
 import { TableSearch } from 'src/modules/table-search/table-search'
 import { useDebounce } from 'src/hooks/debounce/debounce'
-import { MainSelect } from 'src/UI/MainSelect/MainSelect'
 import { Loader } from 'src/components/loader/loader'
 import { useGetAllUsersQuery } from 'src/store/users/users.api'
-import { calculateAge, customFormatDate } from 'src/helpers/utils'
+import { calculateAge } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
 export const UsersTable = () => {

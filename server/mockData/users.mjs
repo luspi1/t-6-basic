@@ -2,10 +2,14 @@ export let users = [
 	{
 		id: '1',
 		avatar: 'https://opmosreg.ru/upload/iblock/707/707b3d25dad112e9474ed24a41258eca.jpg',
+		region: 'Татарстан, республика',
+		mainGroup: 'Васильковые Васильки Васильево',
+		rating: '340',
 		fullname: 'Ахмадиев Фаризулла Мухаммадиевич',
 		statuses: ['Руководитель отделения', 'Член правления ВООПИК'],
 		mainStatus: 'Первый статус',
-		mainDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
+		mainDesc:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 		birthday: '1981.10.17',
 		position: 'Руководитель Отделения',
 		group: 'Правление',
@@ -18,30 +22,30 @@ export let users = [
 		relatedObjects: [
 			{
 				id: '1',
-				title: 'Один какой-то Объект Lorem ipsum dolor sit amet, elit. Inventore, repellat.'
+				title: 'Один какой-то Объект Lorem ipsum dolor sit amet, elit. Inventore, repellat.',
 			},
 			{
 				id: '2',
-				title: 'Один какой-то Объект adipisicing elit. Inventore, repellat.'
+				title: 'Один какой-то Объект adipisicing elit. Inventore, repellat.',
 			},
 			{
 				id: '3',
-				title: 'Один какой-то Объект Inventore, repellat.'
-			}
+				title: 'Один какой-то Объект Inventore, repellat.',
+			},
 		],
 		relatedProjects: [
 			{
 				id: '1',
-				title: 'Один какой-то Проект Lorem ipsum dolor sit amet, elit. Inventore, repellat.'
+				title: 'Один какой-то Проект Lorem ipsum dolor sit amet, elit. Inventore, repellat.',
 			},
 			{
 				id: '2',
-				title: 'Один какой-то Проект adipisicing elit. Inventore, repellat.'
+				title: 'Один какой-то Проект adipisicing elit. Inventore, repellat.',
 			},
 			{
 				id: '3',
-				title: 'Один какой-то Проект Inventore, repellat.'
-			}
+				title: 'Один какой-то Проект Inventore, repellat.',
+			},
 		],
 		relatedLinks: [
 			{
@@ -50,7 +54,7 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				date: '26 марта 2023 года',
-				source: 'журнал «Прораб Перестройки», стр. 21-24'
+				source: 'журнал «Прораб Перестройки», стр. 21-24',
 			},
 
 			{
@@ -59,7 +63,7 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				date: '26 марта 2023 года',
-				source: 'Интернет-портал «Наш Край Тамбов»'
+				source: 'Интернет-портал «Наш Край Тамбов»',
 			},
 
 			{
@@ -68,8 +72,8 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				date: '26 марта 2023 года',
-				source: 'Интернет-портал «Наш Край Тамбов»'
-			}
+				source: 'Интернет-портал «Наш Край Тамбов»',
+			},
 		],
 		documents: [
 			{
@@ -78,7 +82,7 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				type: 'pdf',
-				size: '68.5 Кбайт'
+				size: '68.5 Кбайт',
 			},
 
 			{
@@ -87,7 +91,7 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				type: 'pdf',
-				size: '68.5 Кбайт'
+				size: '68.5 Кбайт',
 			},
 
 			{
@@ -96,8 +100,8 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				type: 'doc',
-				size: '68.5 Кбайт'
-			}
+				size: '68.5 Кбайт',
+			},
 		],
 		groups: [
 			{
@@ -107,7 +111,7 @@ export let users = [
 				title: 'Клуб национальной культуры «Татар Батыр»',
 				role: 'Руководитель',
 				entryDate: '1999.03.24',
-				status: 'Первый статус'
+				status: 'Первый статус',
 			},
 			{
 				id: '2',
@@ -116,7 +120,7 @@ export let users = [
 				title: 'Санкт-Петербург',
 				role: 'Участник',
 				entryDate: '2005.02.25',
-				status: 'Второй статус'
+				status: 'Второй статус',
 			},
 			{
 				id: '3',
@@ -125,8 +129,8 @@ export let users = [
 				title: 'Московская область',
 				role: 'Участник',
 				entryDate: '2019.08.28',
-				status: 'Третий статус'
-			}
+				status: 'Третий статус',
+			},
 		],
 		events: [
 			{
@@ -136,7 +140,7 @@ export let users = [
 				partGroup: 'Клуб «Археоптерикс»',
 				location: 'Армейский полигон в/ч 02590-342',
 				dates: ['2022.03.24', '2022.03.26'],
-				type: 'Посетитель'
+				type: 'Посетитель',
 			},
 			{
 				id: '2',
@@ -145,7 +149,7 @@ export let users = [
 				partGroup: 'нет',
 				location: 'с. Куркачи Высокогорского р-на',
 				dates: ['2022.05.11', '2022.05.20'],
-				type: 'Участник'
+				type: 'Участник',
 			},
 			{
 				id: '3',
@@ -154,8 +158,8 @@ export let users = [
 				partGroup: 'ВФК «Третья стража»',
 				location: 'пгт Винтерфелльск-Заволжскокамский',
 				dates: ['2022.02.11', '2022.02.13'],
-				type: 'Организатор'
-			}
+				type: 'Организатор',
+			},
 		],
 		projects: [
 			{
@@ -163,22 +167,22 @@ export let users = [
 				title: 'Официальное наименование Проекта',
 				type: 'Первый тип',
 				status: 'Закрыт',
-				region: 'Санкт-Петербург'
+				region: 'Санкт-Петербург',
 			},
 			{
 				id: '2',
 				title: 'проект ipsum dolor sit amet',
 				type: 'Первый тип',
 				status: 'Открыт',
-				region: 'Ростовская обл.'
+				region: 'Ростовская обл.',
 			},
 			{
 				id: '3',
 				title: 'проект №3',
 				type: 'Второй тип',
 				status: 'Перекрыт',
-				region: 'Респ. Татарстан'
-			}
+				region: 'Респ. Татарстан',
+			},
 		],
 		objects: [
 			{
@@ -189,7 +193,7 @@ export let users = [
 				type: 'Первый тип',
 				registryNumber: '342 : 0099 : 4432 : А2',
 				status: 'Закрыт',
-				region: 'Санкт-Петербург'
+				region: 'Санкт-Петербург',
 			},
 			{
 				id: '2',
@@ -199,7 +203,7 @@ export let users = [
 				type: 'Первый тип',
 				registryNumber: '342 : 0099 : 4432 : А2',
 				status: 'Открыт',
-				region: 'Ростовская обл.'
+				region: 'Ростовская обл.',
 			},
 			{
 				id: '3',
@@ -209,7 +213,7 @@ export let users = [
 				type: 'Второй тип',
 				registryNumber: '342 : 0099 : 4432 : А2',
 				status: 'Перекрыт',
-				region: 'Респ. Татарстан'
+				region: 'Респ. Татарстан',
 			},
 		],
 		photos: [
@@ -217,31 +221,31 @@ export let users = [
 				id: '1',
 				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				date: '2022.12.23',
-				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg'
+				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 			},
 			{
 				id: '2',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
 				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg'
+				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
 				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg'
+				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				date: '2018.05.01',
-				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg'
+				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				date: '2011.01.05',
-				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg'
+				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 		],
 		videos: [
@@ -249,41 +253,45 @@ export let users = [
 				id: '1',
 				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				date: '2022.12.23',
-				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg'
+				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 			},
 			{
 				id: '2',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
 				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg'
+				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
 				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg'
+				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				date: '2018.05.01',
-				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg'
+				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				date: '2011.01.05',
-				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg'
+				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
-		]
+		],
 	},
 	{
 		id: '2',
 		avatar: 'https://opmosreg.ru/upload/iblock/b49/b49cb844ff7b12fcba676470aa47864c.jpeg',
+		region: 'Санкт-Петербург',
+		mainGroup: 'нет',
+		rating: '340',
 		fullname: 'Кленовичичевский Богдан Архедупсович',
 		statuses: ['Руководитель отделения', 'Член правления ВООПИК'],
 		mainStatus: 'Второй статус',
-		mainDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
+		mainDesc:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 		birthday: '1977.09.11',
 		position: 'Секретарь Отделения',
 		group: 'Правление',
@@ -296,30 +304,30 @@ export let users = [
 		relatedObjects: [
 			{
 				id: '1',
-				title: 'Один какой-то Объект Lorem ipsum dolor sit amet, elit. Inventore, repellat.'
+				title: 'Один какой-то Объект Lorem ipsum dolor sit amet, elit. Inventore, repellat.',
 			},
 			{
 				id: '2',
-				title: 'Один какой-то Объект adipisicing elit. Inventore, repellat.'
+				title: 'Один какой-то Объект adipisicing elit. Inventore, repellat.',
 			},
 			{
 				id: '3',
-				title: 'Один какой-то Объект Inventore, repellat.'
-			}
+				title: 'Один какой-то Объект Inventore, repellat.',
+			},
 		],
 		relatedProjects: [
 			{
 				id: '1',
-				title: 'Один какой-то Проект Lorem ipsum dolor sit amet, elit. Inventore, repellat.'
+				title: 'Один какой-то Проект Lorem ipsum dolor sit amet, elit. Inventore, repellat.',
 			},
 			{
 				id: '2',
-				title: 'Один какой-то Проект adipisicing elit. Inventore, repellat.'
+				title: 'Один какой-то Проект adipisicing elit. Inventore, repellat.',
 			},
 			{
 				id: '3',
-				title: 'Один какой-то Проект Inventore, repellat.'
-			}
+				title: 'Один какой-то Проект Inventore, repellat.',
+			},
 		],
 		relatedLinks: [
 			{
@@ -328,7 +336,7 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				date: '26 марта 2023 года',
-				source: 'журнал «Прораб Перестройки», стр. 21-24'
+				source: 'журнал «Прораб Перестройки», стр. 21-24',
 			},
 
 			{
@@ -337,7 +345,7 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				date: '26 марта 2023 года',
-				source: 'Интернет-портал «Наш Край Тамбов»'
+				source: 'Интернет-портал «Наш Край Тамбов»',
 			},
 
 			{
@@ -346,8 +354,8 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				date: '26 марта 2023 года',
-				source: 'Интернет-портал «Наш Край Тамбов»'
-			}
+				source: 'Интернет-портал «Наш Край Тамбов»',
+			},
 		],
 		documents: [
 			{
@@ -356,7 +364,7 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				type: 'pdf',
-				size: '68.5 Кбайт'
+				size: '68.5 Кбайт',
 			},
 
 			{
@@ -365,7 +373,7 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				type: 'pdf',
-				size: '68.5 Кбайт'
+				size: '68.5 Кбайт',
 			},
 
 			{
@@ -374,8 +382,8 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				type: 'doc',
-				size: '68.5 Кбайт'
-			}
+				size: '68.5 Кбайт',
+			},
 		],
 		groups: [
 			{
@@ -385,7 +393,7 @@ export let users = [
 				title: 'Санкт-Петербург',
 				role: 'Участник',
 				entryDate: '2005.02.25',
-				status: 'Второй статус'
+				status: 'Второй статус',
 			},
 			{
 				id: '3',
@@ -394,8 +402,8 @@ export let users = [
 				title: 'Московская область',
 				role: 'Участник',
 				entryDate: '2019.08.28',
-				status: 'Третий статус'
-			}
+				status: 'Третий статус',
+			},
 		],
 		events: [
 			{
@@ -405,7 +413,7 @@ export let users = [
 				partGroup: 'нет',
 				location: 'с. Куркачи Высокогорского р-на',
 				dates: ['2022.05.11', '2022.05.20'],
-				type: 'Участник'
+				type: 'Участник',
 			},
 			{
 				id: '3',
@@ -414,8 +422,8 @@ export let users = [
 				partGroup: 'ВФК «Третья стража»',
 				location: 'пгт Винтерфелльск-Заволжскокамский',
 				dates: ['2022.02.11', '2022.02.13'],
-				type: 'Организатор'
-			}
+				type: 'Организатор',
+			},
 		],
 		projects: [
 			{
@@ -423,15 +431,15 @@ export let users = [
 				title: 'проект ipsum dolor sit amet',
 				type: 'Первый тип',
 				status: 'Открыт',
-				region: 'Ростовская обл.'
+				region: 'Ростовская обл.',
 			},
 			{
 				id: '3',
 				title: 'проект №3',
 				type: 'Второй тип',
 				status: 'Перекрыт',
-				region: 'Респ. Татарстан'
-			}
+				region: 'Респ. Татарстан',
+			},
 		],
 		objects: [
 			{
@@ -442,7 +450,7 @@ export let users = [
 				type: 'Первый тип',
 				registryNumber: '342 : 0099 : 4432 : А2',
 				status: 'Открыт',
-				region: 'Ростовская обл.'
+				region: 'Ростовская обл.',
 			},
 			{
 				id: '3',
@@ -452,7 +460,7 @@ export let users = [
 				type: 'Второй тип',
 				registryNumber: '342 : 0099 : 4432 : А2',
 				status: 'Перекрыт',
-				region: 'Респ. Татарстан'
+				region: 'Респ. Татарстан',
 			},
 		],
 		photos: [
@@ -460,31 +468,31 @@ export let users = [
 				id: '1',
 				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				date: '2022.12.23',
-				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg'
+				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 			},
 			{
 				id: '2',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
 				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg'
+				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
 				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg'
+				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				date: '2018.05.01',
-				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg'
+				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				date: '2011.01.05',
-				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg'
+				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 		],
 		videos: [
@@ -492,41 +500,45 @@ export let users = [
 				id: '1',
 				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				date: '2022.12.23',
-				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg'
+				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 			},
 			{
 				id: '2',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
 				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg'
+				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
 				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg'
+				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				date: '2018.05.01',
-				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg'
+				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				date: '2011.01.05',
-				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg'
+				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
-		]
+		],
 	},
 	{
 		id: '3',
 		avatar: 'https://opmosreg.ru/upload/iblock/3d6/3d666e096b6b5c70911df0b8a6b6e558.jpg',
+		region: 'Московская область',
+		mainGroup: 'КК «К-9»',
+		rating: '340',
 		fullname: 'Нифаригуллина Мавлюда Талгатовна',
 		statuses: ['Руководитель отделения', 'Член правления ВООПИК'],
 		mainStatus: 'Третий статус',
-		mainDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
+		mainDesc:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 		birthday: '1992.08.11',
 		position: 'Участник',
 		group: 'Участники',
@@ -539,30 +551,30 @@ export let users = [
 		relatedObjects: [
 			{
 				id: '1',
-				title: 'Один какой-то Объект Lorem ipsum dolor sit amet, elit. Inventore, repellat.'
+				title: 'Один какой-то Объект Lorem ipsum dolor sit amet, elit. Inventore, repellat.',
 			},
 			{
 				id: '2',
-				title: 'Один какой-то Объект adipisicing elit. Inventore, repellat.'
+				title: 'Один какой-то Объект adipisicing elit. Inventore, repellat.',
 			},
 			{
 				id: '3',
-				title: 'Один какой-то Объект Inventore, repellat.'
-			}
+				title: 'Один какой-то Объект Inventore, repellat.',
+			},
 		],
 		relatedProjects: [
 			{
 				id: '1',
-				title: 'Один какой-то Проект Lorem ipsum dolor sit amet, elit. Inventore, repellat.'
+				title: 'Один какой-то Проект Lorem ipsum dolor sit amet, elit. Inventore, repellat.',
 			},
 			{
 				id: '2',
-				title: 'Один какой-то Проект adipisicing elit. Inventore, repellat.'
+				title: 'Один какой-то Проект adipisicing elit. Inventore, repellat.',
 			},
 			{
 				id: '3',
-				title: 'Один какой-то Проект Inventore, repellat.'
-			}
+				title: 'Один какой-то Проект Inventore, repellat.',
+			},
 		],
 		relatedLinks: [
 			{
@@ -571,7 +583,7 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				date: '26 марта 2023 года',
-				source: 'журнал «Прораб Перестройки», стр. 21-24'
+				source: 'журнал «Прораб Перестройки», стр. 21-24',
 			},
 
 			{
@@ -580,7 +592,7 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				date: '26 марта 2023 года',
-				source: 'Интернет-портал «Наш Край Тамбов»'
+				source: 'Интернет-портал «Наш Край Тамбов»',
 			},
 
 			{
@@ -589,8 +601,8 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				date: '26 марта 2023 года',
-				source: 'Интернет-портал «Наш Край Тамбов»'
-			}
+				source: 'Интернет-портал «Наш Край Тамбов»',
+			},
 		],
 		documents: [
 			{
@@ -599,7 +611,7 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				type: 'pdf',
-				size: '68.5 Кбайт'
+				size: '68.5 Кбайт',
 			},
 
 			{
@@ -608,7 +620,7 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				type: 'pdf',
-				size: '68.5 Кбайт'
+				size: '68.5 Кбайт',
 			},
 
 			{
@@ -617,8 +629,8 @@ export let users = [
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.',
 				link: '#',
 				type: 'doc',
-				size: '68.5 Кбайт'
-			}
+				size: '68.5 Кбайт',
+			},
 		],
 		groups: [
 			{
@@ -628,8 +640,8 @@ export let users = [
 				title: 'Московская область',
 				role: 'Участник',
 				entryDate: '2019.08.28',
-				status: 'Третий статус'
-			}
+				status: 'Третий статус',
+			},
 		],
 		events: [
 			{
@@ -639,8 +651,8 @@ export let users = [
 				partGroup: 'ВФК «Третья стража»',
 				location: 'пгт Винтерфелльск-Заволжскокамский',
 				dates: ['2022.02.11', '2022.02.13'],
-				type: 'Организатор'
-			}
+				type: 'Организатор',
+			},
 		],
 		projects: [
 			{
@@ -648,8 +660,8 @@ export let users = [
 				title: 'проект №3',
 				type: 'Второй тип',
 				status: 'Перекрыт',
-				region: 'Респ. Татарстан'
-			}
+				region: 'Респ. Татарстан',
+			},
 		],
 		objects: [
 			{
@@ -660,7 +672,7 @@ export let users = [
 				type: 'Второй тип',
 				registryNumber: '342 : 0099 : 4432 : А2',
 				status: 'Перекрыт',
-				region: 'Респ. Татарстан'
+				region: 'Респ. Татарстан',
 			},
 		],
 		photos: [
@@ -668,31 +680,31 @@ export let users = [
 				id: '1',
 				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				date: '2022.12.23',
-				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg'
+				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 			},
 			{
 				id: '2',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
 				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg'
+				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
 				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg'
+				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				date: '2018.05.01',
-				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg'
+				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				date: '2011.01.05',
-				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg'
+				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 		],
 		videos: [
@@ -700,33 +712,32 @@ export let users = [
 				id: '1',
 				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				date: '2022.12.23',
-				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg'
+				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 			},
 			{
 				id: '2',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
 				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg'
+				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
 				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg'
+				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				date: '2018.05.01',
-				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg'
+				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				date: '2011.01.05',
-				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg'
+				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
-		]
-	}
-
+		],
+	},
 ]

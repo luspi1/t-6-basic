@@ -1,9 +1,9 @@
-import React, { type FC } from 'react'
+import React, { type FC, type ReactNode } from 'react'
 
 import styled from 'styled-components'
 
 type CustomTextProps = {
-	children: string
+	children: string | ReactNode
 	className?: string
 	$margin?: string
 	$padding?: string

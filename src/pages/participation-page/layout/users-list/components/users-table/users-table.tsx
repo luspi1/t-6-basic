@@ -9,7 +9,7 @@ import { useDebounce } from 'src/hooks/debounce/debounce'
 import { MainSelect } from 'src/UI/MainSelect/MainSelect'
 import { Loader } from 'src/components/loader/loader'
 import { useGetAllUsersQuery } from 'src/store/users/users.api'
-import { customFormatDate } from 'src/helpers/utils'
+import { calculateAge, customFormatDate } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
 export const UsersTable = () => {
@@ -22,29 +22,31 @@ export const UsersTable = () => {
 	}
 	const tableTitles = [
 		'№',
+		'Регион',
+		'Основная группа',
 		<TableSearch
 			wrapperClassName={styles.usersSearchWrapper}
 			key={1}
 			handleSearch={searchUsers}
-			placeholder='Поиск по фамилии Персоны'
+			placeholder='Поиск по имени, фамилии, прозвищу'
 		/>,
-		'Должность',
-		'Группа',
-		'Дата регистрации',
-		<MainSelect key={5} items={[{ label: 'Статус Персоны', value: '0' }]} />,
+		'Возраст',
+		'Всего групп',
+		'Рейтинг',
 	]
 
 	const formatUsersTableData = (usersData: UserItem[]) => {
 		return usersData.map((userEl, idx) => {
 			return [
 				String(idx + 1),
+				userEl.region,
+				userEl.mainGroup,
 				<Link to={userEl.id} key={userEl.id}>
 					{userEl.fullname}
 				</Link>,
-				userEl.position,
-				userEl.group,
-				customFormatDate(userEl.regDate),
-				userEl.mainStatus,
+				calculateAge(userEl.regDate, true),
+				userEl.groups?.length,
+				userEl.rating,
 			]
 		})
 	}

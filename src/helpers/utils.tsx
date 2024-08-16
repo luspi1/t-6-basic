@@ -41,7 +41,7 @@ export const customFormatDate = (
 
 // функция определения возраста по дате рождения
 
-export const calculateAge = (birthDate?: Date | string) => {
+export const calculateAge = (birthDate?: Date | string, isDateOnly?: boolean) => {
 	if (!birthDate) return null
 	const now: Date = new Date()
 	let parsedBirthDate: Date
@@ -57,6 +57,9 @@ export const calculateAge = (birthDate?: Date | string) => {
 	const ageDate: Date = new Date(diff)
 	const age = Math.abs(ageDate.getUTCFullYear() - 1970)
 	let ageString: string
+
+	if (isDateOnly) return age.toString()
+
 	if (age % 10 === 1 && age !== 11) {
 		ageString = age.toString() + ' год'
 	} else if (age % 10 >= 2 && age % 10 <= 4 && (age < 10 || age > 20)) {

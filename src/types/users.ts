@@ -1,5 +1,6 @@
 import { type ShortDocument } from 'src/types/document'
 import { type RelatedLink } from 'src/types/global'
+import { GroupItem } from 'src/types/groups'
 
 export type UserLink = {
 	id: string
@@ -12,6 +13,9 @@ export type UserLink = {
 export type UserItem = {
 	id: string
 	avatar: string
+	region: string
+	mainGroup: string
+	rating: string
 	fullname: string
 	statuses: string[]
 	mainStatus: string
@@ -29,4 +33,5 @@ export type UserItem = {
 	relatedProjects: RelatedLink[]
 	relatedLinks: UserLink[]
 	documents: ShortDocument[]
+	groups: GroupItem[]
 }

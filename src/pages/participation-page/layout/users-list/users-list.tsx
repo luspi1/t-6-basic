@@ -10,7 +10,7 @@ export const UsersList: FC = () => {
 	const { data: usersList } = useGetAllUsersQuery('')
 
 	return (
-		<PageContent $padding='30px 30px 300px 30px'>
+		<PageContent $padding='30px 30px 300px 30px' $maxWidth='1220px'>
 			<Helmet>
 				<title>Все участники</title>
 			</Helmet>

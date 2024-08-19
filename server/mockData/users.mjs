@@ -19,6 +19,13 @@ export let users = [
 		phones: ['+7 (432) 900-00-00', '+7 (917) 310-09-08'],
 		email: 'tatartstan@voopik.ru',
 		website: 'www.example.com/konstantinopolskiy',
+		regalia: [
+			'Кандидат исторических наук',
+			'кавалер ордена «12 лет без отпуска»',
+			'мастер спорта по рыбной ловле',
+			'заслуженный краевед Тамбовской области',
+			'еще какая-то полезная информация о достижениях',
+		],
 		relatedObjects: [
 			{
 				id: '1',
@@ -301,6 +308,11 @@ export let users = [
 		phones: ['+7 (432) 923-11-18', '+7 (917) 410-05-08'],
 		email: 'bogdan@voopik.ru',
 		website: 'www.example.com/arch',
+		regalia: [
+			'Кандидат исторических наук',
+			'мастер спорта по рыбной ловле',
+			'еще какая-то полезная информация о достижениях',
+		],
 		relatedObjects: [
 			{
 				id: '1',
@@ -548,6 +560,10 @@ export let users = [
 		phones: ['+7 (432) 900-01-01', '+7 (917) 210-03-08'],
 		email: 'mavluda@voopik.ru',
 		website: 'www.example.com/mavluda',
+		regalia: [
+			'заслуженный краевед Тамбовской области',
+			'еще какая-то полезная информация о достижениях',
+		],
 		relatedObjects: [
 			{
 				id: '1',

@@ -10,6 +10,8 @@ type CustomTextProps = {
 	$fontSize?: string
 	$fontWeight?: string
 	$lineHeight?: string
+	$fontStyle?: string
+	$maxWidth?: string
 } & React.CSSProperties
 
 const StyledCustomText = styled.p<CustomTextProps>`
@@ -18,6 +20,8 @@ const StyledCustomText = styled.p<CustomTextProps>`
 	font-size: ${({ $fontSize }) => $fontSize ?? '14px'};
 	font-weight: ${({ $fontWeight }) => $fontWeight ?? '400'};
 	line-height: ${({ $lineHeight }) => $lineHeight};
+	font-style: ${({ $fontStyle }) => $fontStyle ?? 'normal'};
+	max-width: ${({ $maxWidth }) => $maxWidth ?? 'auto'};
 `
 
 export const CustomText: FC<CustomTextProps> = ({ children, className, ...props }) => {

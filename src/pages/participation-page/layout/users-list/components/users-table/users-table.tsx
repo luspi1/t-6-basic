@@ -8,9 +8,10 @@ import { TableSearch } from 'src/modules/table-search/table-search'
 import { useDebounce } from 'src/hooks/debounce/debounce'
 import { Loader } from 'src/components/loader/loader'
 import { useGetAllUsersQuery } from 'src/store/users/users.api'
-import { calculateAge } from 'src/helpers/utils'
+import { calculateAge, getCorrectWordForm } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
+
 export const UsersTable = () => {
 	const [searchUser, setSearchUser] = useState<string>('')
 	const debouncedSearch = useDebounce(searchUser)
@@ -45,7 +46,10 @@ export const UsersTable = () => {
 				</Link>,
 				calculateAge(userEl.regDate, true),
 				userEl.groups?.length,
-				userEl.rating,
+				<div className={styles.ratingCell} key={6}>
+					<span>{userEl.rating}</span>(
+					{getCorrectWordForm(userEl?.events.length, ['событие', 'события', 'событий'])})
+				</div>,
 			]
 		})
 	}

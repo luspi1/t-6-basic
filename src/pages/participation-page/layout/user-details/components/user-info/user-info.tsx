@@ -6,6 +6,7 @@ import { InfoRow } from 'src/UI/InfoRow/InfoRow'
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 
 import styles from './index.module.scss'
+import { CustomText } from 'src/components/custom-text/custom-text'
 
 export const UserInfo = () => {
 	const { id } = useParams()
@@ -26,7 +27,6 @@ export const UserInfo = () => {
 					<img src={userData?.avatar} alt={userData?.fullname} />
 				</div>
 				<div className={styles.infoBlock}>
-					<p>{userData?.mainDesc}</p>
 					<InfoRow
 						title='Дата рождения и возраст:'
 						label={
@@ -53,8 +53,12 @@ export const UserInfo = () => {
 					/>
 					<InfoRow
 						title='Сайт / социальная сеть:'
+						margin='0 0 20px 0'
 						label={<a href={userData?.website}>{userData?.website}</a>}
 					/>
+					<CustomText $fontSize='16px' $fontStyle='italic' $lineHeight='1.5' $maxWidth='950px'>
+						{userData?.mainDesc}
+					</CustomText>
 				</div>
 			</div>
 		</div>

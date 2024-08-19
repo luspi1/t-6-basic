@@ -17,7 +17,11 @@ export const UserDetailsLayout: FC = () => {
 
 	if (matchesLocation) return <Navigate to={AppRoute.UserInfo} replace />
 	return (
-		<PageContent className={styles.userDetailsContent} $padding='30px 30px 40px 30px'>
+		<PageContent
+			className={styles.userDetailsContent}
+			$padding='30px 30px 40px 30px'
+			$maxWidth='1220px'
+		>
 			<Helmet>
 				<title>Информация о пользователе</title>
 			</Helmet>
@@ -26,7 +30,7 @@ export const UserDetailsLayout: FC = () => {
 			<TabNav navItems={UserInfoNavItems} />
 			<Outlet />
 			<Link className={styles.usersListLink} to={`/${AppRoute.Users}`}>
-				На страницу списка Пользователей
+				На страницу списка участников
 			</Link>
 		</PageContent>
 	)

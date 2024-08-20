@@ -6,4 +6,9 @@ export type GroupItem = {
 	role: string
 	entryDate: string
 	status: string
+	category: string
+	participantsCount: number
+	subgroupsCount: number
+	eventsCount: number
+	rating: string
 }

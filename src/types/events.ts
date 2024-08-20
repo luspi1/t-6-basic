@@ -12,4 +12,5 @@ export type EventsItem = {
 	desc: string
 	organizerLinks: SimpleLink[]
 	tags: string[]
+	designation: string
 }

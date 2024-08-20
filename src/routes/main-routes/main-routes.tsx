@@ -47,11 +47,11 @@ import { ParticipationLayout } from 'src/pages/participation-page/layout/partici
 import { UsersList } from 'src/pages/participation-page/layout/users-list/users-list'
 import { UserDetailsLayout } from 'src/pages/participation-page/layout/user-details/layout/user-details-layout'
 import { UserDetails } from 'src/pages/participation-page/layout/user-details/layout/user-details/user-details'
-import { UserGroups } from 'src/pages/participation-page/layout/user-details/layout/user-groups/user-groups'
 import { UserEvents } from 'src/pages/participation-page/layout/user-details/layout/user-events/user-events'
-import { UserProjects } from 'src/pages/participation-page/layout/user-details/layout/user-projects/user-projects'
-import { UserObjects } from 'src/pages/participation-page/layout/user-details/layout/user-objects/user-objects'
+import { UserGroups } from 'src/pages/participation-page/layout/user-details/layout/user-groups/user-groups'
+import { UserDisciplines } from 'src/pages/participation-page/layout/user-details/layout/user-disciplines/user-disciplines'
 import { UserGallery } from 'src/pages/participation-page/layout/user-details/layout/user-gallery/user-gallery'
+import { UserAuthors } from 'src/pages/participation-page/layout/user-details/layout/user-authors/user-authors'
 
 import { NewsLayout } from 'src/pages/news-page/layout/news-layout'
 import { NewsList } from 'src/pages/news-page/layout/news-list/news-list'
@@ -121,11 +121,11 @@ export const MainRoutes = () => {
 					<Route index element={<UsersList />} />
 					<Route path=':id' element={<UserDetailsLayout />}>
 						<Route path={AppRoute.UserInfo} element={<UserDetails />} />
-						<Route path={AppRoute.UserGroups} element={<UserGroups />} />
 						<Route path={AppRoute.UserEvents} element={<UserEvents />} />
-						<Route path={AppRoute.UserProjects} element={<UserProjects />} />
-						<Route path={AppRoute.UserObjects} element={<UserObjects />} />
+						<Route path={AppRoute.UserGroups} element={<UserGroups />} />
+						<Route path={AppRoute.UserDisciplines} element={<UserDisciplines />} />
 						<Route path={AppRoute.UserGallery} element={<UserGallery />} />
+						<Route path={AppRoute.UserAuthors} element={<UserAuthors />} />
 					</Route>
 				</Route>
 

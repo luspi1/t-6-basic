@@ -7,12 +7,13 @@ import { useDebounce } from 'src/hooks/debounce/debounce'
 import { useGetUserGroupQuery } from 'src/store/users/users.api'
 import { TableSearch } from 'src/modules/table-search/table-search'
 import { MainSelect } from 'src/UI/MainSelect/MainSelect'
-import { customFormatDate } from 'src/helpers/utils'
+import { getCorrectWordForm } from 'src/helpers/utils'
 import { Loader } from 'src/components/loader/loader'
 import { CustomTable } from 'src/components/custom-table/custom-table'
 import { Pagination } from 'src/components/pagination/pagination'
 
 import styles from './index.module.scss'
+
 export const UserGroups: FC = () => {
 	const [searchGroups, setSearchGroups] = useState<string>('')
 	const debouncedSearch = useDebounce(searchGroups)
@@ -26,47 +27,43 @@ export const UserGroups: FC = () => {
 	}
 	const tableTitles = [
 		'№',
-		'Регион',
-		<MainSelect
-			key={2}
-			items={[
-				{ label: 'Уровень', value: '0' },
-				{ label: 'Уровень 1', value: '1' },
-				{ label: 'Уровень 2', value: '2' },
-				{ label: 'Уровень 3', value: '3' },
-			]}
-		/>,
+		'Роль в группе',
 		<TableSearch
 			wrapperClassName={styles.usersGroupsSearchWrapper}
-			key={3}
+			key={2}
 			handleSearch={searchGroupsHandler}
 			placeholder='Поиск по названию группы'
 		/>,
-		'Роль',
-		'Дата вступления',
 		<MainSelect
-			key={6}
+			wrapperClassName={styles.userCategorySelect}
+			key={3}
 			items={[
-				{ label: 'Статус группы', value: '0' },
-				{ label: 'Первый статус', value: '1' },
-				{ label: 'Второй статус', value: '2' },
-				{ label: 'Третий статус', value: '3' },
+				{ label: 'Категория группы', value: '0' },
+				{ label: 'Первая категория', value: '1' },
+				{ label: 'Вторая категория', value: '2' },
+				{ label: 'Третья категория', value: '3' },
 			]}
 		/>,
+		'Участники',
+		'Подгруппы',
+		'Рейтинг',
 	]
 
 	const formatGroupsTableData = (groupsData: GroupItem[]) => {
 		return groupsData.map((groupEl, idx) => {
 			return [
 				String(idx + 1),
-				groupEl.regionCode,
-				groupEl.level,
+				groupEl.role,
 				<Link to={groupEl.id} key={groupEl.id}>
 					{groupEl.title}
 				</Link>,
-				groupEl.role,
-				customFormatDate(groupEl.entryDate),
-				groupEl.status,
+				groupEl.category,
+				groupEl.participantsCount <= 0 ? 'нет' : groupEl.participantsCount,
+				groupEl.subgroupsCount <= 0 ? 'нет' : groupEl.subgroupsCount,
+				<div className={styles.ratingCell} key={6}>
+					<span>{groupEl.rating}</span>(
+					{getCorrectWordForm(groupEl.eventsCount, ['событие', 'события', 'событий'])})
+				</div>,
 			]
 		})
 	}
@@ -76,7 +73,7 @@ export const UserGroups: FC = () => {
 	return (
 		<section className={styles.userGroupsSection}>
 			<p className={styles.groupLengthInfo}>
-				Групп: <span>{groupList?.length}</span>
+				Групп отобрано: <span>{groupList?.length}</span>
 			</p>
 			<CustomTable
 				className={styles.usersGroupsTable}

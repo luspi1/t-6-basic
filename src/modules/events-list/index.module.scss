@@ -164,3 +164,10 @@
     }
   }
 }
+
+.eventDesignation {
+  text-transform: uppercase;
+  font-size: 14px;
+  @include ptsans-bold;
+  color: #DE0008;
+}

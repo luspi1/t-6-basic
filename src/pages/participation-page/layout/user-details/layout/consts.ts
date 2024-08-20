@@ -6,23 +6,23 @@ export const UserInfoNavItems: NavigationItem[] = [
 		link: 'user-info',
 	},
 	{
-		title: 'группы',
-		link: 'user-groups',
-	},
-	{
 		title: 'события',
 		link: 'user-events',
 	},
 	{
-		title: 'проекты',
-		link: 'user-projects',
+		title: 'группы',
+		link: 'user-groups',
 	},
 	{
-		title: 'объекты',
-		link: 'user-objects',
+		title: 'дисциплины',
+		link: 'user-disciplines',
 	},
 	{
 		title: 'галерея',
 		link: 'user-gallery',
+	},
+	{
+		title: 'авторский раздел',
+		link: 'user-authors',
 	},
 ]

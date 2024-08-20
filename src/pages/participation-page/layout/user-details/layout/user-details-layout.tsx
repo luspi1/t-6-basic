@@ -26,8 +26,7 @@ export const UserDetailsLayout: FC = () => {
 				<title>Информация о пользователе</title>
 			</Helmet>
 			<UserInfo />
-			<h3>Информация</h3>
-			<TabNav navItems={UserInfoNavItems} />
+			<TabNav navItems={UserInfoNavItems} isTitle />
 			<Outlet />
 			<Link className={styles.usersListLink} to={`/${AppRoute.Users}`}>
 				На страницу списка участников

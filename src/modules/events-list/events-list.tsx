@@ -14,8 +14,9 @@ import styles from './index.module.scss'
 type EventsListProps = {
 	eventsData?: EventsItem[]
 	className?: string
+	eventDesignation?: boolean
 }
-export const EventsList: FC<EventsListProps> = ({ eventsData, className }) => {
+export const EventsList: FC<EventsListProps> = ({ eventsData, className, eventDesignation }) => {
 	const methods = useForm<EventSearchInputs>({
 		mode: 'onBlur',
 	})
@@ -66,7 +67,11 @@ export const EventsList: FC<EventsListProps> = ({ eventsData, className }) => {
 								<span>{eventEl.dates[0]} -</span> <span>{eventEl.dates[1]}</span>
 							</p>
 							<span>{eventEl.location}</span>
-							<Link to={`/events/${eventEl.id}`}>Регистрация</Link>
+							{eventDesignation ? (
+								<span className={styles.eventDesignation}>{eventEl?.designation}</span>
+							) : (
+								<Link to={`/events/${eventEl.id}`}>Регистрация</Link>
+							)}
 						</div>
 						<div className={styles.eventElContent}>
 							<h5>{eventEl.title}</h5>

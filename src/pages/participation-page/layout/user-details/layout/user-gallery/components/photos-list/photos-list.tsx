@@ -4,7 +4,7 @@ import { type PhotoItem } from 'src/types/photos'
 import cn from 'classnames'
 
 import { Link } from 'react-router-dom'
-import { customFormatDate } from 'src/helpers/utils'
+import { mainFormatDate } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
 
@@ -22,7 +22,7 @@ export const PhotosList: FC<PhotosListProps> = ({ photos, className }) => {
 						<img src={photo.url} alt={photo.title} />
 					</div>
 					<Link to={photo.id}>{photo.title}</Link>
-					<span>{customFormatDate(photo.date)}</span>
+					<span>{mainFormatDate(photo.date)}</span>
 				</li>
 			))}
 		</ul>

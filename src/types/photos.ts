@@ -1,7 +1,7 @@
 export type PhotoItem = {
 	id: string
 	title: string
-	date: string
+	date: Date
 	url: string
 }
 

@@ -5,6 +5,7 @@ import { type ProjectItem } from 'src/types/projects'
 import { type ObjectItem } from 'src/types/objects'
 import { type PhotoItem } from 'src/types/photos'
 import { type VideoItem } from 'src/types/videos'
+import { type EthnosportDisciplineItem } from 'src/types/ethnosportDiscipline'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
@@ -62,20 +63,19 @@ export const usersApi = createApi({
 				},
 			}),
 		}),
-		getUserPhoto: build.query<PhotoItem[], [string, string]>({
-			query: ([search, userId]) => ({
-				url: `users/${userId}/photo`,
-				params: {
-					q: search,
-				},
+		getUserDisciplines: build.query<EthnosportDisciplineItem[], string>({
+			query: (userId) => ({
+				url: `users/${userId}/disciplines`,
 			}),
 		}),
-		getUserVideo: build.query<VideoItem[], [string, string]>({
-			query: ([search, userId]) => ({
+		getUserPhoto: build.query<PhotoItem[], string>({
+			query: (userId) => ({
+				url: `users/${userId}/photo`,
+			}),
+		}),
+		getUserVideo: build.query<VideoItem[], string>({
+			query: (userId) => ({
 				url: `users/${userId}/video`,
-				params: {
-					q: search,
-				},
 			}),
 		}),
 	}),
@@ -90,4 +90,5 @@ export const {
 	useGetUserObjectQuery,
 	useGetUserPhotoQuery,
 	useGetUserVideoQuery,
+	useGetUserDisciplinesQuery,
 } = usersApi

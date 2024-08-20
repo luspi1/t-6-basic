@@ -2,6 +2,7 @@ import { type ShortDocument } from 'src/types/document'
 import { type RelatedLink } from 'src/types/global'
 import { type GroupItem } from 'src/types/groups'
 import { type EventsItem } from 'src/types/events'
+import { type EthnosportDisciplineItem } from 'src/types/ethnosportDiscipline'
 
 export type UserLink = {
 	id: string
@@ -37,4 +38,5 @@ export type UserItem = {
 	documents: ShortDocument[]
 	groups: GroupItem[]
 	events: EventsItem[]
+	disciplines: EthnosportDisciplineItem[]
 }

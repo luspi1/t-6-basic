@@ -28,7 +28,9 @@ import {
 	getEthnosportGlobal,
 	getEthnosportById,
 	getAllDisciplines,
-	getDisciplineById, getNewsVideoById
+	getDisciplineById,
+	getNewsVideoById,
+	getUsersDisciplines,
 } from '../controllers/main-controller.mjs'
 import { Router } from 'express'
 
@@ -48,6 +50,7 @@ router.get('/users/:id/group', getUsersGroup)
 router.get('/users/:id/event', getUsersEvent)
 router.get('/users/:id/project', getUsersProject)
 router.get('/users/:id/object', getUsersObject)
+router.get('/users/:id/disciplines', getUsersDisciplines)
 router.get('/users/:id/photo', getUsersPhotos)
 router.get('/users/:id/video', getUsersVideos)
 router.get('/objects', getObjects)

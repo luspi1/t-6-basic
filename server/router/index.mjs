@@ -1,36 +1,37 @@
 import {
+	deleteNews,
+	getAllDisciplines,
+	getDisciplineById,
+	getEthnosportById,
+	getEthnosportGlobal,
+	getEventById,
+	getEvents,
+	getNews,
+	getNewsById,
+	getNewsVideoById,
+	getNewsVideos,
 	getObjectById,
 	getObjects,
 	getProjectById,
 	getProjects,
 	getRegionByCode,
-	getRegionParticipants,
 	getRegionEvents,
 	getRegionObjects,
-	getRegionProjects,
+	getRegionParticipants,
 	getRegionPhotos,
-	getRegionVideos,
+	getRegionProjects,
 	getRegions,
+	getRegionVideos,
 	getUserById,
 	getUsers,
+	getUsersDisciplines,
 	getUsersEvent,
 	getUsersGroup,
+	getUsersMaterial,
 	getUsersObject,
 	getUsersPhotos,
 	getUsersProject,
 	getUsersVideos,
-	getNews,
-	deleteNews,
-	getNewsById,
-	getNewsVideos,
-	getEvents,
-	getEventById,
-	getEthnosportGlobal,
-	getEthnosportById,
-	getAllDisciplines,
-	getDisciplineById,
-	getNewsVideoById,
-	getUsersDisciplines,
 } from '../controllers/main-controller.mjs'
 import { Router } from 'express'
 
@@ -50,6 +51,7 @@ router.get('/users/:id/group', getUsersGroup)
 router.get('/users/:id/event', getUsersEvent)
 router.get('/users/:id/project', getUsersProject)
 router.get('/users/:id/object', getUsersObject)
+router.get('/users/:id/materials', getUsersMaterial)
 router.get('/users/:id/disciplines', getUsersDisciplines)
 router.get('/users/:id/photo', getUsersPhotos)
 router.get('/users/:id/video', getUsersVideos)

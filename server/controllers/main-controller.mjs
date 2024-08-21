@@ -137,6 +137,18 @@ export const getUsersObject = (req, res) => {
 
 	res.status(200).json(filteredObjects)
 }
+export const getUsersMaterial = (req, res) => {
+	const { q } = req.query
+	const userId = req.params.id
+
+	const searchedUser = users.find((user) => user.id === userId)
+	const filteredMaterials = searchedUser.materials.filter((material) =>
+		material.title.toLowerCase().includes(q),
+	)
+
+	res.status(200).json(filteredMaterials)
+}
+
 export const getUsersDisciplines = (req, res) => {
 	const userId = req.params.id
 	const searchedUser = users.find((user) => user.id === userId)

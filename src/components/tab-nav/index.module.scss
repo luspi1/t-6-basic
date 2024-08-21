@@ -3,7 +3,10 @@
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 20px;
-    text-transform: capitalize;
+
+    &:first-letter {
+      text-transform: capitalize;
+    }
   }
 }
 
@@ -13,6 +16,7 @@
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 20px;
+
   li {
     a {
       border-radius: 8px;

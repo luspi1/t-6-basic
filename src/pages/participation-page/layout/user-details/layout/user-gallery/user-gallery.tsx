@@ -3,10 +3,9 @@ import { type FC } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 import { useGetUserPhotoQuery, useGetUserVideoQuery } from 'src/store/users/users.api'
-
-import { PhotosList } from 'src/pages/participation-page/layout/user-details/layout/user-gallery/components/photos-list/photos-list'
 import { VideosList } from 'src/pages/participation-page/layout/user-details/layout/user-gallery/components/videos-list/videos-list'
 
+import { GalleryImg } from 'src/components/image-gallery/image-gallery'
 import styles from './index.module.scss'
 
 export const UserGallery: FC = () => {
@@ -24,12 +23,11 @@ export const UserGallery: FC = () => {
 			</div>
 
 			<h4>Фото</h4>
-			<PhotosList photos={photosData} />
-
+			<GalleryImg className={styles.userPhotos} images={photosData} />
 			<h4>Видео</h4>
 			<VideosList videos={videosData} />
 
-			<Link className={styles.allAlbumsLink} to='/albums'>
+			<Link className={styles.allAlbumsLink} to='/'>
 				Показать все альбомы и видео{' '}
 				<b>({Number(photosData?.length) + Number(videosData?.length)})</b>
 			</Link>

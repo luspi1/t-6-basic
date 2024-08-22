@@ -6,6 +6,8 @@ import {
 	getEthnosportGlobal,
 	getEventById,
 	getEvents,
+	getGroupById,
+	getGroups,
 	getNews,
 	getNewsById,
 	getNewsVideoById,
@@ -70,3 +72,5 @@ router.get('/ethnosport', getEthnosportGlobal)
 router.get('/ethnosport/:id', getEthnosportById)
 router.get('/disciplines', getAllDisciplines)
 router.get('/disciplines/:id', getDisciplineById)
+router.get('/groups', getGroups)
+router.get('/groups/:id', getGroupById)

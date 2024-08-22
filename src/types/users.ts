@@ -1,16 +1,9 @@
 import { type ShortDocument } from 'src/types/document'
-import { type RelatedLink } from 'src/types/global'
+import { type RelatedLink, type SourceLink } from 'src/types/global'
 import { type GroupItem } from 'src/types/groups'
 import { type EventsItem } from 'src/types/events'
 import { type EthnosportDisciplineItem } from 'src/types/ethnosportDiscipline'
-
-export type UserLink = {
-	id: string
-	title: string
-	link: string
-	date: string
-	source: string
-}
+import type { ImageItem } from 'src/types/photos'
 
 export type UserItem = {
 	id: string
@@ -34,9 +27,10 @@ export type UserItem = {
 	regalia: string[]
 	relatedObjects: RelatedLink[]
 	relatedProjects: RelatedLink[]
-	relatedLinks: UserLink[]
+	relatedLinks: SourceLink[]
 	documents: ShortDocument[]
 	groups: GroupItem[]
 	events: EventsItem[]
 	disciplines: EthnosportDisciplineItem[]
+	photos: ImageItem[]
 }

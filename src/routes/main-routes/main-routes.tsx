@@ -63,6 +63,9 @@ import { EventsLayout } from 'src/pages/events-page/events-layout'
 import { EventsListPage } from 'src/pages/events-page/layout/events-list-page/events-list-page'
 import { EventDetails } from 'src/pages/events-page/layout/events-details/event-details'
 
+import { GroupsLayout } from 'src/pages/groups-page/layout/groups-layout'
+import { GroupsList } from 'src/pages/groups-page/layout/groups-list/groups-list'
+
 export const MainRoutes = () => {
 	return (
 		<Routes>
@@ -127,6 +130,9 @@ export const MainRoutes = () => {
 						<Route path={AppRoute.UserGallery} element={<UserGallery />} />
 						<Route path={AppRoute.UserAuthors} element={<UserAuthors />} />
 					</Route>
+				</Route>
+				<Route path={AppRoute.Groups} element={<GroupsLayout />}>
+					<Route index element={<GroupsList />} />
 				</Route>
 
 				<Route path={AppRoute.News} element={<NewsLayout />}>

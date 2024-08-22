@@ -7,6 +7,7 @@ import { events } from '../mockData/events.mjs'
 import { ethnosport } from '../mockData/ethnosport.mjs'
 import { disciplines } from '../mockData/disciplines.mjs'
 import { newsVideos } from '../mockData/newsVideos.mjs'
+import { groups } from '../mockData/groups.mjs'
 
 export const getRegions = (req, res) => {
 	const { q } = req.query
@@ -281,4 +282,18 @@ export const getDisciplineById = (req, res) => {
 	const foundDiscipline = disciplines.find((dis) => dis.id === disId)
 
 	res.status(200).json(foundDiscipline)
+}
+
+export const getGroups = (req, res) => {
+	const { q } = req.query
+
+	const filteredGroups = groups.filter((el) => el.title.toLowerCase().includes(q))
+
+	res.status(200).json(filteredGroups)
+}
+export const getGroupById = (req, res) => {
+	const groupId = req.params.id
+	const foundGroup = groups.find((group) => group.id === groupId)
+
+	res.status(200).json(foundGroup)
 }

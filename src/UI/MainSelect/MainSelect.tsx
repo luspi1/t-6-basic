@@ -11,20 +11,21 @@ type MainSelectProps = {
 	wrapperClassName?: string
 } & SelectHTMLAttributes<HTMLSelectElement>
 
-export const MainSelect = React.forwardRef<HTMLSelectElement, MainSelectProps>((props, ref) => {
-	const { items, wrapperClassName } = props
-	return (
-		<div className={cn(styles.selectWrapper, wrapperClassName)}>
-			<select {...props} ref={ref}>
-				{items.map((el) => (
-					<option key={el.value} value={el.value}>
-						{el.label}
-					</option>
-				))}
-			</select>
-			<SelectArrowSvg />
-		</div>
-	)
-})
+export const MainSelect = React.forwardRef<HTMLSelectElement, MainSelectProps>(
+	({ wrapperClassName, items, ...props }, ref) => {
+		return (
+			<div className={cn(styles.selectWrapper, wrapperClassName)}>
+				<select {...props} ref={ref}>
+					{items.map((el) => (
+						<option key={el.value} value={el.value}>
+							{el.label}
+						</option>
+					))}
+				</select>
+				<SelectArrowSvg />
+			</div>
+		)
+	},
+)
 
 MainSelect.displayName = 'MainSelect'

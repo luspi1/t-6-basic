@@ -798,7 +798,7 @@ export let users = [
 				size: '221 Кбайт',
 				publicationDate: '2023-02-11T14:30:00Z',
 				postingDate: '2024-09-13T14:30:00Z',
-				edition: 'Риверран, журнал «Юный Мейс..',
+				edition: 'Риверран, журнал «Юный Мейстер lorem consectetur adipiscing',
 				coAuthors: ['Ланнистер Т.Т.', 'Старк А.Н.', 'Деморт В.Г.', 'Дж.К. Роулинг', 'Дж. Оруэлл'],
 				downloadLink: 'https://cyberleninka.ru/article/n/o-derevoobitayuschih-gribah/pdf',
 			},

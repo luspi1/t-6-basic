@@ -33,6 +33,7 @@ export enum AppRoute {
 	Groups = 'groups-list',
 	GroupsNews = 'groups-news',
 	GroupsInfo = 'groups-info',
+	GroupsContacts = 'groups-contacts',
 	GroupsEvents = 'groups-events',
 	GroupsParticipants = 'groups-participants',
 	GroupsTable = 'groups-table',

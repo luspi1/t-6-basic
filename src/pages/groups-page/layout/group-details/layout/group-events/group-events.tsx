@@ -10,7 +10,7 @@ import { EventsList } from 'src/modules/events-list/events-list'
 
 import styles from './index.module.scss'
 
-export const UserEvents: FC = () => {
+export const GroupEvents: FC = () => {
 	const [searchEvents] = useState<string>('')
 	const debouncedSearch = useDebounce(searchEvents)
 

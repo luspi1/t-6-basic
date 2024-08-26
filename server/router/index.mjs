@@ -10,6 +10,7 @@ import {
 	getGroupDisciplinesById,
 	getGroupEvent,
 	getGroupParticipantes,
+	getGroupPhotos,
 	getGroups,
 	getGroupTable,
 	getNews,
@@ -82,3 +83,4 @@ router.get('/groups/:id/event', getGroupEvent)
 router.get('/groups/:id/participantes', getGroupParticipantes)
 router.get('/groups/:id/table', getGroupTable)
 router.get('/groups/:id/disciplines', getGroupDisciplinesById)
+router.get('/groups/:id/photos', getGroupPhotos)

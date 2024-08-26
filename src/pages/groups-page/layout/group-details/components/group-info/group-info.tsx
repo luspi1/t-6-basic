@@ -6,6 +6,7 @@ import { CustomText } from 'src/components/custom-text/custom-text'
 import { useGetGroupByIdQuery } from 'src/store/groups/groups.api'
 
 import styles from './index.module.scss'
+import { RenderedArray } from 'src/components/rendered-array/rendered-array'
 
 export const GroupInfo = () => {
 	const { id } = useParams()
@@ -22,12 +23,16 @@ export const GroupInfo = () => {
 					<img src={groupData?.avatar} alt={groupData?.title} />
 				</div>
 				<div className={styles.infoBlock}>
-					<CustomText $fontSize='16px' $fontStyle='italic'>
+					<CustomText $fontSize='16px' $fontStyle='italic' $lineHeight='1.45' $margin='0 0 20px 0'>
 						{groupData?.mainDesc}
 					</CustomText>
-					<InfoRow title='Категория:' label={groupData?.category} />
-					<InfoRow title='Разделы:' label={groupData?.sections} />
-					<InfoRow title='Регион:' label={groupData?.region} />
+					<InfoRow title='Категория:' label={groupData?.category} titleWidth='95' />
+					<InfoRow
+						title='Разделы:'
+						label={<RenderedArray strArray={groupData?.sections} />}
+						titleWidth='95'
+					/>
+					<InfoRow title='Регион:' label={groupData?.region} titleWidth='95' />
 				</div>
 			</div>
 		</div>

@@ -21,7 +21,7 @@ const StyledCustomText = styled.p<CustomTextProps>`
 	font-weight: ${({ $fontWeight }) => $fontWeight ?? '400'};
 	line-height: ${({ $lineHeight }) => $lineHeight};
 	font-style: ${({ $fontStyle }) => $fontStyle ?? 'normal'};
-	max-width: ${({ $maxWidth }) => $maxWidth ?? 'auto'};
+	max-width: ${({ $maxWidth }) => $maxWidth ?? 'initial'};
 `
 
 export const CustomText: FC<CustomTextProps> = ({ children, className, ...props }) => {

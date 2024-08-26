@@ -3,34 +3,34 @@ import { type NavigationItem } from 'src/types/navigation'
 export const GroupInfoNavItems: NavigationItem[] = [
 	{
 		title: 'новости',
-		link: 'groups-news',
+		link: 'group-news',
 	},
 	{
 		title: 'информация',
-		link: 'groups-info',
+		link: 'group-info',
 	},
 	{
 		title: 'контакты',
-		link: 'groups-contacts',
+		link: 'group-contacts',
 	},
 	{
 		title: 'события',
-		link: 'groups-events',
+		link: 'group-events',
 	},
 	{
 		title: 'участники',
-		link: 'groups-participants',
+		link: 'group-participantes',
 	},
 	{
 		title: 'группы',
-		link: 'groups-table',
+		link: 'group-table',
 	},
 	{
 		title: 'дисциплины',
-		link: 'groups-disciplines',
+		link: 'group-disciplines',
 	},
 	{
 		title: 'галерея',
-		link: 'groups-gallery',
+		link: 'group-gallery',
 	},
 ]

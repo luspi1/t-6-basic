@@ -65,6 +65,15 @@ import { EventDetails } from 'src/pages/events-page/layout/events-details/event-
 
 import { GroupsLayout } from 'src/pages/groups-page/layout/groups-layout'
 import { GroupsList } from 'src/pages/groups-page/layout/groups-list/groups-list'
+import { GroupDetailsLayout } from 'src/pages/groups-page/layout/group-details/layout/group-details-layout'
+import { GroupNews } from 'src/pages/groups-page/layout/group-details/layout/group-news/group-news'
+import { GroupDetails } from 'src/pages/groups-page/layout/group-details/layout/group-details/group-details'
+import { GroupContacts } from 'src/pages/groups-page/layout/group-details/layout/group-contacts/group-contacts'
+import { GroupEvents } from 'src/pages/groups-page/layout/group-details/layout/group-events/group-events'
+import { GroupParticipantes } from 'src/pages/groups-page/layout/group-details/layout/group-participantes/group-participantes'
+import { GroupTable } from 'src/pages/groups-page/layout/group-details/layout/group-table/group-table'
+import { GroupDisciplines } from 'src/pages/groups-page/layout/group-details/layout/group-disciplines/group-disciplines'
+import { GroupGallery } from 'src/pages/groups-page/layout/group-details/layout/group-gallery/group-gallery'
 
 export const MainRoutes = () => {
 	return (
@@ -133,6 +142,16 @@ export const MainRoutes = () => {
 				</Route>
 				<Route path={AppRoute.Groups} element={<GroupsLayout />}>
 					<Route index element={<GroupsList />} />
+					<Route path=':id' element={<GroupDetailsLayout />}>
+						<Route path={AppRoute.GroupNews} element={<GroupNews />} />
+						<Route path={AppRoute.GroupInfo} element={<GroupDetails />} />
+						<Route path={AppRoute.GroupContacts} element={<GroupContacts />} />
+						<Route path={AppRoute.GroupEvents} element={<GroupEvents />} />
+						<Route path={AppRoute.GroupParticipantes} element={<GroupParticipantes />} />
+						<Route path={AppRoute.GroupTable} element={<GroupTable />} />
+						<Route path={AppRoute.GroupDisciplines} element={<GroupDisciplines />} />
+						<Route path={AppRoute.GroupGallery} element={<GroupGallery />} />
+					</Route>
 				</Route>
 
 				<Route path={AppRoute.News} element={<NewsLayout />}>

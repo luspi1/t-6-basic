@@ -337,3 +337,10 @@ export const getGroupDisciplinesById = (req, res) => {
 
 	res.status(200).json(searchedGroup.disciplines)
 }
+export const getGroupPhotos = (req, res) => {
+	const groupId = req.params.id
+
+	const searchedGroup = groups.find((group) => group.id === groupId)
+
+	res.status(200).json(searchedGroup.photos)
+}

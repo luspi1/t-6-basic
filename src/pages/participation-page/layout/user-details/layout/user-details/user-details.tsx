@@ -1,6 +1,5 @@
 import { type FC } from 'react'
-import { type LinkItem } from 'src/types/global'
-import { type UserLink } from 'src/types/users'
+import { type LinkItem, type SourceLink } from 'src/types/global'
 
 import { useParams } from 'react-router-dom'
 
@@ -14,7 +13,7 @@ export const UserDetails: FC = () => {
 	const { id } = useParams()
 
 	const { data: userInfo } = useGetUserByIdQuery(id ?? '')
-	const formatUserLinks = (data: UserLink[] | undefined): LinkItem[] | undefined => {
+	const formatUserLinks = (data: SourceLink[] | undefined): LinkItem[] | undefined => {
 		if (!data) return undefined
 		return data.map((regItem) => ({
 			id: regItem.id,

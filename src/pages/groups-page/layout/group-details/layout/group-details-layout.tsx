@@ -7,16 +7,16 @@ import { Helmet } from 'react-helmet-async'
 import { PageContent } from 'src/components/page-content/page-content'
 import { useLocationMatch } from 'src/hooks/location-match'
 import { AppRoute } from 'src/routes/main-routes/consts'
-import { UserInfo } from 'src/pages/participation-page/layout/user-details/components/user-info/user-info'
 import { TabNav } from 'src/components/tab-nav/tab-nav'
 import { GroupInfoNavItems } from 'src/pages/groups-page/layout/group-details/layout/consts'
+import { GroupInfo } from 'src/pages/groups-page/layout/group-details/components/group-info/group-info'
 
 import styles from './index.module.scss'
 
 export const GroupDetailsLayout: FC = () => {
 	const [matchesLocation] = useLocationMatch<ContentNav>([`${AppRoute.Groups}/:id`])
 
-	if (matchesLocation) return <Navigate to={AppRoute.GroupsNews} replace />
+	if (matchesLocation) return <Navigate to={AppRoute.GroupNews} replace />
 	return (
 		<PageContent
 			className={styles.groupDetailsContent}
@@ -26,8 +26,8 @@ export const GroupDetailsLayout: FC = () => {
 			<Helmet>
 				<title>Информация о группе</title>
 			</Helmet>
-			<UserInfo />
-			<TabNav className={styles.groupTabs} navItems={GroupInfoNavItems} isTitle />
+			<GroupInfo />
+			<TabNav className={styles.groupTabs} navItems={GroupInfoNavItems} />
 			<Outlet />
 			<Link className={styles.groupsListLink} to={`/${AppRoute.Groups}`}>
 				На страницу списка групп

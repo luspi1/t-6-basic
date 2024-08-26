@@ -2,6 +2,7 @@ import { type GroupItem } from 'src/types/groups'
 import { type EventsItem } from 'src/types/events'
 import { type UserItem } from 'src/types/users'
 import { type EthnosportDisciplineItem } from 'src/types/ethnosportDiscipline'
+import { type ImageItem } from 'src/types/photos'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
@@ -56,11 +57,11 @@ export const groupsApi = createApi({
 				url: `groups/${groupId}/disciplines`,
 			}),
 		}),
-		// getGroupPhoto: build.query<ImageItem[], string>({
-		// 	query: (userId) => ({
-		// 		url: `users/${userId}/photo`,
-		// 	}),
-		// }),
+		getGroupPhoto: build.query<ImageItem[], string>({
+			query: (groupId) => ({
+				url: `groups/${groupId}/photos`,
+			}),
+		}),
 	}),
 })
 
@@ -71,4 +72,5 @@ export const {
 	useGetGroupParticipantesQuery,
 	useGetGroupTableQuery,
 	useGetGroupDisciplinesQuery,
+	useGetGroupPhotoQuery,
 } = groupsApi

@@ -14,7 +14,6 @@
   }
   section {
     padding: 30px 0 20px;
-    border-top: 7px solid #F2F5F8;
     &:last-child {
       border-bottom: 7px solid #F2F5F8;
     }
@@ -22,6 +21,8 @@
 }
 
 .groupTabs {
+  padding-top: 25px;
+  border-top: 7px solid #F2F5F8;
   li a {
     text-transform: lowercase;
   }

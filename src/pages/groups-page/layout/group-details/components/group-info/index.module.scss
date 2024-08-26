@@ -1,9 +1,9 @@
 @import "src/assets/styles/vars";
 
 .groupInfoWrapper {
-  margin-bottom: 45px;
+  margin-bottom: 40px;
   h2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -17,7 +17,7 @@
 }
 .avatarWrapper {
   width: 132px;
-  height: 164px;
+  height: 132px;
   min-width: 132px;
   border: 7px solid #EBEEF2;
   img {
@@ -27,11 +27,9 @@
 }
 
 .infoBlock {
+  padding-top: 10px;
   flex-grow: 1;
 }
 
-.groupInfoDocs {
-  margin-bottom: 20px;
-}
 
 

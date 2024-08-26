@@ -7,7 +7,11 @@ import {
 	getEventById,
 	getEvents,
 	getGroupById,
+	getGroupDisciplinesById,
+	getGroupEvent,
+	getGroupParticipantes,
 	getGroups,
+	getGroupTable,
 	getNews,
 	getNewsById,
 	getNewsVideoById,
@@ -74,3 +78,7 @@ router.get('/disciplines', getAllDisciplines)
 router.get('/disciplines/:id', getDisciplineById)
 router.get('/groups', getGroups)
 router.get('/groups/:id', getGroupById)
+router.get('/groups/:id/event', getGroupEvent)
+router.get('/groups/:id/participantes', getGroupParticipantes)
+router.get('/groups/:id/table', getGroupTable)
+router.get('/groups/:id/disciplines', getGroupDisciplinesById)

@@ -1,5 +1,5 @@
 
-section.userGroupsSection {
+section.groupTableSection {
   padding: 15px 0 10px;
   border-bottom: 7px solid #F2F5F8;
 
@@ -12,7 +12,7 @@ section.userGroupsSection {
   }
 }
 
-.usersGroupsTable {
+.groupTable {
   grid-template-columns:
           minmax(40px, 0.2fr)
           minmax(100px, 0.9fr)
@@ -41,7 +41,7 @@ section.userGroupsSection {
 
 }
 
-.usersGroupsSearchWrapper {
+.groupSearchWrapper {
   svg {
     left: 100px;
   }
@@ -58,7 +58,7 @@ section.userGroupsSection {
   }
 }
 
-.userCategorySelect {
+.groupCategorySelect {
   width: 100%;
 
   select {

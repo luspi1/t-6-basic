@@ -1,8 +1,6 @@
 import { type UserItem } from 'src/types/users'
 import { type GroupItem } from 'src/types/groups'
 import { type EventsItem } from 'src/types/events'
-import { type ProjectItem } from 'src/types/projects'
-import { type ObjectItem } from 'src/types/objects'
 import { type ImageItem } from 'src/types/photos'
 import { type VideoItem } from 'src/types/videos'
 import { type EthnosportDisciplineItem } from 'src/types/ethnosportDiscipline'
@@ -48,22 +46,6 @@ export const usersApi = createApi({
 				},
 			}),
 		}),
-		getUserProject: build.query<ProjectItem[], [string, string]>({
-			query: ([search, userId]) => ({
-				url: `users/${userId}/project`,
-				params: {
-					q: search,
-				},
-			}),
-		}),
-		getUserObject: build.query<ObjectItem[], [string, string]>({
-			query: ([search, userId]) => ({
-				url: `users/${userId}/object`,
-				params: {
-					q: search,
-				},
-			}),
-		}),
 		getUserMaterials: build.query<MaterialItem[], [string, string]>({
 			query: ([search, userId]) => ({
 				url: `users/${userId}/materials`,
@@ -96,8 +78,6 @@ export const {
 	useGetUserGroupQuery,
 	useGetUserEventQuery,
 	useGetUserMaterialsQuery,
-	useGetUserProjectQuery,
-	useGetUserObjectQuery,
 	useGetUserPhotoQuery,
 	useGetUserVideoQuery,
 	useGetUserDisciplinesQuery,

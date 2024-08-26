@@ -297,3 +297,43 @@ export const getGroupById = (req, res) => {
 
 	res.status(200).json(foundGroup)
 }
+
+export const getGroupEvent = (req, res) => {
+	const { q } = req.query
+	const groupId = req.params.id
+
+	const searchedGroup = groups.find((group) => group.id === groupId)
+	const filteredEvents = searchedGroup.events.filter((event) =>
+		event.title.toLowerCase().includes(q),
+	)
+
+	res.status(200).json(filteredEvents)
+}
+export const getGroupParticipantes = (req, res) => {
+	const { q } = req.query
+	const groupId = req.params.id
+
+	const searchedGroup = groups.find((group) => group.id === groupId)
+	const filteredParticipantes = searchedGroup.participants.filter((participant) =>
+		participant.fullname.toLowerCase().includes(q),
+	)
+
+	res.status(200).json(filteredParticipantes)
+}
+export const getGroupTable = (req, res) => {
+	const { q } = req.query
+	const groupId = req.params.id
+
+	const searchedGroup = groups.find((group) => group.id === groupId)
+	const filteredGroups = searchedGroup.groups.filter((group) =>
+		group.title.toLowerCase().includes(q),
+	)
+
+	res.status(200).json(filteredGroups)
+}
+export const getGroupDisciplinesById = (req, res) => {
+	const groupId = req.params.id
+	const searchedGroup = groups.find((group) => group.id === groupId)
+
+	res.status(200).json(searchedGroup.disciplines)
+}

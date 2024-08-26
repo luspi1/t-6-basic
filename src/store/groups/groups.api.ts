@@ -1,4 +1,7 @@
 import { type GroupItem } from 'src/types/groups'
+import { type EventsItem } from 'src/types/events'
+import { type UserItem } from 'src/types/users'
+import { type EthnosportDisciplineItem } from 'src/types/ethnosportDiscipline'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
@@ -24,35 +27,35 @@ export const groupsApi = createApi({
 				url: `groups/${groupId}`,
 			}),
 		}),
-		// getGroupGroup: build.query<GroupItem[], [string, string]>({
-		// 	query: ([search, userId]) => ({
-		// 		url: `users/${userId}/group`,
-		// 		params: {
-		// 			q: search,
-		// 		},
-		// 	}),
-		// }),
-		// getGroupEvent: build.query<EventsItem[], [string, string]>({
-		// 	query: ([search, userId]) => ({
-		// 		url: `users/${userId}/event`,
-		// 		params: {
-		// 			q: search,
-		// 		},
-		// 	}),
-		// }),
-		// getGroupMaterials: build.query<MaterialItem[], [string, string]>({
-		// 	query: ([search, userId]) => ({
-		// 		url: `users/${userId}/materials`,
-		// 		params: {
-		// 			q: search,
-		// 		},
-		// 	}),
-		// }),
-		// getGroupDisciplines: build.query<EthnosportDisciplineItem[], string>({
-		// 	query: (userId) => ({
-		// 		url: `users/${userId}/disciplines`,
-		// 	}),
-		// }),
+		getGroupEvent: build.query<EventsItem[], [string, string]>({
+			query: ([search, groupId]) => ({
+				url: `groups/${groupId}/event`,
+				params: {
+					q: search,
+				},
+			}),
+		}),
+		getGroupParticipantes: build.query<UserItem[], [string, string]>({
+			query: ([search, groupId]) => ({
+				url: `groups/${groupId}/participantes`,
+				params: {
+					q: search,
+				},
+			}),
+		}),
+		getGroupTable: build.query<GroupItem[], [string, string]>({
+			query: ([search, groupId]) => ({
+				url: `groups/${groupId}/table`,
+				params: {
+					q: search,
+				},
+			}),
+		}),
+		getGroupDisciplines: build.query<EthnosportDisciplineItem[], string>({
+			query: (groupId) => ({
+				url: `groups/${groupId}/disciplines`,
+			}),
+		}),
 		// getGroupPhoto: build.query<ImageItem[], string>({
 		// 	query: (userId) => ({
 		// 		url: `users/${userId}/photo`,
@@ -61,4 +64,11 @@ export const groupsApi = createApi({
 	}),
 })
 
-export const { useGetAllGroupsQuery, useGetGroupByIdQuery } = groupsApi
+export const {
+	useGetAllGroupsQuery,
+	useGetGroupByIdQuery,
+	useGetGroupEventQuery,
+	useGetGroupParticipantesQuery,
+	useGetGroupTableQuery,
+	useGetGroupDisciplinesQuery,
+} = groupsApi

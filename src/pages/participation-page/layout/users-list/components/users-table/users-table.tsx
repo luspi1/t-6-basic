@@ -44,7 +44,7 @@ export const UsersTable = () => {
 				<Link to={userEl.id} key={userEl.id}>
 					{userEl.fullname}
 				</Link>,
-				calculateAge(userEl.regDate, true),
+				calculateAge(userEl.birthday, true),
 				userEl.groups?.length,
 				<div className={styles.ratingCell} key={6}>
 					<span>{userEl.rating}</span>(

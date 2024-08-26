@@ -1,0 +1,24 @@
+.participantesTable {
+  grid-template-columns: minmax(40px, 0.3fr) minmax(100px, 0.8fr) minmax(250px, 2.9fr) minmax(80px, 0.5fr)  minmax(100px, 0.8fr) minmax(100px, 0.7fr);
+  margin-bottom: 10px;
+
+  td {
+    min-height: 60px;
+  }
+}
+
+.participantesSearchWrapper {
+  svg {
+    left: 195px;
+  }
+  input {
+    padding: 6px 20px 6px 200px;
+  }
+}
+
+.ratingCell {
+  span {
+    display: block;
+    font-weight: 700;
+  }
+}

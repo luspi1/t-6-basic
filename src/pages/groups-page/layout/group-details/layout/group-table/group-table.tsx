@@ -4,38 +4,38 @@ import { type GroupItem } from 'src/types/groups'
 import { Link, useParams } from 'react-router-dom'
 
 import { useDebounce } from 'src/hooks/debounce/debounce'
-import { useGetUserGroupQuery } from 'src/store/users/users.api'
 import { TableSearch } from 'src/modules/table-search/table-search'
 import { MainSelect } from 'src/UI/MainSelect/MainSelect'
 import { getCorrectWordForm } from 'src/helpers/utils'
 import { Loader } from 'src/components/loader/loader'
 import { CustomTable } from 'src/components/custom-table/custom-table'
 import { Pagination } from 'src/components/pagination/pagination'
+import { useGetGroupTableQuery } from 'src/store/groups/groups.api'
 
 import styles from './index.module.scss'
 
-export const UserGroups: FC = () => {
+export const GroupTable: FC = () => {
 	const [searchGroups, setSearchGroups] = useState<string>('')
 	const debouncedSearch = useDebounce(searchGroups)
 
 	const { id } = useParams()
 
-	const { data: groupList, isLoading } = useGetUserGroupQuery([debouncedSearch, id ?? ''])
+	const { data: groupList, isLoading } = useGetGroupTableQuery([debouncedSearch, id ?? ''])
 
 	const searchGroupsHandler = (value: string) => {
 		setSearchGroups(value)
 	}
 	const tableTitles = [
 		'№',
-		'Роль в группе',
+		'Регион',
 		<TableSearch
-			wrapperClassName={styles.usersGroupsSearchWrapper}
+			wrapperClassName={styles.groupSearchWrapper}
 			key={2}
 			handleSearch={searchGroupsHandler}
 			placeholder='Поиск по названию группы'
 		/>,
 		<MainSelect
-			wrapperClassName={styles.userCategorySelect}
+			wrapperClassName={styles.groupCategorySelect}
 			key={3}
 			items={[
 				{ label: 'Категория группы', value: '0' },
@@ -53,7 +53,7 @@ export const UserGroups: FC = () => {
 		return groupsData.map((groupEl, idx) => {
 			return [
 				String(idx + 1),
-				groupEl.role,
+				groupEl.region,
 				<Link to={groupEl.id} key={groupEl.id}>
 					{groupEl.title}
 				</Link>,
@@ -71,12 +71,12 @@ export const UserGroups: FC = () => {
 	if (isLoading || !groupList) return <Loader />
 
 	return (
-		<section className={styles.userGroupsSection}>
+		<section className={styles.groupTableSection}>
 			<p className={styles.groupLengthInfo}>
 				Групп отобрано: <span>{groupList?.length}</span>
 			</p>
 			<CustomTable
-				className={styles.usersGroupsTable}
+				className={styles.groupTable}
 				cellsData={formatGroupsTableData(groupList)}
 				colTitles={tableTitles}
 			/>

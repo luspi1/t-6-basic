@@ -133,16 +133,22 @@ export const defineFileFormat = (fileName: string) => {
 }
 
 // функция форматирования даты с локализацией
-export const mainFormatDate = (date: Date, dateFormat = 'dd MMMM yyyy'): string => {
+export const mainFormatDate = (date: Date, dateFormat = 'dd MMMM yyyy'): string | null => {
+	if (!date) return null
 	return format(date, dateFormat, { locale: ru })
 }
 
-export const formatDateRange = ([startDate, endDate]: [Date, Date]): string => {
+export const formatDateRange = ([startDate, endDate]: [Date, Date]): string | null => {
+	if (!startDate || !endDate) return null
+
 	const startMonth = format(startDate, 'MMMM', { locale: ru })
 	const endMonth = format(endDate, 'MMMM', { locale: ru })
 	const startYear = format(startDate, 'yyyy', { locale: ru })
 	const endYear = format(endDate, 'yyyy', { locale: ru })
 
+	if (startYear === endYear && startMonth !== endMonth) {
+		return `${format(startDate, 'd MMMM', { locale: ru })} — ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
+	}
 	if (startMonth === endMonth && startYear === endYear) {
 		return `${format(startDate, 'd', { locale: ru })} — ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
 	}

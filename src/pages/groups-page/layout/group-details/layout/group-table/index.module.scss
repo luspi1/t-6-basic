@@ -15,21 +15,20 @@ section.groupTableSection {
 .groupTable {
   grid-template-columns:
           minmax(40px, 0.2fr)
-          minmax(100px, 0.9fr)
-          minmax(325px, 2.4fr)
+          minmax(100px, 1fr)
+          minmax(325px, 2.2fr)
           minmax(180px, 1.4fr)
           minmax(75px, 0.5fr)
-          minmax(90px, 0.8fr)
+          minmax(90px, 0.9fr)
           minmax(90px, 0.8fr);
 
   td {
     min-height: 60px;
 
-    &:nth-child(3) {
-      a {
-        font-size: 14px;
-      }
+    a {
+      font-size: 14px;
     }
+
   }
 
   th {
@@ -44,10 +43,16 @@ section.groupTableSection {
 .groupSearchWrapper {
   svg {
     left: 100px;
+    @media (max-width: 1024px) {
+      left: 20px;
+    }
   }
 
   input {
     padding: 6px 20px 6px 105px;
+    @media (max-width: 1024px) {
+      padding: 6px 20px 6px 25px;
+    }
   }
 }
 

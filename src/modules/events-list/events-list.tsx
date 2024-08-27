@@ -8,6 +8,7 @@ import { ControlledSelect } from 'src/components/controlled-select/controlled-se
 import { ControlledInput } from 'src/components/controlled-input/controlled-input'
 import { MainButton } from 'src/UI/MainButton/MainButton'
 import { Link } from 'react-router-dom'
+import { formatDateRange } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
 
@@ -64,9 +65,9 @@ export const EventsList: FC<EventsListProps> = ({ eventsData, className, eventDe
 					<li key={eventEl.id}>
 						<div className={styles.eventElInfo}>
 							<p>
-								<span>{eventEl.dates[0]} -</span> <span>{eventEl.dates[1]}</span>
+								<span>{formatDateRange(eventEl.dates)}</span>
 							</p>
-							<span>{eventEl.location}</span>
+							<span className={styles.eventLocation}>{eventEl.location}</span>
 							{eventDesignation ? (
 								<span className={styles.eventDesignation}>{eventEl?.designation}</span>
 							) : (

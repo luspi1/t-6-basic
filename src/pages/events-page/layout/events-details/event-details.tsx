@@ -8,6 +8,7 @@ import { AppRoute } from 'src/routes/main-routes/consts'
 import { useGetEventByIdQuery } from 'src/store/events/events.api'
 
 import styles from './index.module.scss'
+import { formatDateRange } from 'src/helpers/utils'
 export const EventDetails = () => {
 	const { id } = useParams()
 	const { data: eventData, isLoading } = useGetEventByIdQuery(id ?? '')
@@ -26,9 +27,7 @@ export const EventDetails = () => {
 			</Helmet>
 
 			<h2>{eventData?.title}</h2>
-			<span className={styles.eventItemDate}>
-				{eventData?.dates[0]} - {eventData?.dates[1]}
-			</span>
+			<span className={styles.eventItemDate}>{formatDateRange(eventData.dates)}</span>
 			<div className={styles.eventItemMainImg}>
 				<img src={eventData?.preview} alt={eventData?.title} />
 			</div>

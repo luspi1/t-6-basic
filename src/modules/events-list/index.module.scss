@@ -68,21 +68,21 @@
   width: 113px;
   min-width: 113px;
   padding-top: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
-  & > span {
-    font-size: 14px;
-    margin-bottom: 10px;
+  .eventLocation {
+    font-size: 12px;
     display: inline-block;
     line-height: 1.2;
   }
 
   p {
     @include ptsans-bold;
-    margin-bottom: 20px;
 
     span {
       display: block;
-
     }
   }
 
@@ -166,6 +166,7 @@
 }
 
 .eventDesignation {
+  margin-top: auto;
   text-transform: uppercase;
   font-size: 14px;
   @include ptsans-bold;

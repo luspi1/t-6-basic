@@ -1,7 +1,7 @@
 import { type FC } from 'react'
 import { type ContentNav } from 'src/types/navigation'
 
-import { Outlet, Navigate, Link } from 'react-router-dom'
+import { Outlet, Navigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 
 import { PageContent } from 'src/components/page-content/page-content'
@@ -29,9 +29,6 @@ export const GroupDetailsLayout: FC = () => {
 			<GroupInfo />
 			<TabNav className={styles.groupTabs} navItems={GroupInfoNavItems} />
 			<Outlet />
-			<Link className={styles.groupsListLink} to={`/${AppRoute.Groups}`}>
-				На страницу списка групп
-			</Link>
 		</PageContent>
 	)
 }

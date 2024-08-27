@@ -2,6 +2,7 @@ export let groups = [
 	{
 		id: '1',
 		avatar: 'https://tatarstan.ru/file/news/1581_n2165026_big.jpg',
+		leader: 'Хабибуллин Габдулла Салимуллович',
 		region: 'Татарстан, республика',
 		rating: '340',
 		title: 'МФК «Татар Батыр»',
@@ -76,6 +77,7 @@ export let groups = [
 			{
 				id: '1',
 				regionCode: '16',
+				region: 'Татарстан, республика',
 				level: '3',
 				title: 'Клуб национальной культуры «Татар Батыр»',
 				role: 'Руководитель',
@@ -90,6 +92,7 @@ export let groups = [
 			{
 				id: '2',
 				regionCode: '78',
+				region: 'Санкт-Петербург',
 				level: '2',
 				title: 'Татар Батыр, народная песня',
 				role: 'Участник',
@@ -104,6 +107,7 @@ export let groups = [
 			{
 				id: '3',
 				regionCode: '90',
+				region: 'Московская область',
 				level: '1',
 				title: 'Татар Батыр, деревенский мэзэк',
 				role: 'Участник',
@@ -119,7 +123,7 @@ export let groups = [
 		events: [
 			{
 				id: '0',
-				dates: ['24 мар', '26 мар 2024'],
+				dates: ['2024-08-25T00:00:00+03:00', '2024-08-27T00:00:00+03:00'],
 				location: 'Россия, Тамбовская обл.',
 				title: 'Какое-то длинное название события, которое пишется строго в одну строку',
 				preview: 'https://media.nazaccent.ru/cache/ef/80/ef80f06fb61905ab45cb60cf4cbf4d1c.jpg',
@@ -139,7 +143,7 @@ export let groups = [
 			},
 			{
 				id: '1',
-				dates: ['12 апр', '19 апр 2024'],
+				dates: ['2024-09-25T00:00:00+03:00', '2024-10-27T00:00:00+03:00'],
 				location: 'Россия, Тамбовская обл.',
 				title: 'Какое-то длинное название события, которое пишется строго в одну строку',
 				preview:
@@ -156,7 +160,7 @@ export let groups = [
 			},
 			{
 				id: '2',
-				dates: ['24 мар', '26 мар 2024'],
+				dates: ['2023-08-25T00:00:00+03:00', '2024-08-27T00:00:00+03:00'],
 				location: 'Россия, Тамбовская обл.',
 				title: 'Какое-то длинное название события, которое пишется строго в одну строку',
 				preview: 'https://vestitambov.ru/wp-content/uploads/2022/08/kulachki.jpg',
@@ -175,7 +179,6 @@ export let groups = [
 			{
 				id: '1',
 				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
-				date: '2022.12.23',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -184,28 +187,120 @@ export let groups = [
 			{
 				id: '2',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
-				date: '2021.11.13',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
-				date: '2021.11.13',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
-				date: '2018.05.01',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
-				date: '2011.01.05',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '8',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '9',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '10',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '11',
+				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '12',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '13',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '14',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '15',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '16',
+				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '17',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '18',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '19',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '20',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
@@ -2751,6 +2846,7 @@ export let groups = [
 		id: '2',
 		avatar:
 			'https://ptzgovorit.ru/sites/default/files/styles/700x100_proc/public/enziclop/_%D0%9A%D0%B0%D1%80%D0%B5%D0%BB%D0%B8%D0%B8.jpg?itok=fd9dQa8t',
+		leader: 'Попова Елена Владимировна',
 		region: 'Санкт-Петербург',
 		rating: '310',
 		title: 'ЭСК «Карельская Кила»',
@@ -2825,6 +2921,7 @@ export let groups = [
 			{
 				id: '1',
 				regionCode: '16',
+				region: 'Татарстан, республика',
 				level: '3',
 				title: 'Клуб национальной культуры «Татар Батыр»',
 				role: 'Руководитель',
@@ -2839,6 +2936,7 @@ export let groups = [
 			{
 				id: '2',
 				regionCode: '78',
+				region: 'Санкт-Петербург',
 				level: '2',
 				title: 'Татар Батыр, народная песня',
 				role: 'Участник',
@@ -2853,6 +2951,7 @@ export let groups = [
 			{
 				id: '3',
 				regionCode: '90',
+				region: 'Московская область',
 				level: '1',
 				title: 'Татар Батыр, деревенский мэзэк',
 				role: 'Участник',
@@ -2868,7 +2967,7 @@ export let groups = [
 		events: [
 			{
 				id: '0',
-				dates: ['24 мар', '26 мар 2024'],
+				dates: ['2024-08-25T00:00:00+03:00', '2024-08-27T00:00:00+03:00'],
 				location: 'Россия, Тамбовская обл.',
 				title: 'Какое-то длинное название события, которое пишется строго в одну строку',
 				preview: 'https://media.nazaccent.ru/cache/ef/80/ef80f06fb61905ab45cb60cf4cbf4d1c.jpg',
@@ -2888,7 +2987,7 @@ export let groups = [
 			},
 			{
 				id: '1',
-				dates: ['12 апр', '19 апр 2024'],
+				dates: ['2024-09-25T00:00:00+03:00', '2024-10-27T00:00:00+03:00'],
 				location: 'Россия, Тамбовская обл.',
 				title: 'Какое-то длинное название события, которое пишется строго в одну строку',
 				preview:
@@ -2905,7 +3004,7 @@ export let groups = [
 			},
 			{
 				id: '2',
-				dates: ['24 мар', '26 мар 2024'],
+				dates: ['2023-08-25T00:00:00+03:00', '2024-08-27T00:00:00+03:00'],
 				location: 'Россия, Тамбовская обл.',
 				title: 'Какое-то длинное название события, которое пишется строго в одну строку',
 				preview: 'https://vestitambov.ru/wp-content/uploads/2022/08/kulachki.jpg',
@@ -2924,7 +3023,6 @@ export let groups = [
 			{
 				id: '1',
 				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
-				date: '2022.12.23',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -2933,30 +3031,40 @@ export let groups = [
 			{
 				id: '2',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
-				date: '2021.11.13',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
-				date: '2021.11.13',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
-				date: '2018.05.01',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
-				date: '2011.01.05',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 		],
 		disciplines: [
@@ -5499,6 +5607,7 @@ export let groups = [
 	{
 		id: '3',
 		avatar: 'https://ethnomir.ru/upload/medialibrary/856/gerb.jpg',
+		leader: 'Кузнецов Дмитрий Сергеевич',
 		region: 'Московская область',
 		rating: '455',
 		title: 'ВИК «Подмосковное исконно-посконное Казачество XXI века»',
@@ -5573,6 +5682,7 @@ export let groups = [
 			{
 				id: '1',
 				regionCode: '16',
+				region: 'Татарстан, республика',
 				level: '3',
 				title: 'Клуб национальной культуры «Татар Батыр»',
 				role: 'Руководитель',
@@ -5587,6 +5697,7 @@ export let groups = [
 			{
 				id: '2',
 				regionCode: '78',
+				region: 'Санкт-Петербург',
 				level: '2',
 				title: 'Татар Батыр, народная песня',
 				role: 'Участник',
@@ -5601,6 +5712,7 @@ export let groups = [
 			{
 				id: '3',
 				regionCode: '90',
+				region: 'Московская область',
 				level: '1',
 				title: 'Татар Батыр, деревенский мэзэк',
 				role: 'Участник',
@@ -5616,7 +5728,7 @@ export let groups = [
 		events: [
 			{
 				id: '0',
-				dates: ['24 мар', '26 мар 2024'],
+				dates: ['2024-08-25T00:00:00+03:00', '2024-08-27T00:00:00+03:00'],
 				location: 'Россия, Тамбовская обл.',
 				title: 'Какое-то длинное название события, которое пишется строго в одну строку',
 				preview: 'https://media.nazaccent.ru/cache/ef/80/ef80f06fb61905ab45cb60cf4cbf4d1c.jpg',
@@ -5636,7 +5748,7 @@ export let groups = [
 			},
 			{
 				id: '1',
-				dates: ['12 апр', '19 апр 2024'],
+				dates: ['2024-09-25T00:00:00+03:00', '2024-10-27T00:00:00+03:00'],
 				location: 'Россия, Тамбовская обл.',
 				title: 'Какое-то длинное название события, которое пишется строго в одну строку',
 				preview:
@@ -5653,7 +5765,7 @@ export let groups = [
 			},
 			{
 				id: '2',
-				dates: ['24 мар', '26 мар 2024'],
+				dates: ['2023-08-25T00:00:00+03:00', '2024-08-27T00:00:00+03:00'],
 				location: 'Россия, Тамбовская обл.',
 				title: 'Какое-то длинное название события, которое пишется строго в одну строку',
 				preview: 'https://vestitambov.ru/wp-content/uploads/2022/08/kulachki.jpg',
@@ -5668,45 +5780,7 @@ export let groups = [
 				tags: ['Региональный уровень'],
 			},
 		],
-		photos: [
-			{
-				id: '1',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
-				date: '2022.12.23',
-				original:
-					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
-				thumbnail:
-					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
-			},
-			{
-				id: '2',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
-				date: '2021.11.13',
-				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
-				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
-			},
-			{
-				id: '3',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
-				date: '2021.11.13',
-				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
-				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
-			},
-			{
-				id: '4',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
-				date: '2018.05.01',
-				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
-				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
-			},
-			{
-				id: '5',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
-				date: '2011.01.05',
-				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
-				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
-			},
-		],
+		photos: [],
 		disciplines: [
 			{
 				id: '0',

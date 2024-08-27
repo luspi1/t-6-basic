@@ -7,7 +7,7 @@ export type EventsItem = {
 	partGroup: string
 	location: string
 	preview: string
-	dates: [string, string]
+	dates: [Date, Date]
 	type: string
 	desc: string
 	organizerLinks: SimpleLink[]

@@ -5,14 +5,17 @@ import { useParams } from 'react-router-dom'
 import { useGetGroupDisciplinesQuery } from 'src/store/groups/groups.api'
 
 import styles from './index.module.scss'
+import mainGroupsStyles from '../index.module.scss'
 
 export const GroupDisciplines: FC = () => {
 	const { id } = useParams()
 
 	const { data: groupDisciplines } = useGetGroupDisciplinesQuery(id ?? '')
 	return (
-		<section className={styles.groupDisciplinesSection}>
-			<DisciplinesList disciplinesData={groupDisciplines} />
-		</section>
+		<div className={mainGroupsStyles.groupTabContent}>
+			<section className={styles.groupDisciplinesSection}>
+				<DisciplinesList disciplinesData={groupDisciplines} />
+			</section>
+		</div>
 	)
 }

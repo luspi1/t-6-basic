@@ -13,6 +13,7 @@ import { Pagination } from 'src/components/pagination/pagination'
 import { useGetGroupTableQuery } from 'src/store/groups/groups.api'
 
 import styles from './index.module.scss'
+import mainGroupsStyles from '../index.module.scss'
 
 export const GroupTable: FC = () => {
 	const [searchGroups, setSearchGroups] = useState<string>('')
@@ -57,7 +58,9 @@ export const GroupTable: FC = () => {
 				<Link to={groupEl.id} key={groupEl.id}>
 					{groupEl.title}
 				</Link>,
-				groupEl.category,
+				<a href='#' key={3}>
+					{groupEl.category}
+				</a>,
 				groupEl.participantsCount <= 0 ? 'нет' : groupEl.participantsCount,
 				groupEl.subgroupsCount <= 0 ? 'нет' : groupEl.subgroupsCount,
 				<div className={styles.ratingCell} key={6}>
@@ -71,16 +74,18 @@ export const GroupTable: FC = () => {
 	if (isLoading || !groupList) return <Loader />
 
 	return (
-		<section className={styles.groupTableSection}>
-			<p className={styles.groupLengthInfo}>
-				Групп отобрано: <span>{groupList?.length}</span>
-			</p>
-			<CustomTable
-				className={styles.groupTable}
-				cellsData={formatGroupsTableData(groupList)}
-				colTitles={tableTitles}
-			/>
-			<Pagination pagesCount={7} activePage={2} />
-		</section>
+		<div className={mainGroupsStyles.groupTabContent}>
+			<section className={styles.groupTableSection}>
+				<p className={styles.groupLengthInfo}>
+					Групп отобрано: <span>{groupList?.length}</span>
+				</p>
+				<CustomTable
+					className={styles.groupTable}
+					cellsData={formatGroupsTableData(groupList)}
+					colTitles={tableTitles}
+				/>
+				<Pagination pagesCount={7} activePage={2} />
+			</section>
+		</div>
 	)
 }

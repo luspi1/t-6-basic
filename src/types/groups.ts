@@ -10,6 +10,7 @@ export type GroupItem = {
 	regionCode: string
 	region: string
 	avatar: string
+	leader: string
 	mainDesc: string
 	descs: string[]
 	level: string

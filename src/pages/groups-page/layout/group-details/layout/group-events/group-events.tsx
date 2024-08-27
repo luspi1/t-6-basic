@@ -1,4 +1,4 @@
-import { type FC, useState } from 'react'
+import React, { type FC, useState } from 'react'
 
 import { useParams } from 'react-router-dom'
 
@@ -9,6 +9,9 @@ import { EventsList } from 'src/modules/events-list/events-list'
 import { useGetGroupEventQuery } from 'src/store/groups/groups.api'
 
 import styles from './index.module.scss'
+import mainGroupsStyles from '../index.module.scss'
+import { MainButton } from 'src/UI/MainButton/MainButton'
+import { AppRoute } from 'src/routes/main-routes/consts'
 
 export const GroupEvents: FC = () => {
 	const [searchEvents] = useState<string>('')
@@ -21,8 +24,13 @@ export const GroupEvents: FC = () => {
 	if (isLoading || !eventList) return <Loader />
 
 	return (
-		<section className={styles.groupEventsSection}>
-			<EventsList eventsData={eventList} eventDesignation />
-		</section>
+		<div className={mainGroupsStyles.groupTabContent}>
+			<section className={styles.groupEventsSection}>
+				<EventsList className={styles.groupEventsList} eventsData={eventList} eventDesignation />
+				<MainButton className={styles.allEventsLink} as='route' to={`/${AppRoute.Events}`}>
+					Перейти в раздел Все события
+				</MainButton>
+			</section>
+		</div>
 	)
 }

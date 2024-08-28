@@ -1,4 +1,3 @@
-import { type ReactNode } from 'react'
 import { type LinkItem, type RelatedLink, type SourceLink } from 'src/types/global'
 import { type ShortDocument } from 'src/types/document'
 import { type SelOption } from 'src/types/select'
@@ -74,17 +73,6 @@ export const calculateAge = (birthDate?: Date | string, isDateOnly?: boolean) =>
 // форматирование номера телефона
 export const formatPhoneNumber = (number: string) => {
 	return number.replace(/[-()\s]/g, '')
-}
-export const isNullOrEmpty = (value: ReactNode | ReactNode[]): boolean => {
-	if (value == null) {
-		return true
-	}
-
-	if (typeof value === 'string' && value.trim() === '') {
-		return true
-	}
-
-	return Array.isArray(value) && value.length === 0
 }
 
 // Форматирование ссылок-связей

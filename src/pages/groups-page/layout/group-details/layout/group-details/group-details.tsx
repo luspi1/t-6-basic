@@ -22,8 +22,8 @@ export const GroupDetails: FC = () => {
 				<InfoRow
 					title='Руководитель группы:'
 					label={<a href='#'>{groupInfo?.leader}</a>}
-					titleWidth='175'
-					margin='0 0 20px 0'
+					$titleWidth='165px'
+					$margin='0 0 20px 0'
 				/>
 				<CustomText $fontSize='16px' $lineHeight='1.45'>
 					{groupInfo?.mainDesc}

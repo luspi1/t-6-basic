@@ -1,39 +1,55 @@
 import { type FC, type ReactNode } from 'react'
 
-import cn from 'classnames'
+import styled from 'styled-components'
 
-import styles from './index.module.scss'
-import { isNullOrEmpty } from 'src/helpers/utils'
+type InfoRowStyleProps = {
+	$margin?: string
+	$alignItems?: string
+	$gap?: string
+	$titleWidth?: string
+	$titleSize?: string
+	$titleWeight?: string
+	$labelMaxWidth?: string
+}
 
 type InfoRowProps = {
 	wrapperClassname?: string
 	title: string
-	label: ReactNode | ReactNode[]
-	titleWidth?: string
-	margin?: string
-}
+	label: ReactNode
+} & InfoRowStyleProps
 
-export const InfoRow: FC<InfoRowProps> = ({
-	title,
-	label,
-	titleWidth,
-	margin,
-	wrapperClassname,
-}) => {
-	if (isNullOrEmpty(label)) return null
+const StyledInfoRow = styled.div<InfoRowStyleProps>`
+	margin: ${({ $margin }) => $margin ?? '0 0 10px 0'};
+	display: flex;
+	align-items: ${({ $alignItems }) => $alignItems ?? 'flex-start'};
+	gap: ${({ $gap }) => $gap ?? '10px'};
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 5px;
+	}
+
+	h6 {
+		font-size: ${({ $titleSize }) => $titleSize ?? '16px'};
+		font-weight: ${({ $titleWeight }) => $titleWeight ?? '700'};
+		width: ${({ $titleWidth }) => $titleWidth ?? '190px'};
+		min-width: ${({ $titleWidth }) => $titleWidth ?? '190px'};
+	}
+
+	a {
+		color: #015db9;
+	}
+
+	& > p {
+		font-size: 16px;
+		max-width: ${({ $labelMaxWidth }) => $labelMaxWidth ?? 'initial'};
+	}
+`
+export const InfoRow: FC<InfoRowProps> = ({ title, label, wrapperClassname, ...props }) => {
 	return (
-		<div
-			className={cn(styles.infoRow, wrapperClassname)}
-			style={{ margin: `${margin ?? '0 0 10px 0'}` }}
-		>
-			<h6 style={{ width: `${titleWidth ?? 200}px`, minWidth: `${titleWidth ?? 200}px` }}>
-				{title}
-			</h6>
-			{Array.isArray(label) ? (
-				<ul>{label?.map((labelEl, idx) => <li key={idx}>{labelEl}</li>)}</ul>
-			) : (
-				<span>{label}</span>
-			)}
-		</div>
+		<StyledInfoRow className={wrapperClassname} {...props}>
+			<h6>{title}</h6>
+			<p>{label}</p>
+		</StyledInfoRow>
 	)
 }

@@ -50,7 +50,7 @@ export const GalleryImg: FC<ImageGalleryProps> = ({
 		</button>
 	)
 
-	if (!images?.length) return <h6>Нет изображений</h6>
+	if (!images?.length) return null
 
 	return (
 		<div className={className}>

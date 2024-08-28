@@ -26,13 +26,13 @@ export const GroupInfo = () => {
 					<CustomText $fontSize='16px' $fontStyle='italic' $lineHeight='1.45' $margin='0 0 20px 0'>
 						{groupData?.mainDesc}
 					</CustomText>
-					<InfoRow title='Категория:' label={groupData?.category} titleWidth='95' />
+					<InfoRow title='Категория:' label={groupData?.category} $titleWidth='85px' />
 					<InfoRow
 						title='Разделы:'
-						label={<RenderedArray strArray={groupData?.sections} />}
-						titleWidth='95'
+						label={<RenderedArray strArray={groupData?.sections} as='span' />}
+						$titleWidth='85px'
 					/>
-					<InfoRow title='Регион:' label={groupData?.region} titleWidth='95' />
+					<InfoRow title='Регион:' label={groupData?.region} $titleWidth='85px' />
 				</div>
 			</div>
 		</div>

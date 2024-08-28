@@ -16,7 +16,7 @@ import styles from './index.module.scss'
 export const GroupDetailsLayout: FC = () => {
 	const [matchesLocation] = useLocationMatch<ContentNav>([`${AppRoute.Groups}/:id`])
 
-	if (matchesLocation) return <Navigate to={AppRoute.GroupNews} replace />
+	if (matchesLocation) return <Navigate to={AppRoute.News} replace />
 	return (
 		<PageContent
 			className={styles.groupDetailsContent}

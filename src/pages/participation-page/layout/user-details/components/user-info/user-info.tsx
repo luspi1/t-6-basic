@@ -5,8 +5,9 @@ import { calculateAge, customFormatDate } from 'src/helpers/utils'
 import { InfoRow } from 'src/UI/InfoRow/InfoRow'
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 
-import styles from './index.module.scss'
 import { CustomText } from 'src/components/custom-text/custom-text'
+import { SimpleLink } from 'src/components/simple-link/simple-link'
+import styles from './index.module.scss'
 
 export const UserInfo = () => {
 	const { id } = useParams()
@@ -41,7 +42,7 @@ export const UserInfo = () => {
 						}
 					/>
 					<InfoRow title='Населенный пункт:' label={userData?.locality} />
-					<InfoRow title='Пол:' label={userData?.gender} margin='0 0 25px 0' />
+					<InfoRow title='Пол:' label={userData?.gender} $margin='0 0 25px 0' />
 					<InfoRow
 						wrapperClassname={styles.phoneWrapper}
 						title='Телефоны:'
@@ -49,11 +50,11 @@ export const UserInfo = () => {
 					/>
 					<InfoRow
 						title='Электронная почта:'
-						label={<a href={`mailto:${userData?.email}`}>{userData?.email}</a>}
+						label={<SimpleLink title={userData?.email} link={userData?.email} isEmail />}
 					/>
 					<InfoRow
 						title='Сайт / социальная сеть:'
-						margin='0 0 20px 0'
+						$margin='0 0 20px 0'
 						label={<a href={userData?.website}>{userData?.website}</a>}
 					/>
 					<CustomText $fontSize='16px' $fontStyle='italic' $lineHeight='1.5' $maxWidth='950px'>

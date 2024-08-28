@@ -25,8 +25,8 @@ export const EthnoDetailsHistory: FC = () => {
 					key={idx}
 					title={el.date}
 					label={el.text}
-					titleWidth='82'
-					margin='0 0 15px 0'
+					$titleWidth='72px'
+					$margin='0 0 15px 0'
 				/>
 			))}
 		</section>

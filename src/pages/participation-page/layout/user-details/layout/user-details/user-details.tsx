@@ -18,7 +18,7 @@ export const UserDetails: FC = () => {
 			<section>
 				<InfoRow
 					title='Статусы участника:'
-					margin='0 0 20px 0'
+					$margin='0 0 20px 0'
 					label={<RenderedArray strArray={userInfo?.statuses} />}
 				/>
 				<InfoRow
@@ -27,7 +27,7 @@ export const UserDetails: FC = () => {
 				/>
 			</section>
 			<section>
-				<InfoRow title='Подробнее о себе' margin='0 0 10px 0' label={userInfo?.mainDesc} />
+				<InfoRow title='Подробнее о себе' $margin='0 0 10px 0' label={userInfo?.mainDesc} />
 			</section>
 			<section>
 				<LinksList dataList={formatSourceLinks(userInfo?.relatedLinks)} title='Массив ссылок' />

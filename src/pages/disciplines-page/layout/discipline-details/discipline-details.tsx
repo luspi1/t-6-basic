@@ -30,11 +30,11 @@ export const DisciplineDetails = () => {
 				</div>
 				<div className={styles.disciplineContent}>
 					<p>{disciplineItem?.mainDesc}</p>
-					<InfoRow title='Направление:' label={disciplineItem?.direction} titleWidth='116' />
-					<InfoRow title='Раздел:' label={disciplineItem?.chapter} titleWidth='116' />
-					<InfoRow title='Участие:' label={disciplineItem?.participation} titleWidth='116' />
-					<InfoRow title='Пол:' label={disciplineItem?.gender} titleWidth='116' />
-					<InfoRow title='Категория:' label={disciplineItem?.category} titleWidth='116' />
+					<InfoRow title='Направление:' label={disciplineItem?.direction} $titleWidth='106px' />
+					<InfoRow title='Раздел:' label={disciplineItem?.chapter} $titleWidth='106px' />
+					<InfoRow title='Участие:' label={disciplineItem?.participation} $titleWidth='106px' />
+					<InfoRow title='Пол:' label={disciplineItem?.gender} $titleWidth='106px' />
+					<InfoRow title='Категория:' label={disciplineItem?.category} $titleWidth='106px' />
 				</div>
 			</div>
 			<TabNav className={styles.disciplineNav} navItems={DisciplineDetailsNavItems} isTitle />

@@ -13,7 +13,7 @@ import { NewsNavigation } from 'src/components/news-navigation/news-navigation'
 
 import styles from './index.module.scss'
 
-export const NewsList: FC = () => {
+export const GroupNewsList: FC = () => {
 	const [yearsSelectValue, setYearsSelectValue] = useState<string>('')
 	const [yearsOptions, setYearsOptions] = useState<SelOption[]>([])
 	const { data: newsList, isLoading } = useGetAllNewsQuery({ year: yearsSelectValue })

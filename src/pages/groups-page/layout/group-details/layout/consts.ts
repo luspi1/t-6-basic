@@ -3,7 +3,7 @@ import { type NavigationItem } from 'src/types/navigation'
 export const GroupInfoNavItems: NavigationItem[] = [
 	{
 		title: 'новости',
-		link: 'group-news',
+		link: 'news',
 	},
 	{
 		title: 'информация',

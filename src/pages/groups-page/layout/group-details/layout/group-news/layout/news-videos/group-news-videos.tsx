@@ -10,7 +10,7 @@ import { NewsNavigation } from 'src/components/news-navigation/news-navigation'
 
 import styles from './index.module.scss'
 
-export const NewsVideos: FC = () => {
+export const GroupNewsVideos: FC = () => {
 	const [yearsSelectValue, setYearsSelectValue] = useState<string>('')
 	const { data: newsVideosList } = useGetNewsVideosQuery(null)
 

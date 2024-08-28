@@ -66,7 +66,6 @@ import { EventDetails } from 'src/pages/events-page/layout/events-details/event-
 import { GroupsLayout } from 'src/pages/groups-page/layout/groups-layout'
 import { GroupsList } from 'src/pages/groups-page/layout/groups-list/groups-list'
 import { GroupDetailsLayout } from 'src/pages/groups-page/layout/group-details/layout/group-details-layout'
-import { GroupNews } from 'src/pages/groups-page/layout/group-details/layout/group-news/group-news'
 import { GroupDetails } from 'src/pages/groups-page/layout/group-details/layout/group-details/group-details'
 import { GroupContacts } from 'src/pages/groups-page/layout/group-details/layout/group-contacts/group-contacts'
 import { GroupEvents } from 'src/pages/groups-page/layout/group-details/layout/group-events/group-events'
@@ -74,6 +73,11 @@ import { GroupParticipantes } from 'src/pages/groups-page/layout/group-details/l
 import { GroupTable } from 'src/pages/groups-page/layout/group-details/layout/group-table/group-table'
 import { GroupDisciplines } from 'src/pages/groups-page/layout/group-details/layout/group-disciplines/group-disciplines'
 import { GroupGallery } from 'src/pages/groups-page/layout/group-details/layout/group-gallery/group-gallery'
+import { GroupNewsLayout } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/group-news-layout'
+import { GroupNewsList } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/group-news-list/group-news-list'
+import { GroupNewsVideos } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/news-videos/group-news-videos'
+import { GroupNewsVideoDetails } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/group-news-video-details/group-news-video-details'
+import { GroupNewsDetails } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/group-news-details/group-news-details'
 
 export const MainRoutes = () => {
 	return (
@@ -143,7 +147,12 @@ export const MainRoutes = () => {
 				<Route path={AppRoute.Groups} element={<GroupsLayout />}>
 					<Route index element={<GroupsList />} />
 					<Route path=':id' element={<GroupDetailsLayout />}>
-						<Route path={AppRoute.GroupNews} element={<GroupNews />} />
+						<Route path={AppRoute.News} element={<GroupNewsLayout />}>
+							<Route index element={<GroupNewsList />} />
+							<Route path={AppRoute.NewsVideo} element={<GroupNewsVideos />} />
+							<Route path={`${AppRoute.NewsVideo}/:id`} element={<GroupNewsVideoDetails />} />
+							<Route path=':id' element={<GroupNewsDetails />} />
+						</Route>
 						<Route path={AppRoute.GroupInfo} element={<GroupDetails />} />
 						<Route path={AppRoute.GroupContacts} element={<GroupContacts />} />
 						<Route path={AppRoute.GroupEvents} element={<GroupEvents />} />

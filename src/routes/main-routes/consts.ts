@@ -31,7 +31,6 @@ export enum AppRoute {
 	UserGallery = 'user-gallery',
 	UserAuthors = 'user-authors',
 	Groups = 'groups-list',
-	GroupNews = 'group-news',
 	GroupInfo = 'group-info',
 	GroupContacts = 'group-contacts',
 	GroupEvents = 'group-events',

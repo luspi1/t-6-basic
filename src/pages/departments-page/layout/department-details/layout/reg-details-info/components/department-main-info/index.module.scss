@@ -9,29 +9,8 @@
 }
 
 
-.phoneList {
-  ul {
-    display: flex;
-    gap: 6px;
-
-    li:not(:last-child) {
-      position: relative;
-
-      &::after {
-        position: absolute;
-        content: (',');
-      }
-    }
-
-    a {
-      color: inherit;
-    }
-  }
-}
 
 .mainInfoLogo {
-  display: flex;
-  align-items: center;
   padding-top: 10px;
 
   img {

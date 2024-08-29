@@ -1,10 +1,16 @@
-import { type FC } from 'react'
+import React, { type FC } from 'react'
+
+import cn from 'classnames'
 import { Outlet } from 'react-router-dom'
+
 import mainGroupsStyles from 'src/pages/groups-page/layout/group-details/layout/index.module.scss'
+import styles from './index.module.scss'
+import { NewsNavigation } from 'src/components/news-navigation/news-navigation'
 
 export const GroupNewsLayout: FC = () => {
 	return (
-		<div className={mainGroupsStyles.groupTabContent}>
+		<div className={cn(mainGroupsStyles.groupTabContent, styles.newsTabContent)}>
+			<NewsNavigation />
 			<Outlet />
 		</div>
 	)

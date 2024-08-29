@@ -10,13 +10,19 @@ type TabNavProps = {
 	isTitle?: boolean
 	className?: string
 	customLocations?: string[]
+	activeClassName?: string
 }
-export const TabNav: FC<TabNavProps> = ({ navItems, isTitle = false, className }) => {
+export const TabNav: FC<TabNavProps> = ({
+	navItems,
+	isTitle = false,
+	className,
+	activeClassName,
+}) => {
 	const location = useLocation()
 
 	const [activeTitle, setActiveTitle] = useState<string>(navItems[0].title)
 	const setActive = ({ isActive }: { isActive: boolean }) =>
-		isActive ? `${styles.activeLink}` : ''
+		isActive ? `${activeClassName ?? styles.activeLink}` : ''
 
 	useEffect(() => {
 		if (isTitle) {

@@ -7,10 +7,12 @@ import { type ImageItem } from 'src/types/photos'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 import { BASE_URL, ReducerPath } from 'src/helpers/consts'
+import type { NewsItem } from 'src/types/news'
+import type { VideoItem } from 'src/types/videos'
 
 export const groupsApi = createApi({
 	reducerPath: ReducerPath.Groups,
-	tagTypes: ['Groups'],
+	tagTypes: ['Groups', 'GroupNews'],
 	baseQuery: fetchBaseQuery({
 		baseUrl: BASE_URL,
 	}),
@@ -62,6 +64,32 @@ export const groupsApi = createApi({
 				url: `groups/${groupId}/photos`,
 			}),
 		}),
+		getGroupAllNews: build.query<NewsItem[], { groupId?: string; search?: string; year?: string }>({
+			query: ({ groupId = '', search = '', year = '' }) => ({
+				url: `groups/${groupId}/news`,
+				params: {
+					q: search,
+					y: year,
+				},
+			}),
+			providesTags: ['GroupNews'],
+		}),
+		getGroupNewsById: build.query<NewsItem, { groupId?: string; newsId?: string }>({
+			query: ({ groupId = '', newsId = '' }) => ({
+				url: `groups/${groupId}/news/${newsId}`,
+			}),
+			providesTags: ['GroupNews'],
+		}),
+		getGroupNewsVideos: build.query<VideoItem[], string>({
+			query: (groupId) => ({
+				url: `groups/${groupId}/news-videos`,
+			}),
+		}),
+		getGroupNewsVideoById: build.query<VideoItem, { groupId?: string; videoId?: string }>({
+			query: ({ groupId = '', videoId = '' }) => ({
+				url: `groups/${groupId}/news-videos/${videoId}`,
+			}),
+		}),
 	}),
 })
 
@@ -73,4 +101,8 @@ export const {
 	useGetGroupTableQuery,
 	useGetGroupDisciplinesQuery,
 	useGetGroupPhotoQuery,
+	useGetGroupAllNewsQuery,
+	useGetGroupNewsByIdQuery,
+	useGetGroupNewsVideosQuery,
+	useGetGroupNewsVideoByIdQuery,
 } = groupsApi

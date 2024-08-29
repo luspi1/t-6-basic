@@ -344,3 +344,42 @@ export const getGroupPhotos = (req, res) => {
 
 	res.status(200).json(searchedGroup.photos)
 }
+
+export const getGroupNews = (req, res) => {
+	const groupId = req.params.id
+	const { q, y } = req.query
+	const searchedGroup = groups.find((group) => group.id === groupId)
+	const filteredNews = searchedGroup.news.filter((el) => {
+		if (y) {
+			return String(new Date(el.date).getFullYear()) === y && el.title.toLowerCase().includes(q)
+		}
+		return el.title.toLowerCase().includes(q)
+	})
+
+	res.status(200).json(filteredNews)
+}
+
+export const getGroupNewsVideos = (req, res) => {
+	const groupId = req.params.id
+	const searchedGroup = groups.find((group) => group.id === groupId)
+	res.status(200).json(searchedGroup.newsVideos)
+}
+
+export const getGroupNewsVideoById = (req, res) => {
+	const groupId = req.params.id
+	const videoId = req.params.videoId
+	const searchedGroup = groups.find((group) => group.id === groupId)
+	const foundVideoNews = searchedGroup.newsVideos.find((videoItem) => videoItem.id === videoId)
+
+	res.status(200).json(foundVideoNews)
+}
+
+export const getGroupNewsById = (req, res) => {
+	const groupId = req.params.id
+	const newsId = req.params.newsId
+	const searchedGroup = groups.find((group) => group.id === groupId)
+
+	const foundNews = searchedGroup.news.find((newsItem) => newsItem.id === newsId)
+
+	res.status(200).json(foundNews)
+}

@@ -54,7 +54,7 @@ import { UserGallery } from 'src/pages/participation-page/layout/user-details/la
 import { UserAuthors } from 'src/pages/participation-page/layout/user-details/layout/user-authors/user-authors'
 
 import { NewsLayout } from 'src/pages/news-page/layout/news-layout'
-import { NewsList } from 'src/pages/news-page/layout/news-list/news-list'
+import { News } from 'src/pages/news-page/layout/news/news'
 import { NewsVideos } from 'src/pages/news-page/layout/news-videos/news-videos'
 import { NewsDetails } from 'src/pages/news-page/layout/news-details/news-details'
 import { NewsVideoDetails } from 'src/pages/news-page/layout/news-video-details/news-video-details'
@@ -150,8 +150,8 @@ export const MainRoutes = () => {
 						<Route path={AppRoute.News} element={<GroupNewsLayout />}>
 							<Route index element={<GroupNewsList />} />
 							<Route path={AppRoute.NewsVideo} element={<GroupNewsVideos />} />
-							<Route path={`${AppRoute.NewsVideo}/:id`} element={<GroupNewsVideoDetails />} />
-							<Route path=':id' element={<GroupNewsDetails />} />
+							<Route path={`${AppRoute.NewsVideo}/:vidId`} element={<GroupNewsVideoDetails />} />
+							<Route path=':newsId' element={<GroupNewsDetails />} />
 						</Route>
 						<Route path={AppRoute.GroupInfo} element={<GroupDetails />} />
 						<Route path={AppRoute.GroupContacts} element={<GroupContacts />} />
@@ -164,7 +164,7 @@ export const MainRoutes = () => {
 				</Route>
 
 				<Route path={AppRoute.News} element={<NewsLayout />}>
-					<Route index element={<NewsList />} />
+					<Route index element={<News />} />
 					<Route path={AppRoute.NewsVideo} element={<NewsVideos />} />
 					<Route path={`${AppRoute.NewsVideo}/:id`} element={<NewsVideoDetails />} />
 					<Route path=':id' element={<NewsDetails />} />

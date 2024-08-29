@@ -1,18 +1,21 @@
 import { type FC } from 'react'
 import { Link } from 'react-router-dom'
+import { type NewsItem } from 'src/types/news'
 
-import { useGetAllNewsQuery } from 'src/store/news/news.api'
 import { customFormatDate } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
 
 type AsideNewsProps = {
 	previewCount?: number
-	currentNewsId: string
+	currentNewsId?: string
+	newsList?: NewsItem[]
 }
-export const AsideNews: FC<AsideNewsProps> = ({ previewCount = 4, currentNewsId }) => {
-	const { data: newsList } = useGetAllNewsQuery({})
-
+export const AsideNews: FC<AsideNewsProps> = ({
+	previewCount = 4,
+	currentNewsId = '',
+	newsList,
+}) => {
 	if (!newsList) return null
 	return (
 		<aside className={styles.asideNews}>

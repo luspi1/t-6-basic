@@ -1,29 +1,32 @@
-import { type FC } from 'react'
+import React, { type FC } from 'react'
 
-import { NavLink } from 'react-router-dom'
-import { AppRoute } from 'src/routes/main-routes/consts'
+import { useLocation } from 'react-router-dom'
 
-import styles from './index.module.scss'
+import { TabNav } from 'src/components/tab-nav/tab-nav'
 import cn from 'classnames'
 
+import styles from './index.module.scss'
+
 type NewsNavigationProps = {
-	activeLink: 'news' | 'videos'
+	className?: string
 }
-export const NewsNavigation: FC<NewsNavigationProps> = ({ activeLink = 'news' }) => {
+
+export const NewsNavigation: FC<NewsNavigationProps> = ({ className }) => {
+	const location = useLocation()
+	const isDetailPage =
+		/\/news\/\d+$/.test(location.pathname) || /\/news\/news-video\/\d+$/.test(location.pathname)
 	return (
-		<nav className={styles.newsNav}>
-			<NavLink
-				to={`/${AppRoute.News}`}
-				className={cn({ [styles.activeLink]: activeLink === 'news' })}
-			>
-				Новости
-			</NavLink>
-			<NavLink
-				to={AppRoute.NewsVideo}
-				className={cn({ [styles.activeLink]: activeLink === 'videos' })}
-			>
-				Видеолента
-			</NavLink>
-		</nav>
+		<div className={cn(styles.newsNav, className)}>
+			{!isDetailPage && (
+				<TabNav
+					className={styles.newsTabs}
+					activeClassName={styles.activeNewsTab}
+					navItems={[
+						{ title: 'Новости', link: '', exact: true },
+						{ title: 'Видеолента', link: 'news-video' },
+					]}
+				/>
+			)}
+		</div>
 	)
 }

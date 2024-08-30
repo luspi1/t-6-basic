@@ -10,7 +10,12 @@ import { NewsNavigation } from 'src/components/news-navigation/news-navigation'
 export const GroupNewsLayout: FC = () => {
 	return (
 		<div className={cn(mainGroupsStyles.groupTabContent, styles.newsTabContent)}>
-			<NewsNavigation />
+			<NewsNavigation
+				customNav={[
+					{ title: 'Новости', link: '', exact: true },
+					{ title: 'Видеолента', link: 'videos' },
+				]}
+			/>
 			<Outlet />
 		</div>
 	)

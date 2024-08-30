@@ -3,8 +3,7 @@ import { type VideoItem } from 'src/types/videos'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { customFormatDate } from 'src/helpers/utils'
-import { AppRoute } from 'src/routes/main-routes/consts'
+import { mainFormatDate } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
 
@@ -62,10 +61,8 @@ export const VideoGallery: FC<VideoGalleryProps> = ({
 							></iframe>
 							{item.thumbnail && <img src={item.thumbnail} alt={item.title} />}
 						</StyledVideo>
-						<Link to={`/${AppRoute.News}/${AppRoute.NewsVideo}/${item.id}`}>{item.title}</Link>
-						<p>
-							{customFormatDate(item?.date, { day: 'numeric', month: 'long', year: 'numeric' })}
-						</p>
+						<Link to={item.id}>{item.title}</Link>
+						<p>{mainFormatDate(item?.date)}</p>
 					</li>
 				))}
 			</ul>

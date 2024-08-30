@@ -1,5 +1,5 @@
 import { type FC } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { type NewsItem } from 'src/types/news'
 
 import { customFormatDate } from 'src/helpers/utils'
@@ -16,6 +16,9 @@ export const AsideNews: FC<AsideNewsProps> = ({
 	currentNewsId = '',
 	newsList,
 }) => {
+	const location = useLocation()
+	const baseUrl = location.pathname.split('/').slice(0, -1).join('/')
+
 	if (!newsList) return null
 	return (
 		<aside className={styles.asideNews}>
@@ -28,7 +31,7 @@ export const AsideNews: FC<AsideNewsProps> = ({
 					.map((newsEl) => (
 						<li key={newsEl.id}>
 							<span>{customFormatDate(newsEl.date, { day: 'numeric', month: 'long' })}</span>
-							<Link to={`/news/${newsEl.id}`}>{newsEl.title}</Link>
+							<Link to={`${baseUrl}/${newsEl.id}`}>{newsEl.title}</Link>
 						</li>
 					))}
 			</ul>

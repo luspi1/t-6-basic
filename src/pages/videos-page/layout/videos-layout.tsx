@@ -7,7 +7,7 @@ import { NewsNavigation } from 'src/components/news-navigation/news-navigation'
 import { PageContent } from 'src/components/page-content/page-content'
 import styles from './index.module.scss'
 
-export const NewsLayout: FC = () => {
+export const VideosLayout: FC = () => {
 	return (
 		<Container>
 			<BreadCrumbs

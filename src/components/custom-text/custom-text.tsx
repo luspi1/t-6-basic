@@ -12,6 +12,7 @@ type CustomTextProps = {
 	$lineHeight?: string
 	$fontStyle?: string
 	$maxWidth?: string
+	$color?: string
 } & React.CSSProperties
 
 const StyledCustomText = styled.p<CustomTextProps>`
@@ -22,6 +23,7 @@ const StyledCustomText = styled.p<CustomTextProps>`
 	line-height: ${({ $lineHeight }) => $lineHeight};
 	font-style: ${({ $fontStyle }) => $fontStyle ?? 'normal'};
 	max-width: ${({ $maxWidth }) => $maxWidth ?? 'initial'};
+	color: ${({ $color }) => $color ?? '#000000'};
 `
 
 export const CustomText: FC<CustomTextProps> = ({ children, className, ...props }) => {

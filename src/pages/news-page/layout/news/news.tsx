@@ -1,9 +1,9 @@
-import { type FC, useState } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React, { type FC, useState } from 'react'
 
 import { NewsList } from 'src/modules/news-list/news-list'
-import { PageContent } from 'src/components/page-content/page-content'
 import { useGetAllNewsQuery } from 'src/store/news/news.api'
+
+import styles from './index.module.scss'
 
 export const News: FC = () => {
 	const [yearsValue, setYearsValue] = useState<string>('')
@@ -11,10 +11,7 @@ export const News: FC = () => {
 	const { data: newsList, isSuccess } = useGetAllNewsQuery({ year: yearsValue })
 
 	return (
-		<PageContent $padding='30px 40px 55px 30px' $maxWidth='100%'>
-			<Helmet>
-				<title>Все новости</title>
-			</Helmet>
+		<div className={styles.newsListPage}>
 			<NewsList
 				newsItems={newsList ?? []}
 				title='Все новости'
@@ -22,6 +19,6 @@ export const News: FC = () => {
 				yearsValue={yearsValue}
 				isSuccess={isSuccess}
 			/>
-		</PageContent>
+		</div>
 	)
 }

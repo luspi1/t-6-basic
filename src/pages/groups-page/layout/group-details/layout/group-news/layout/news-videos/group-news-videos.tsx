@@ -3,9 +3,13 @@ import React, { type FC, useState } from 'react'
 import { MainSelect } from 'src/UI/MainSelect/MainSelect'
 import { VideoGallery } from 'src/components/video-gallery/video-gallery'
 
-import styles from './index.module.scss'
 import { useGetGroupNewsVideosQuery } from 'src/store/groups/groups.api'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { AppRoute } from 'src/routes/main-routes/consts'
+
+import mainGroupsStyles from 'src/pages/groups-page/layout/group-details/layout/index.module.scss'
+import styles from './index.module.scss'
+import { Pagination } from 'src/components/pagination/pagination'
 
 export const GroupNewsVideos: FC = () => {
 	const { id } = useParams()
@@ -14,23 +18,29 @@ export const GroupNewsVideos: FC = () => {
 	const { data: newsVideosList } = useGetGroupNewsVideosQuery(id ?? '')
 
 	return (
-		<div>
-			<div className={styles.videosTitleBlock}>
-				<h2>Видеозаписи группы</h2>
-				<MainSelect
-					onChange={(e) => setYearsSelectValue(e.target.value)}
-					value={yearsSelectValue}
-					className={styles.newsDateSelect}
-					items={[{ label: 'Все годы', value: '' }]}
-				/>
-				<MainSelect
-					onChange={(e) => setYearsSelectValue(e.target.value)}
-					value={yearsSelectValue}
-					className={styles.newsDateSelect}
-					items={[{ label: 'Все месяцы', value: '' }]}
-				/>
+		<div className={mainGroupsStyles.groupTabContent}>
+			<div className={styles.groupTabNewsVideos}>
+				<div className={styles.videosTitleBlock}>
+					<h2>Видеозаписи группы</h2>
+					<MainSelect
+						onChange={(e) => setYearsSelectValue(e.target.value)}
+						value={yearsSelectValue}
+						className={styles.newsDateSelect}
+						items={[{ label: 'Все годы', value: '' }]}
+					/>
+					<MainSelect
+						onChange={(e) => setYearsSelectValue(e.target.value)}
+						value={yearsSelectValue}
+						className={styles.newsDateSelect}
+						items={[{ label: 'Все месяцы', value: '' }]}
+					/>
+				</div>
+				<VideoGallery videos={newsVideosList} />
+				<Pagination className={styles.newsVideosPagination} pagesCount={7} activePage={2} />
 			</div>
-			<VideoGallery videos={newsVideosList} />
+			<Link className={mainGroupsStyles.groupsListLink} to={`/${AppRoute.Groups}`}>
+				На страницу списка групп
+			</Link>
 		</div>
 	)
 }

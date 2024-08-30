@@ -53,11 +53,7 @@ import { UserDisciplines } from 'src/pages/participation-page/layout/user-detail
 import { UserGallery } from 'src/pages/participation-page/layout/user-details/layout/user-gallery/user-gallery'
 import { UserAuthors } from 'src/pages/participation-page/layout/user-details/layout/user-authors/user-authors'
 
-import { NewsLayout } from 'src/pages/news-page/layout/news-layout'
-import { News } from 'src/pages/news-page/layout/news/news'
-import { NewsVideos } from 'src/pages/news-page/layout/news-videos/news-videos'
 import { NewsDetails } from 'src/pages/news-page/layout/news-details/news-details'
-import { NewsVideoDetails } from 'src/pages/news-page/layout/news-video-details/news-video-details'
 
 import { EventsLayout } from 'src/pages/events-page/events-layout'
 import { EventsListPage } from 'src/pages/events-page/layout/events-list-page/events-list-page'
@@ -78,6 +74,11 @@ import { GroupNewsList } from 'src/pages/groups-page/layout/group-details/layout
 import { GroupNewsVideos } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/news-videos/group-news-videos'
 import { GroupNewsVideoDetails } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/group-news-video-details/group-news-video-details'
 import { GroupNewsDetails } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/group-news-details/group-news-details'
+import { NewsLayout } from 'src/pages/news-page/layout/news-layout'
+import { VideosLayout } from 'src/pages/videos-page/layout/videos-layout'
+import { Videos } from 'src/pages/videos-page/layout/videos/videos'
+import { VideoDetails } from 'src/pages/videos-page/layout/video-details/video-details'
+import { News } from 'src/pages/news-page/layout/news/news'
 
 export const MainRoutes = () => {
 	return (
@@ -149,8 +150,8 @@ export const MainRoutes = () => {
 					<Route path=':id' element={<GroupDetailsLayout />}>
 						<Route path={AppRoute.News} element={<GroupNewsLayout />}>
 							<Route index element={<GroupNewsList />} />
-							<Route path={AppRoute.NewsVideo} element={<GroupNewsVideos />} />
-							<Route path={`${AppRoute.NewsVideo}/:vidId`} element={<GroupNewsVideoDetails />} />
+							<Route path={AppRoute.Videos} element={<GroupNewsVideos />} />
+							<Route path={`${AppRoute.Videos}/:vidId`} element={<GroupNewsVideoDetails />} />
 							<Route path=':newsId' element={<GroupNewsDetails />} />
 						</Route>
 						<Route path={AppRoute.GroupInfo} element={<GroupDetails />} />
@@ -165,9 +166,11 @@ export const MainRoutes = () => {
 
 				<Route path={AppRoute.News} element={<NewsLayout />}>
 					<Route index element={<News />} />
-					<Route path={AppRoute.NewsVideo} element={<NewsVideos />} />
-					<Route path={`${AppRoute.NewsVideo}/:id`} element={<NewsVideoDetails />} />
 					<Route path=':id' element={<NewsDetails />} />
+				</Route>
+				<Route path={AppRoute.Videos} element={<VideosLayout />}>
+					<Route index element={<Videos />} />
+					<Route path=':id' element={<VideoDetails />} />
 				</Route>
 				<Route path={AppRoute.Events} element={<EventsLayout />}>
 					<Route index element={<EventsListPage />} />

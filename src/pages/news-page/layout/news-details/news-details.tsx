@@ -1,5 +1,3 @@
-import { PageContent } from 'src/components/page-content/page-content'
-import { Helmet } from 'react-helmet-async'
 import { Link, useParams } from 'react-router-dom'
 
 import { useGetAllNewsQuery, useGetNewsByIdQuery } from 'src/store/news/news.api'
@@ -10,6 +8,7 @@ import { AppRoute } from 'src/routes/main-routes/consts'
 
 import styles from './index.module.scss'
 import { AsideNews } from 'src/components/aside-news/aside-news'
+
 export const NewsDetails = () => {
 	const { id } = useParams()
 	const { data: newsList } = useGetAllNewsQuery({})
@@ -20,14 +19,14 @@ export const NewsDetails = () => {
 	if (!newsItemData) return null
 	return (
 		<div className={styles.newsItemPage}>
-			<PageContent className={styles.newsItemPageContent} $padding='30px 70px 35px 30px'>
-				<Helmet>
-					<title>Одна новость</title>
-				</Helmet>
-
+			<div className={styles.newsItemPageContent}>
 				<h2>{newsItemData?.title}</h2>
 				<span className={styles.newsItemDate}>
-					{customFormatDate(newsItemData?.date, { day: 'numeric', month: 'long', year: 'numeric' })}
+					{customFormatDate(newsItemData?.date, {
+						day: 'numeric',
+						month: 'long',
+						year: 'numeric',
+					})}
 				</span>
 				<div className={styles.newsItemMainImg}>
 					<img src={newsItemData?.preview} alt={newsItemData?.title} />
@@ -47,7 +46,7 @@ export const NewsDetails = () => {
 				<div className={styles.allNewsBlock}>
 					<Link to={`/${AppRoute.News}`}>Все новости</Link>
 				</div>
-			</PageContent>
+			</div>
 			<AsideNews currentNewsId={id ?? ''} newsList={newsList} />
 		</div>
 	)

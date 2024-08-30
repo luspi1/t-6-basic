@@ -22,7 +22,7 @@ export enum AppRoute {
 	Disciplines = 'disciplines',
 	DisEvents = 'dis-events',
 	DisGallery = 'dis-gallery',
-	DisGalleryVideos = 'videos',
+	DisGalleryVideos = 'dis-videos',
 	Users = 'users-list',
 	UserInfo = 'user-info',
 	UserEvents = 'user-events',
@@ -39,6 +39,6 @@ export enum AppRoute {
 	GroupDisciplines = 'group-disciplines',
 	GroupGallery = 'group-gallery',
 	News = 'news',
-	NewsVideo = 'news-video',
+	Videos = 'videos',
 	Events = 'events',
 }

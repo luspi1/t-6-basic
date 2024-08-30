@@ -8,6 +8,6 @@ export const DisciplineGalleryNavItems: TabNavigationItem[] = [
 	},
 	{
 		title: 'видео',
-		link: 'videos',
+		link: 'dis-videos',
 	},
 ]

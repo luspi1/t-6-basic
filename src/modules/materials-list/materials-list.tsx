@@ -8,11 +8,13 @@ import { ControlledSelect } from 'src/components/controlled-select/controlled-se
 import { ControlledInput } from 'src/components/controlled-input/controlled-input'
 import { MainButton } from 'src/UI/MainButton/MainButton'
 
-import styles from './index.module.scss'
 import { DOCIconSvg } from 'src/UI/icons/docIconSVG'
 import { PDFIconSvg } from 'src/UI/icons/pdfIconSVG'
 import { mainFormatDate } from 'src/helpers/utils'
 import { RenderedArray } from 'src/components/rendered-array/rendered-array'
+import { SimpleLink } from 'src/components/simple-link/simple-link'
+
+import styles from './index.module.scss'
 
 type MaterialsListProps = {
 	materialsData?: MaterialItem[]
@@ -99,6 +101,15 @@ export const MaterialsList: FC<MaterialsListProps> = ({ materialsData, className
 					</li>
 				))}
 			</ul>
+			<SimpleLink
+				className={styles.allMaterialsLink}
+				title={
+					<>
+						Показать все авторские материалы <b>({materialsData?.length})</b>
+					</>
+				}
+				link='#'
+			/>
 		</div>
 	)
 }

@@ -11,8 +11,6 @@ export enum AppRoute {
 	DepartmentsDetailsInfo = 'departments-details-info',
 	DepartmentsDetailsParticipant = 'departments-details-participants',
 	DepartmentsDetailsEvents = 'departments-details-events',
-	DepartmentsDetailsObjects = 'departments-details-objects',
-	DepartmentsDetailsProjects = 'departments-details-projects',
 	DepartmentsDetailsGallery = 'departments-details-gallery',
 	Ethnosport = 'ethnosport',
 	EthnoHistory = 'ethno-history',

@@ -38,8 +38,6 @@ import { DisGalleryVideos } from 'src/pages/disciplines-page/layout/discipline-d
 import { RegDetailsInfo } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/reg-details-info'
 import { RegDetailsParticipants } from 'src/pages/departments-page/layout/department-details/layout/reg-details-participants/reg-details-participants'
 import { RegDetailsEvents } from 'src/pages/departments-page/layout/department-details/layout/reg-details-events/reg-details-events'
-import { RegDetailsObjects } from 'src/pages/departments-page/layout/department-details/layout/reg-details-objects/reg-details-objects'
-import { RegDetailsProjects } from 'src/pages/departments-page/layout/department-details/layout/reg-details-projects/reg-details-projects'
 import { RegDetailsGallery } from 'src/pages/departments-page/layout/department-details/layout/reg-details-gallery/reg-details-gallery'
 
 import { ParticipationLayout } from 'src/pages/participation-page/layout/participation-layout'
@@ -105,8 +103,6 @@ export const MainRoutes = () => {
 							element={<RegDetailsParticipants />}
 						/>
 						<Route path={AppRoute.DepartmentsDetailsEvents} element={<RegDetailsEvents />} />
-						<Route path={AppRoute.DepartmentsDetailsObjects} element={<RegDetailsObjects />} />
-						<Route path={AppRoute.DepartmentsDetailsProjects} element={<RegDetailsProjects />} />
 						<Route path={AppRoute.DepartmentsDetailsGallery} element={<RegDetailsGallery />} />
 					</Route>
 				</Route>

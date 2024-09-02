@@ -6,10 +6,10 @@ import cn from 'classnames'
 import { mainFormatDate } from 'src/helpers/utils'
 import { CustomFullscreenIcon } from 'src/UI/icons/customFullscreenIcon'
 
+import { LimitArrowTop } from 'src/UI/icons/limitArrowTop'
 import { LimitArrowDown } from 'src/UI/icons/limitArrowDown'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import styles from './index.module.scss'
-import { LimitArrowTop } from 'src/UI/icons/limitArrowTop'
 
 type ImageGalleryProps = {
 	className?: string

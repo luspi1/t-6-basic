@@ -15,7 +15,7 @@ export type UserItem = {
 	statuses: string[]
 	mainStatus: string
 	mainDesc: string
-	birthday: string
+	birthday: Date
 	position: string
 	group: string
 	regDate: string
@@ -26,7 +26,6 @@ export type UserItem = {
 	website: string
 	regalia: string[]
 	relatedObjects: RelatedLink[]
-	relatedProjects: RelatedLink[]
 	relatedLinks: SourceLink[]
 	documents: ShortDocument[]
 	groups: GroupItem[]

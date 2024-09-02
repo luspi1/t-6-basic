@@ -45,6 +45,11 @@
 }
 
 .imageGallery {
+  :global {
+    .image-gallery-content{
+      background: rgba(#000, 0.5);
+    }
+  }
 }
 
 .customFsBtn {

@@ -29,7 +29,6 @@ export type RegionItem = {
 	mainInfoLogo: string
 	site: string
 	relatedObjects: RelatedLink[]
-	relatedProjects: RelatedLink[]
 	relatedLinks: RegionLink[]
 	documents: ShortDocument[]
 	participants: UserItem[]

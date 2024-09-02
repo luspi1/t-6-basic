@@ -1,7 +1,7 @@
 import { type ShortDocument } from 'src/types/document'
 import { type SourceLink } from 'src/types/global'
 import { type EventsItem } from 'src/types/events'
-import { type GalleryPhoto } from 'src/types/photos'
+import { type ImageItem } from 'src/types/photos'
 import { type VideoItem } from 'src/types/videos'
 
 export type EthnosportDisciplineItem = {
@@ -21,6 +21,6 @@ export type EthnosportDisciplineItem = {
 		documents: ShortDocument[]
 	}
 	events: EventsItem[]
-	photos: GalleryPhoto[]
+	photos: ImageItem[]
 	videos: VideoItem[]
 }

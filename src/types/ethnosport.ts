@@ -1,4 +1,4 @@
-import { type GalleryPhoto } from 'src/types/photos'
+import { type ImageItem } from 'src/types/photos'
 import { type EthnosportDisciplineItem } from 'src/types/ethnosportDiscipline'
 import { type EventsItem } from 'src/types/events'
 
@@ -9,7 +9,7 @@ export type EthnosportDirection = {
 	logo: string
 	info: {
 		mainDesc: string
-		photos: GalleryPhoto[]
+		photos: ImageItem[]
 		descs: string[]
 	}
 	history: {
@@ -24,6 +24,6 @@ export type EthnosportDirection = {
 export type EthnosportGlobal = {
 	mainDesc: string
 	descs: string[]
-	photos: GalleryPhoto[]
+	photos: ImageItem[]
 	directions: EthnosportDirection[]
 }

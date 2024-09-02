@@ -121,7 +121,10 @@ export const defineFileFormat = (fileName: string) => {
 }
 
 // функция форматирования даты с локализацией
-export const mainFormatDate = (date: Date, dateFormat = 'dd MMMM yyyy'): string | null => {
+export const mainFormatDate = (
+	date: Date | undefined,
+	dateFormat = 'dd MMMM yyyy',
+): string | null => {
 	if (!date) return null
 	return format(date, dateFormat, { locale: ru })
 }

@@ -5,7 +5,6 @@ import { Link, useParams } from 'react-router-dom'
 import { useGetRegionByCodeQuery } from 'src/store/regions/regions.api'
 import { DepartmentMainInfo } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/components/department-main-info/department-main-info'
 import { DepartmentDescription } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/components/department-description/department-description'
-import { DepartmentStatus } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/components/department-status/department-status'
 import { DepartmentDocuments } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/components/department-documents/department-documents'
 import { DepartmentLinks } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/components/department-links/department-links'
 import { AppRoute } from 'src/routes/main-routes/consts'
@@ -24,7 +23,6 @@ export const RegDetailsInfo: FC = () => {
 			</Helmet>
 			<DepartmentMainInfo {...regionData} />
 			<DepartmentDescription {...regionData} />
-			<DepartmentStatus {...regionData} />
 			<DepartmentDocuments {...regionData} />
 			<DepartmentLinks {...regionData} />
 			<Link className={departmentsStyles.pageMainLink} to={`/${AppRoute.Departments}`}>

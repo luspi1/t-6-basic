@@ -17,16 +17,6 @@ export const OneDepartmentMenu: NavigationItem[] = [
 	},
 
 	{
-		title: 'Объекты',
-		link: 'departments-details-objects',
-	},
-
-	{
-		title: 'Проекты',
-		link: 'departments-details-projects',
-	},
-
-	{
 		title: 'Галерея',
 		link: 'departments-details-gallery',
 	},

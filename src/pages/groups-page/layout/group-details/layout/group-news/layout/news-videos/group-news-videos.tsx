@@ -6,10 +6,10 @@ import { VideoGallery } from 'src/components/video-gallery/video-gallery'
 import { useGetGroupNewsVideosQuery } from 'src/store/groups/groups.api'
 import { Link, useParams } from 'react-router-dom'
 import { AppRoute } from 'src/routes/main-routes/consts'
+import { Pagination } from 'src/components/pagination/pagination'
 
 import mainGroupsStyles from 'src/pages/groups-page/layout/group-details/layout/index.module.scss'
 import styles from './index.module.scss'
-import { Pagination } from 'src/components/pagination/pagination'
 
 export const GroupNewsVideos: FC = () => {
 	const { id } = useParams()

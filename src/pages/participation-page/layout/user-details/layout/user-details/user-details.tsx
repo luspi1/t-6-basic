@@ -19,11 +19,11 @@ export const UserDetails: FC = () => {
 				<InfoRow
 					title='Статусы участника:'
 					$margin='0 0 20px 0'
-					label={<RenderedArray strArray={userInfo?.statuses} />}
+					label={<RenderedArray strArray={userInfo?.statuses} as='span' />}
 				/>
 				<InfoRow
 					title='Официальные регалии:'
-					label={<RenderedArray strArray={userInfo?.regalia} />}
+					label={<RenderedArray strArray={userInfo?.regalia} as='span' />}
 				/>
 			</section>
 			<section>

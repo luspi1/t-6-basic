@@ -1,8 +1,10 @@
-import { type FC, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import React, { type FC, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import cn from 'classnames'
 
 import { useGetRegionPhotosQuery, useGetRegionVideosQuery } from 'src/store/regions/regions.api'
+import { GalleryImg } from 'src/components/image-gallery/image-gallery'
+import { VideoGallery } from 'src/components/video-gallery/video-gallery'
 import styles from './index.module.scss'
 
 export const RegDetailsGallery: FC = () => {
@@ -34,38 +36,12 @@ export const RegDetailsGallery: FC = () => {
 			{currentMode === 'photos' ? (
 				<>
 					<p className={styles.itemsCount}>Всего фото в альбоме: {photos?.length}</p>
-
-					{photos && (
-						<ul className={styles.gallery}>
-							{photos?.map((item) => (
-								<li key={item.id}>
-									<figure className={styles.image}>
-										<img src={item.url} alt={item.title} />
-										<figcaption>{item.title}</figcaption>
-									</figure>
-								</li>
-							))}
-						</ul>
-					)}
-
-					<Link to='#'>Показать все фотографии</Link>
+					<GalleryImg className={styles.groupPhotos} images={photos} limit={12} limitController />
 				</>
 			) : (
 				<>
 					<p className={styles.itemsCount}>Всего видео в альбоме: {videos?.length}</p>
-					{videos && (
-						<ul className={styles.gallery}>
-							{photos?.map((item) => (
-								<li key={item.id}>
-									<figure className={styles.image}>
-										<img src={item.url} alt={item.title} />
-										<figcaption>{item.title}</figcaption>
-									</figure>
-								</li>
-							))}
-						</ul>
-					)}
-					<Link to='#'>Показать все видеозаписи</Link>
+					{<VideoGallery videos={videos} />}
 				</>
 			)}
 		</div>

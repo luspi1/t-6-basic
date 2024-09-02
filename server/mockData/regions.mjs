@@ -219,64 +219,199 @@ export let regions = [
 			{
 				id: '1',
 				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
-				date: '2022.12.23',
-				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 			},
 			{
 				id: '2',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
-				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
 				title: 'Спасо-Бородинский монастырь. Часть 2',
-				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
-				date: '2018.05.01',
-				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
 				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
-				date: '2011.01.05',
-				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '8',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '9',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '10',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '11',
+				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '12',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '13',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '14',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '15',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '16',
+				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '17',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '18',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '19',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '20',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 		],
 		videos: [
 			{
 				id: '1',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
-				date: '2022.12.23',
-				url: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				title: 'Атмановские кулачки',
+				url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+				thumbnail:
+					'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+				date: '2024-08-27T00:00:00+03:00',
+				similarVideos: [
+					{
+						id: '5',
+						title: 'Похожее видео 1',
+						url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+						thumbnail:
+							'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+						date: '2021-08-27T00:00:00+03:00',
+					},
+					{
+						id: '6',
+						title: 'Похожее видео 2',
+						url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+						thumbnail:
+							'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+						date: '2023-08-27T00:00:00+03:00',
+					},
+					{
+						id: '7',
+						title: 'Похожее видео 3',
+						url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+						thumbnail:
+							'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+						date: '2023-02-27T00:00:00+03:00',
+					},
+				],
 			},
 			{
 				id: '2',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
-				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
-			},
-			{
-				id: '3',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
-				date: '2021.11.13',
-				url: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
-			},
-			{
-				id: '4',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
-				date: '2018.05.01',
-				url: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
-			},
-			{
-				id: '5',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
-				date: '2011.01.05',
-				url: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				title: 'Сколот - Атмановские Кулачки (Live "Наследие 2022")',
+				url: 'https://vk.com/video_ext.php?oid=-973262&id=456239864&hd=2',
+				thumbnail: '',
+				date: '2024-08-27T00:00:00+03:00',
+				similarVideos: [
+					{
+						id: '5',
+						title: 'Похожее видео 1',
+						url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+						thumbnail:
+							'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+						date: '2021-08-27T00:00:00+03:00',
+					},
+					{
+						id: '6',
+						title: 'Похожее видео 2',
+						url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+						thumbnail:
+							'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+						date: '2023-08-27T00:00:00+03:00',
+					},
+					{
+						id: '7',
+						title: 'Похожее видео 3',
+						url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+						thumbnail:
+							'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+						date: '2023-02-27T00:00:00+03:00',
+					},
+				],
 			},
 		],
 
@@ -303,6 +438,167 @@ export let regions = [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 		],
 		openDate: '2005.02.27',
+		photos: [
+			{
+				id: '1',
+				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '13',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '14',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '15',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '16',
+				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '17',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '18',
+				title: 'Спасо-Бородинский монастырь. Часть 2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '19',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '20',
+				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+		],
+		videos: [
+			{
+				id: '1',
+				title: 'Атмановские кулачки',
+				url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+				thumbnail:
+					'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+				date: '2024-08-27T00:00:00+03:00',
+				similarVideos: [
+					{
+						id: '5',
+						title: 'Похожее видео 1',
+						url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+						thumbnail:
+							'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+						date: '2021-08-27T00:00:00+03:00',
+					},
+					{
+						id: '6',
+						title: 'Похожее видео 2',
+						url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+						thumbnail:
+							'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+						date: '2023-08-27T00:00:00+03:00',
+					},
+					{
+						id: '7',
+						title: 'Похожее видео 3',
+						url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+						thumbnail:
+							'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+						date: '2023-02-27T00:00:00+03:00',
+					},
+				],
+			},
+			{
+				id: '2',
+				title: 'Сколот - Атмановские Кулачки (Live "Наследие 2022")',
+				url: 'https://vk.com/video_ext.php?oid=-973262&id=456239864&hd=2',
+				thumbnail: '',
+				date: '2024-08-27T00:00:00+03:00',
+				similarVideos: [
+					{
+						id: '5',
+						title: 'Похожее видео 1',
+						url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+						thumbnail:
+							'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+						date: '2021-08-27T00:00:00+03:00',
+					},
+					{
+						id: '6',
+						title: 'Похожее видео 2',
+						url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+						thumbnail:
+							'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+						date: '2023-08-27T00:00:00+03:00',
+					},
+					{
+						id: '7',
+						title: 'Похожее видео 3',
+						url: 'https://vk.com/video_ext.php?oid=-213035593&id=456239056&hd=2',
+						thumbnail:
+							'https://i.mycdn.me/getVideoPreview?id=2724882221732&idx=12&type=39&tkn=VF-cK0AMQuwuU_4fBRAwELYmCuw&fn=vid_w',
+						date: '2023-02-27T00:00:00+03:00',
+					},
+				],
+			},
+		],
 		relatedObjects: [
 			{
 				id: '1',
@@ -348,6 +644,8 @@ export let regions = [
 		phones: ['+7 (432) 900-00-00', '+7 (917) 310-09-08'],
 		email: 'msk@voopik.ru',
 		address: 'Россия, 123123, г. Москва, дом 113, стр. 4, офис 207',
+		photos: [],
+		videos: [],
 		descList: [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 		],

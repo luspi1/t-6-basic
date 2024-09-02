@@ -1,12 +1,13 @@
 import { useParams } from 'react-router-dom'
 
 import { useGetUserByIdQuery } from 'src/store/users/users.api'
-import { calculateAge, customFormatDate } from 'src/helpers/utils'
+import { calculateAge, mainFormatDate } from 'src/helpers/utils'
 import { InfoRow } from 'src/UI/InfoRow/InfoRow'
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 
 import { CustomText } from 'src/components/custom-text/custom-text'
 import { SimpleLink } from 'src/components/simple-link/simple-link'
+import { RenderedArray } from 'src/components/rendered-array/rendered-array'
 import styles from './index.module.scss'
 
 export const UserInfo = () => {
@@ -31,14 +32,9 @@ export const UserInfo = () => {
 					<InfoRow
 						title='Дата рождения и возраст:'
 						label={
-							<p className={styles.userBirthday}>
-								{customFormatDate(userData?.birthday, {
-									day: 'numeric',
-									month: 'long',
-									year: 'numeric',
-								})}{' '}
-								<span>({calculateAge(userData?.birthday)})</span>
-							</p>
+							<>
+								{mainFormatDate(userData?.birthday)} <b>({calculateAge(userData?.birthday)})</b>
+							</>
 						}
 					/>
 					<InfoRow title='Населенный пункт:' label={userData?.locality} />
@@ -46,7 +42,7 @@ export const UserInfo = () => {
 					<InfoRow
 						wrapperClassname={styles.phoneWrapper}
 						title='Телефоны:'
-						label={userData?.phones}
+						label={<RenderedArray strArray={userData?.phones} as='span' />}
 					/>
 					<InfoRow
 						title='Электронная почта:'

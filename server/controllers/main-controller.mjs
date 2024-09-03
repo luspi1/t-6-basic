@@ -1,4 +1,4 @@
-import { regions } from '../mockData/regions.mjs'
+import { regions, regionsInfo } from '../mockData/regions.mjs'
 import { users } from '../mockData/users.mjs'
 import { objects } from '../mockData/objects.mjs'
 import { projects } from '../mockData/projects.mjs'
@@ -8,6 +8,10 @@ import { ethnosport } from '../mockData/ethnosport.mjs'
 import { disciplines } from '../mockData/disciplines.mjs'
 import { newsVideos } from '../mockData/newsVideos.mjs'
 import { groups } from '../mockData/groups.mjs'
+
+export const getRegionsInfo = (req, res) => {
+	res.status(200).json(regionsInfo)
+}
 
 export const getRegions = (req, res) => {
 	const { q } = req.query

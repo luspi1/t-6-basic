@@ -3,7 +3,16 @@ import { type NavigationItem } from 'src/types/navigation'
 export const OneDepartmentMenu: NavigationItem[] = [
 	{
 		title: 'Информация',
-		link: 'departments-details-info',
+		link: '',
+		exact: true,
+	},
+	{
+		title: 'Новости',
+		link: 'departments-details-news',
+	},
+	{
+		title: 'История',
+		link: 'departments-details-history',
 	},
 
 	{

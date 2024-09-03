@@ -5,77 +5,36 @@ import { Link } from 'react-router-dom'
 
 import { PageContent } from 'src/components/page-content/page-content'
 import { AppRoute } from 'src/routes/main-routes/consts'
+import { RenderedArray } from 'src/components/rendered-array/rendered-array'
 
-import foundersImage from 'src/assets/img/history-founders.jpg'
+import { useGetRegionsInfoQuery } from 'src/store/regions/regions.api'
 
 import styles from './index.module.scss'
 
 export const DepartmentsAbout: FC = () => {
+	const { data: regionsInfo } = useGetRegionsInfoQuery(null)
+
 	return (
 		<PageContent className={styles.aboutDepartmentContainer} $padding='30px 55px 25px 30px'>
 			<Helmet>
-				<title>О региональных отделениях ВООПИК</title>
+				<title>О региональных отделениях</title>
 			</Helmet>
 
-			<h2>О региональных отделениях ВООПИК</h2>
+			<h2>О региональных отделениях</h2>
 			<Link to={`/${AppRoute.Departments}`}>На страницу списка отделений</Link>
-
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-				Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar
-				sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-				mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus
-				pronin sapien nunc accuan eget.
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-				Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar
-				sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-				mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus
-				pronin sapien nunc accuan eget.
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-				Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar
-				sic tempor. Sociis natoque penatibus et magnis dis parturient mont.
-			</p>
+			<RenderedArray strArray={regionsInfo?.aboutDescriptions} as='div' asStr='p' separator='' />
 
 			<figure className={styles.image}>
-				<img src={foundersImage} alt='Основатели ВООПИиК' />
-				<figcaption>Подпись под фото</figcaption>
+				<img src={regionsInfo?.aboutPhoto?.url} alt={regionsInfo?.aboutPhoto?.caption} />
+				<figcaption>{regionsInfo?.aboutPhoto?.caption}</figcaption>
 			</figure>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-				Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar
-				sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-				mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus
-				pronin sapien nunc accuan eget.
-			</p>
 
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-				Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar
-				sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-				mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus
-				pronin sapien nunc accuan eget.
-			</p>
-
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-				Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar
-				sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-				mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus
-				pronin sapien nunc accuan eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
-				justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis
-				parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate,
-				felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget. Lorem ipsum dolor sit
-				amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
-				amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis
-				natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum,
-				nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc
-				accuan eget.
-			</p>
+			<RenderedArray
+				strArray={regionsInfo?.secondaryDescriptions}
+				as='div'
+				asStr='p'
+				separator=''
+			/>
 
 			<Link to={`/${AppRoute.Departments}`}>На страницу списка отделений</Link>
 		</PageContent>

@@ -32,6 +32,7 @@ import {
 	getRegionPhotos,
 	getRegionProjects,
 	getRegions,
+	getRegionsInfo,
 	getRegionVideos,
 	getUserById,
 	getUsers,
@@ -48,6 +49,7 @@ import { Router } from 'express'
 
 export const router = new Router()
 
+router.get('/regions-info', getRegionsInfo)
 router.get('/regions', getRegions)
 router.get('/regions/:code', getRegionByCode)
 router.get('/regions/:code/participants', getRegionParticipants)

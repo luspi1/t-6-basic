@@ -1,9 +1,8 @@
-import { type RegionItem } from 'src/types/regions'
+import { type RegionItem, type RegionsInfo } from 'src/types/regions'
 import { type UserItem } from 'src/types/users'
 import { type EventsItem } from 'src/types/events'
 import { type ImageItem } from 'src/types/photos'
 import { type VideoItem } from 'src/types/videos'
-import { type ObjectItem } from 'src/types/objects'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
@@ -16,6 +15,11 @@ export const regionsApi = createApi({
 		baseUrl: BASE_URL,
 	}),
 	endpoints: (build) => ({
+		getRegionsInfo: build.query<RegionsInfo, null>({
+			query: () => ({
+				url: `regions-info`,
+			}),
+		}),
 		getAllRegions: build.query<RegionItem[], string>({
 			query: (search) => ({
 				url: `regions`,
@@ -48,15 +52,6 @@ export const regionsApi = createApi({
 			}),
 		}),
 
-		getRegionObjects: build.query<ObjectItem[], [string, string]>({
-			query: ([search, regCode]) => ({
-				url: `regions/${regCode}/objects`,
-				params: {
-					q: search,
-				},
-			}),
-		}),
-
 		getRegionPhotos: build.query<ImageItem[], string>({
 			query: (regCode) => ({
 				url: `regions/${regCode}/photos`,
@@ -76,7 +71,7 @@ export const {
 	useGetRegionByCodeQuery,
 	useGetRegionParticipantsQuery,
 	useGetRegionEventsQuery,
-	useGetRegionObjectsQuery,
 	useGetRegionPhotosQuery,
 	useGetRegionVideosQuery,
+	useGetRegionsInfoQuery,
 } = regionsApi

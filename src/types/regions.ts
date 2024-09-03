@@ -24,7 +24,7 @@ export type RegionItem = {
 	email: string
 	address: string
 	descList: string[]
-	openDate: string
+	openDate: Date
 	logo: string
 	mainInfoLogo: string
 	site: string

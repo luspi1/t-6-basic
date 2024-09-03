@@ -12,7 +12,7 @@ import styles from './index.module.scss'
 import { DepartmentsTable } from 'src/pages/departments-page/layout/departments-list/components/departments-table/departments-table'
 export const DepartmentsList: FC = () => {
 	return (
-		<PageContent className={styles.departmentListPage} $padding='30px 50px 250px 30px'>
+		<PageContent className={styles.departmentListPage} $padding='30px 30px 50px 30px'>
 			<Helmet>
 				<title>Региональные отделения</title>
 			</Helmet>

@@ -31,7 +31,7 @@ export const ParticipantesTable = () => {
 		'Роль в группе',
 		<TableSearch
 			wrapperClassName={styles.participantesSearchWrapper}
-			key={1}
+			key={2}
 			handleSearch={searchParticipantesHandler}
 			placeholder='Поиск по имени, фамилии...'
 		/>,

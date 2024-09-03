@@ -8,6 +8,9 @@ import { SideMenu } from 'src/components/side-menu/side-menu'
 
 import { DepartmentsMenuItems } from 'src/pages/departments-page/layout/consts'
 
+import { ethnosportPageDocuments } from 'src/pages/ethnosport-page/consts'
+import { AsideDocuments } from 'src/components/aside-documents/aside-documents'
+
 import styles from './index.module.scss'
 
 export const DepartmentsLayout: FC = () => {
@@ -29,9 +32,11 @@ export const DepartmentsLayout: FC = () => {
 				/>
 				<div className={styles.departmentsContentWrapper}>
 					<Outlet />
-
 					{!id && (
-						<SideMenu className={styles.departmentsSideMenu} sideItems={DepartmentsMenuItems} />
+						<div>
+							<SideMenu className={styles.departmentsSideMenu} sideItems={DepartmentsMenuItems} />
+							<AsideDocuments documents={ethnosportPageDocuments} />
+						</div>
 					)}
 				</div>
 			</Container>

@@ -1,7 +1,7 @@
 export let regions = [
 	{
 		id: '0',
-		title: 'Татарстан, республика',
+		title: 'Татарстанское республиканское отделение',
 		fullTitle: 'Региональное отделение по Республике Татарстан',
 		mainDesc:
 			'Отделение основано 23 марта 2002 года в г. Казань.\n' +
@@ -20,7 +20,7 @@ export let regions = [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 		],
-		openDate: '1999.03.24',
+		openDate: '2024-08-25T00:00:00+03:00',
 		relatedObjects: [
 			{
 				id: '1',
@@ -421,7 +421,7 @@ export let regions = [
 	},
 	{
 		id: '1',
-		title: 'Санкт-Петербург',
+		title: 'Санкт-Петербургское областное отделение',
 		fullTitle: 'Отделение по Санкт-Петербургу',
 		mainDesc:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
@@ -437,7 +437,7 @@ export let regions = [
 		descList: [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 		],
-		openDate: '2005.02.27',
+		openDate: '2005-03-15T00:00:00+03:00',
 		photos: [
 			{
 				id: '1',
@@ -631,7 +631,7 @@ export let regions = [
 	},
 	{
 		id: '2',
-		title: 'Московская область',
+		title: 'Московское областное отделение',
 		fullTitle: 'Отделение по Московской области',
 		mainDesc:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
@@ -649,7 +649,7 @@ export let regions = [
 		descList: [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 		],
-		openDate: '2019.08.28',
+		openDate: '2015-03-12T00:00:00+03:00',
 		relatedObjects: [
 			{
 				id: '1',

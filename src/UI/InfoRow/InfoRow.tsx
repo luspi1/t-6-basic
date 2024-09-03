@@ -14,6 +14,7 @@ type InfoRowStyleProps = {
 
 type InfoRowProps = {
 	wrapperClassname?: string
+	titleClassname?: string
 	title: string
 	label: ReactNode
 } & InfoRowStyleProps
@@ -45,10 +46,16 @@ const StyledInfoRow = styled.div<InfoRowStyleProps>`
 		max-width: ${({ $labelMaxWidth }) => $labelMaxWidth ?? 'initial'};
 	}
 `
-export const InfoRow: FC<InfoRowProps> = ({ title, label, wrapperClassname, ...props }) => {
+export const InfoRow: FC<InfoRowProps> = ({
+	title,
+	label,
+	wrapperClassname,
+	titleClassname,
+	...props
+}) => {
 	return (
 		<StyledInfoRow className={wrapperClassname} {...props}>
-			<h6>{title}</h6>
+			<h6 className={titleClassname}>{title}</h6>
 			<p>{label}</p>
 		</StyledInfoRow>
 	)

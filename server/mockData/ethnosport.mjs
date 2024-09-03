@@ -292,24 +292,34 @@ export let ethnosport = {
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 				chronology: [
 					{
-						date: '21 сен 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2024-08-25T00:00:00+03:00',
+						text: 'В Москве, в пабе "Бошки и Пышки", была принята концепция серии событий "Утки Наравне". Эта дата считается днем рождения серии (бренда).',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: '2006-2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2023-03-21T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: 'Сен 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2022-01-11T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: '05 сен 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2021-02-11T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: '12 авг 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2020-05-12T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 				],
 			},
@@ -555,24 +565,34 @@ export let ethnosport = {
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 				chronology: [
 					{
-						date: '21 сен 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2024-08-25T00:00:00+03:00',
+						text: 'В Москве, в пабе "Бошки и Пышки", была принята концепция серии событий "Утки Наравне". Эта дата считается днем рождения серии (бренда).',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: '2006-2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2023-03-21T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: 'Сен 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2022-01-11T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: '05 сен 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2021-02-11T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: '12 авг 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2020-05-12T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 				],
 			},
@@ -818,24 +838,34 @@ export let ethnosport = {
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 				chronology: [
 					{
-						date: '21 сен 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2024-08-25T00:00:00+03:00',
+						text: 'В Москве, в пабе "Бошки и Пышки", была принята концепция серии событий "Утки Наравне". Эта дата считается днем рождения серии (бренда).',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: '2006-2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2023-03-21T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: 'Сен 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2022-01-11T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: '05 сен 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2021-02-11T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: '12 авг 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2020-05-12T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 				],
 			},
@@ -1081,24 +1111,34 @@ export let ethnosport = {
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 				chronology: [
 					{
-						date: '21 сен 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2024-08-25T00:00:00+03:00',
+						text: 'В Москве, в пабе "Бошки и Пышки", была принята концепция серии событий "Утки Наравне". Эта дата считается днем рождения серии (бренда).',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: '2006-2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2023-03-21T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: 'Сен 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2022-01-11T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: '05 сен 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2021-02-11T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 					{
-						date: '12 авг 2007',
-						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Произошло что-то очень важное и нужное. Оно было! Происходило в две строчки  (точнее, тут можно вставить еще немного) met, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulpu.',
+						date: '2020-05-12T00:00:00+03:00',
+						text: 'На подмосковном полигоне "Алабино" проведена первая открытая межкомандная тренировка по новым правилам.',
+						hiddenText:
+							'И еще какой-то очень интересный текст, окончательно раскрывающий эту безумно интересную всем на свете тему непонятно о чем и еще несколько слов для того, чтобы заполнить еще одну строку.',
 					},
 				],
 			},

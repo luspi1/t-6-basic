@@ -14,7 +14,7 @@ export type EthnosportDirection = {
 	}
 	history: {
 		mainDesc: string
-		chronology: Array<{ date: string; text: string }>
+		chronology: Array<{ date: Date; text: string; hiddenText: string }>
 	}
 	disciplines: EthnosportDisciplineItem[]
 	events: EventsItem[]

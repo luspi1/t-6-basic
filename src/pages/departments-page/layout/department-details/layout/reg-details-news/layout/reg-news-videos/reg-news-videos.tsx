@@ -6,10 +6,10 @@ import { VideoGallery } from 'src/components/video-gallery/video-gallery'
 import { Link, useParams } from 'react-router-dom'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { Pagination } from 'src/components/pagination/pagination'
+import { useGetRegionNewsVideosQuery } from 'src/store/regions/regions.api'
 
 import mainGroupsStyles from 'src/pages/groups-page/layout/group-details/layout/index.module.scss'
 import styles from './index.module.scss'
-import { useGetRegionNewsVideosQuery } from 'src/store/regions/regions.api'
 
 export const RegNewsVideos: FC = () => {
 	const { id } = useParams()

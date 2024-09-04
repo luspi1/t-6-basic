@@ -60,7 +60,7 @@ export const getRegionByCode = (req, res) => {
 export const getRegionNews = (req, res) => {
 	const regionCode = req.params.code
 	const { q, y } = req.query
-	const searchedRegion = regions.find((region) => region.id === regionCode)
+	const searchedRegion = regions.find((region) => region.regionCode === regionCode)
 	const filteredNews = searchedRegion.news.filter((el) => {
 		if (y) {
 			return String(new Date(el.date).getFullYear()) === y && el.title.toLowerCase().includes(q)
@@ -73,14 +73,14 @@ export const getRegionNews = (req, res) => {
 
 export const getRegionNewsVideos = (req, res) => {
 	const regionCode = req.params.code
-	const searchedRegion = regions.find((region) => region.id === regionCode)
+	const searchedRegion = regions.find((region) => region.regionCode === regionCode)
 	res.status(200).json(searchedRegion.newsVideos)
 }
 
 export const getRegionNewsVideoById = (req, res) => {
 	const regionCode = req.params.code
 	const videoId = req.params.videoId
-	const searchedRegion = regions.find((region) => region.id === regionCode)
+	const searchedRegion = regions.find((region) => region.regionCode === regionCode)
 	const foundVideoNews = searchedRegion.newsVideos.find((videoItem) => videoItem.id === videoId)
 
 	res.status(200).json(foundVideoNews)
@@ -89,7 +89,7 @@ export const getRegionNewsVideoById = (req, res) => {
 export const getRegionNewsById = (req, res) => {
 	const regionCode = req.params.code
 	const newsId = req.params.newsId
-	const searchedRegion = regions.find((region) => region.id === regionCode)
+	const searchedRegion = regions.find((region) => region.regionCode === regionCode)
 
 	const foundNews = searchedRegion.news.find((newsItem) => newsItem.id === newsId)
 

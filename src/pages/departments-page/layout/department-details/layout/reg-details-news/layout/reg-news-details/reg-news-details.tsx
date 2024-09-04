@@ -4,15 +4,15 @@ import { customFormatDate } from 'src/helpers/utils'
 import { Loader } from 'src/components/loader/loader'
 import { AppRoute } from 'src/routes/main-routes/consts'
 
-import { useGetGroupAllNewsQuery, useGetGroupNewsByIdQuery } from 'src/store/groups/groups.api'
 import { AsideNews } from 'src/components/aside-news/aside-news'
 import styles from './index.module.scss'
+import { useGetRegionAllNewsQuery, useGetRegionNewsByIdQuery } from 'src/store/regions/regions.api'
 
 export const RegNewsDetails = () => {
 	const { id, newsId } = useParams()
-	const { data: newsList } = useGetGroupAllNewsQuery({ groupId: id })
-	const { data: newsItemData, isLoading } = useGetGroupNewsByIdQuery({
-		groupId: id,
+	const { data: newsList } = useGetRegionAllNewsQuery({ regCode: id })
+	const { data: newsItemData, isLoading } = useGetRegionNewsByIdQuery({
+		regCode: id,
 		newsId,
 	})
 
@@ -45,7 +45,7 @@ export const RegNewsDetails = () => {
 					))}
 				</ul>
 				<div className={styles.allNewsBlock}>
-					<Link to={`/${AppRoute.Groups}/${id}/${AppRoute.News}`}>К новостям группы</Link>
+					<Link to={`/${AppRoute.Departments}/${id}/${AppRoute.News}`}>К новостям отделения</Link>
 				</div>
 			</div>
 			<AsideNews currentNewsId={newsId} newsList={newsList} previewCount={4} />

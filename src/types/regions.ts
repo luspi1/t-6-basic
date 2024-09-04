@@ -24,6 +24,10 @@ export type RegionItem = {
 	relatedLinks: SourceLink[]
 	documents: ShortDocument[]
 	participants: UserItem[]
+	history: {
+		mainDesc: string
+		chronology: Array<{ date: Date; text: string; hiddenText: string }>
+	}
 }
 
 export type RegionsInfo = {

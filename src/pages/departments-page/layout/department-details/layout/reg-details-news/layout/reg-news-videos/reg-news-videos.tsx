@@ -3,19 +3,19 @@ import React, { type FC, useState } from 'react'
 import { MainSelect } from 'src/UI/MainSelect/MainSelect'
 import { VideoGallery } from 'src/components/video-gallery/video-gallery'
 
-import { useGetGroupNewsVideosQuery } from 'src/store/groups/groups.api'
 import { Link, useParams } from 'react-router-dom'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { Pagination } from 'src/components/pagination/pagination'
 
 import mainGroupsStyles from 'src/pages/groups-page/layout/group-details/layout/index.module.scss'
 import styles from './index.module.scss'
+import { useGetRegionNewsVideosQuery } from 'src/store/regions/regions.api'
 
 export const RegNewsVideos: FC = () => {
 	const { id } = useParams()
 
 	const [yearsSelectValue, setYearsSelectValue] = useState<string>('')
-	const { data: newsVideosList } = useGetGroupNewsVideosQuery(id ?? '')
+	const { data: newsVideosList } = useGetRegionNewsVideosQuery(id ?? '')
 
 	return (
 		<div className={mainGroupsStyles.groupTabContent}>
@@ -38,8 +38,8 @@ export const RegNewsVideos: FC = () => {
 				<VideoGallery videos={newsVideosList} />
 				<Pagination className={styles.newsVideosPagination} pagesCount={7} activePage={2} />
 			</div>
-			<Link className={mainGroupsStyles.groupsListLink} to={`/${AppRoute.Groups}`}>
-				На страницу списка групп
+			<Link className={mainGroupsStyles.groupsListLink} to={`/${AppRoute.Departments}`}>
+				На страницу списка отделений
 			</Link>
 		</div>
 	)

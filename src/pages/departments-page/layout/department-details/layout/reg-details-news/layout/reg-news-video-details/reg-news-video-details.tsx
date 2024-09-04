@@ -2,18 +2,18 @@ import React, { type FC } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import cn from 'classnames'
 
-import { useGetGroupNewsVideoByIdQuery } from 'src/store/groups/groups.api'
 import { CustomText } from 'src/components/custom-text/custom-text'
 import { mainFormatDate } from 'src/helpers/utils'
 import { AsideVideos } from 'src/components/aside-videos/aside-videos'
 import { AppRoute } from 'src/routes/main-routes/consts'
+import { useGetRegionNewsVideoByIdQuery } from 'src/store/regions/regions.api'
 
 import mainGroupsStyles from 'src/pages/groups-page/layout/group-details/layout/index.module.scss'
 import styles from './index.module.scss'
 
 export const RegNewsVideoDetails: FC = () => {
 	const { id, vidId } = useParams()
-	const { data: videoDetails } = useGetGroupNewsVideoByIdQuery({ groupId: id, videoId: vidId })
+	const { data: videoDetails } = useGetRegionNewsVideoByIdQuery({ regCode: id, videoId: vidId })
 
 	if (!videoDetails) return
 
@@ -35,9 +35,9 @@ export const RegNewsVideoDetails: FC = () => {
 			</div>
 			<Link
 				className={mainGroupsStyles.groupsListLink}
-				to={`/${AppRoute.Groups}/${id}/${AppRoute.News}/${AppRoute.Videos}`}
+				to={`/${AppRoute.Departments}/${id}/${AppRoute.News}/${AppRoute.Videos}`}
 			>
-				К видеозаписям группы
+				К видеозаписям отделения
 			</Link>
 		</div>
 	)

@@ -27,13 +27,14 @@ import {
 	getProjects,
 	getRegionByCode,
 	getRegionEvents,
-	getRegionObjects,
+	getRegionNews,
+	getRegionNewsById,
+	getRegionNewsVideoById,
+	getRegionNewsVideos,
 	getRegionParticipants,
 	getRegionPhotos,
-	getRegionProjects,
 	getRegions,
 	getRegionsInfo,
-	getRegionVideos,
 	getUserById,
 	getUsers,
 	getUsersDisciplines,
@@ -54,10 +55,11 @@ router.get('/regions', getRegions)
 router.get('/regions/:code', getRegionByCode)
 router.get('/regions/:code/participants', getRegionParticipants)
 router.get('/regions/:code/events', getRegionEvents)
-router.get('/regions/:code/objects', getRegionObjects)
-router.get('/regions/:code/projects', getRegionProjects)
 router.get('/regions/:code/photos', getRegionPhotos)
-router.get('/regions/:code/videos', getRegionVideos)
+router.get('/regions/:code/news', getRegionNews)
+router.get('/regions/:code/news-videos', getRegionNewsVideos)
+router.get('/regions/:code/news/:newsId', getRegionNewsById)
+router.get('/regions/:code/news-videos/:videoId', getRegionNewsVideoById)
 router.get('/users', getUsers)
 router.get('/users/:id', getUserById)
 router.get('/users/:id/group', getUsersGroup)

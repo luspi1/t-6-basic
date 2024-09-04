@@ -43,28 +43,6 @@ export const getRegionEvents = (req, res) => {
 	res.status(200).json(filteredRegionEvents)
 }
 
-export const getRegionObjects = (req, res) => {
-	const { q } = req.query
-	const regionCode = req.params.code
-
-	const foundRegion = regions.find((region) => region.regionCode === regionCode)
-	const filteredRegionObjects = foundRegion.objects.filter((item) =>
-		item.title.toLowerCase().includes(q),
-	)
-	res.status(200).json(filteredRegionObjects)
-}
-
-export const getRegionProjects = (req, res) => {
-	const { q } = req.query
-	const regionCode = req.params.code
-
-	const foundRegion = regions.find((region) => region.regionCode === regionCode)
-	const filteredRegionProjects = foundRegion.projects.filter((item) =>
-		item.title.toLowerCase().includes(q),
-	)
-	res.status(200).json(filteredRegionProjects)
-}
-
 export const getRegionPhotos = (req, res) => {
 	const regionCode = req.params.code
 	const foundRegion = regions.find((region) => region.regionCode === regionCode)
@@ -72,17 +50,50 @@ export const getRegionPhotos = (req, res) => {
 	res.status(200).json(regionPhotos)
 }
 
-export const getRegionVideos = (req, res) => {
-	const regionCode = req.params.code
-	const foundRegion = regions.find((region) => region.regionCode === regionCode)
-	res.status(200).json(foundRegion.videos)
-}
-
 export const getRegionByCode = (req, res) => {
 	const regionCode = req.params.code
 	const foundRegion = regions.find((region) => region.regionCode === regionCode)
 
 	res.status(200).json(foundRegion)
+}
+
+export const getRegionNews = (req, res) => {
+	const regionCode = req.params.code
+	const { q, y } = req.query
+	const searchedRegion = regions.find((region) => region.id === regionCode)
+	const filteredNews = searchedRegion.news.filter((el) => {
+		if (y) {
+			return String(new Date(el.date).getFullYear()) === y && el.title.toLowerCase().includes(q)
+		}
+		return el.title.toLowerCase().includes(q)
+	})
+
+	res.status(200).json(filteredNews)
+}
+
+export const getRegionNewsVideos = (req, res) => {
+	const regionCode = req.params.code
+	const searchedRegion = regions.find((region) => region.id === regionCode)
+	res.status(200).json(searchedRegion.newsVideos)
+}
+
+export const getRegionNewsVideoById = (req, res) => {
+	const regionCode = req.params.code
+	const videoId = req.params.videoId
+	const searchedRegion = regions.find((region) => region.id === regionCode)
+	const foundVideoNews = searchedRegion.newsVideos.find((videoItem) => videoItem.id === videoId)
+
+	res.status(200).json(foundVideoNews)
+}
+
+export const getRegionNewsById = (req, res) => {
+	const regionCode = req.params.code
+	const newsId = req.params.newsId
+	const searchedRegion = regions.find((region) => region.id === regionCode)
+
+	const foundNews = searchedRegion.news.find((newsItem) => newsItem.id === newsId)
+
+	res.status(200).json(foundNews)
 }
 
 export const getUsers = (req, res) => {

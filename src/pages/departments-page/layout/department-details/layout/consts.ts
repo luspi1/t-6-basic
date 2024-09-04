@@ -8,7 +8,7 @@ export const OneDepartmentMenu: NavigationItem[] = [
 	},
 	{
 		title: 'Новости',
-		link: 'departments-details-news',
+		link: 'news',
 	},
 	{
 		title: 'История',

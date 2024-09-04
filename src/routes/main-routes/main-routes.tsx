@@ -36,11 +36,15 @@ import { DisGalleryPhotos } from 'src/pages/disciplines-page/layout/discipline-d
 import { DisGalleryVideos } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-gallery/layout/dis-gallery-videos/dis-gallery-videos'
 
 import { RegDetailsInfo } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/reg-details-info'
-import { RegDetailsNews } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/reg-details-news'
 import { RegDetailsHistory } from 'src/pages/departments-page/layout/department-details/layout/reg-details-history/reg-details-history'
 import { RegDetailsParticipants } from 'src/pages/departments-page/layout/department-details/layout/reg-details-participants/reg-details-participants'
 import { RegDetailsEvents } from 'src/pages/departments-page/layout/department-details/layout/reg-details-events/reg-details-events'
 import { RegDetailsGallery } from 'src/pages/departments-page/layout/department-details/layout/reg-details-gallery/reg-details-gallery'
+import { RegNewsLayout } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/layout/reg-news-layout'
+import { RegNewsVideos } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/layout/reg-news-videos/reg-news-videos'
+import { RegNewsVideoDetails } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/layout/reg-news-video-details/reg-news-video-details'
+import { RegNewsDetails } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/layout/reg-news-details/reg-news-details'
+import { RegNewsList } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/layout/reg-news-list/reg-news-list'
 
 import { ParticipationLayout } from 'src/pages/participation-page/layout/participation-layout'
 
@@ -100,7 +104,12 @@ export const MainRoutes = () => {
 					<Route path={AppRoute.DepartmentsAbout} element={<DepartmentsAbout />} />
 					<Route path=':id' element={<DepartmentDetailsLayout />}>
 						<Route index element={<RegDetailsInfo />} />
-						<Route path={AppRoute.DepartmentsDetailsNews} element={<RegDetailsNews />} />
+						<Route path={AppRoute.News} element={<RegNewsLayout />}>
+							<Route index element={<RegNewsList />} />
+							<Route path={AppRoute.Videos} element={<RegNewsVideos />} />
+							<Route path={`${AppRoute.Videos}/:vidId`} element={<RegNewsVideoDetails />} />
+							<Route path=':newsId' element={<RegNewsDetails />} />
+						</Route>
 						<Route path={AppRoute.DepartmentsDetailsHistory} element={<RegDetailsHistory />} />
 						<Route
 							path={AppRoute.DepartmentsDetailsParticipant}

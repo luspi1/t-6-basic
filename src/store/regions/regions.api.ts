@@ -7,10 +7,11 @@ import { type VideoItem } from 'src/types/videos'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 import { BASE_URL, ReducerPath } from 'src/helpers/consts'
+import type { NewsItem } from 'src/types/news'
 
 export const regionsApi = createApi({
 	reducerPath: ReducerPath.Regions,
-	tagTypes: ['Regions'],
+	tagTypes: ['Regions', 'RegionNews'],
 	baseQuery: fetchBaseQuery({
 		baseUrl: BASE_URL,
 	}),
@@ -57,10 +58,32 @@ export const regionsApi = createApi({
 				url: `regions/${regCode}/photos`,
 			}),
 		}),
-
-		getRegionVideos: build.query<VideoItem[], string>({
+		getRegionAllNews: build.query<NewsItem[], { regCode?: string; search?: string; year?: string }>(
+			{
+				query: ({ regCode = '', search = '', year = '' }) => ({
+					url: `regions/${regCode}/news`,
+					params: {
+						q: search,
+						y: year,
+					},
+				}),
+				providesTags: ['RegionNews'],
+			},
+		),
+		getRegionNewsById: build.query<NewsItem, { regCode?: string; newsId?: string }>({
+			query: ({ regCode = '', newsId = '' }) => ({
+				url: `regions/${regCode}/news/${newsId}`,
+			}),
+			providesTags: ['RegionNews'],
+		}),
+		getRegionNewsVideos: build.query<VideoItem[], string>({
 			query: (regCode) => ({
-				url: `regions/${regCode}/videos`,
+				url: `regions/${regCode}/news-videos`,
+			}),
+		}),
+		getRegionNewsVideoById: build.query<VideoItem, { regCode?: string; videoId?: string }>({
+			query: ({ regCode = '', videoId = '' }) => ({
+				url: `regions/${regCode}/news-videos/${videoId}`,
 			}),
 		}),
 	}),
@@ -72,6 +95,9 @@ export const {
 	useGetRegionParticipantsQuery,
 	useGetRegionEventsQuery,
 	useGetRegionPhotosQuery,
-	useGetRegionVideosQuery,
 	useGetRegionsInfoQuery,
+	useGetRegionAllNewsQuery,
+	useGetRegionNewsByIdQuery,
+	useGetRegionNewsVideosQuery,
+	useGetRegionNewsVideoByIdQuery,
 } = regionsApi

@@ -17,6 +17,7 @@ export type UserItem = {
 	mainDesc: string
 	birthday: Date
 	position: string
+	role: string
 	group: string
 	regDate: string
 	locality: string

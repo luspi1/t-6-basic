@@ -11,6 +11,7 @@ import { useDebounce } from 'src/hooks/debounce/debounce'
 import { useGetRegionParticipantsQuery } from 'src/store/regions/regions.api'
 
 import styles from './index.module.scss'
+import { calculateAge } from 'src/helpers/utils'
 
 export const DepartmentParticipantsTable = () => {
 	const { id } = useParams()
@@ -32,9 +33,11 @@ export const DepartmentParticipantsTable = () => {
 			wrapperClassName={styles.usersSearchWrapper}
 			key={1}
 			handleSearch={searchDepartments}
-			placeholder='Поиск по фамилии Персоны'
+			placeholder='Поиск по имени, фамилии...'
 		/>,
-		'Должность',
+		'Возраст',
+		'Роль',
+		'Город',
 	]
 
 	const formatUsersTableData = (usersData: UserItem[]) => {
@@ -44,7 +47,9 @@ export const DepartmentParticipantsTable = () => {
 				<Link to={userEl.id} key={userEl.id}>
 					{userEl.fullname}
 				</Link>,
-				userEl.position,
+				calculateAge(userEl.birthday),
+				userEl.role,
+				userEl.region,
 			]
 		})
 	}

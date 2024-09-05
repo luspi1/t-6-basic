@@ -11,7 +11,7 @@ export const RegDetailsGallery: FC = () => {
 
 	return (
 		<div className={styles.galleryPage}>
-			<p className={styles.itemsCount}>Всего фото в альбоме: {photos?.length}</p>
+			<p className={styles.itemsCount}>Всего фото: {photos?.length}</p>
 			<GalleryImg className={styles.groupPhotos} images={photos} limit={12} limitController />
 		</div>
 	)

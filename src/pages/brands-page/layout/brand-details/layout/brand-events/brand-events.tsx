@@ -24,7 +24,7 @@ export const BrandEvents: FC = () => {
 	return (
 		<div>
 			<section className={styles.brandEventsSection}>
-				<EventsList eventsData={eventList} eventDesignation />
+				<EventsList eventsData={eventList} typeEventInfo='designation' />
 			</section>
 		</div>
 	)

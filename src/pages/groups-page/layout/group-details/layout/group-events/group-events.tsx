@@ -26,7 +26,11 @@ export const GroupEvents: FC = () => {
 	return (
 		<div className={mainGroupsStyles.groupTabContent}>
 			<section className={styles.groupEventsSection}>
-				<EventsList className={styles.groupEventsList} eventsData={eventList} eventDesignation />
+				<EventsList
+					className={styles.groupEventsList}
+					eventsData={eventList}
+					typeEventInfo='designation'
+				/>
 				<MainButton className={styles.allEventsLink} as='route' to={`/${AppRoute.Events}`}>
 					Перейти в раздел Все события
 				</MainButton>

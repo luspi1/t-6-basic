@@ -22,7 +22,7 @@ export const UserEvents: FC = () => {
 
 	return (
 		<section className={styles.userEventsSection}>
-			<EventsList eventsData={eventList} eventDesignation />
+			<EventsList eventsData={eventList} typeEventInfo='designation' />
 		</section>
 	)
 }

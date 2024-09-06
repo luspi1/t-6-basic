@@ -8,6 +8,7 @@ import { ethnosport } from '../mockData/ethnosport.mjs'
 import { disciplines } from '../mockData/disciplines.mjs'
 import { newsVideos } from '../mockData/newsVideos.mjs'
 import { groups } from '../mockData/groups.mjs'
+import { brandEvents } from '../mockData/brandEvents.mjs'
 
 export const getRegionsInfo = (req, res) => {
 	res.status(200).json(regionsInfo)
@@ -395,6 +396,75 @@ export const getGroupNewsById = (req, res) => {
 	const searchedGroup = groups.find((group) => group.id === groupId)
 
 	const foundNews = searchedGroup.news.find((newsItem) => newsItem.id === newsId)
+
+	res.status(200).json(foundNews)
+}
+
+export const getAllBrandEvents = (req, res) => {
+	res.status(200).json(brandEvents)
+}
+export const getBrandEventById = (req, res) => {
+	const brandEventId = req.params.id
+	const foundBrandEvent = brandEvents.find((brandEvent) => brandEvent.id === brandEventId)
+
+	res.status(200).json(foundBrandEvent)
+}
+
+export const getEventsByBrands = (req, res) => {
+	const { q } = req.query
+	const brandEventId = req.params.id
+
+	const searchedBrandEvent = brandEvents.find((brandEvent) => brandEvent.id === brandEventId)
+	const filteredEvents = searchedBrandEvent.events.filter((event) =>
+		event.title.toLowerCase().includes(q),
+	)
+
+	res.status(200).json(filteredEvents)
+}
+
+export const getBrandEventPhotos = (req, res) => {
+	const brandEventId = req.params.id
+
+	const searchedBrandEvent = brandEvents.find((brandEvent) => brandEvent.id === brandEventId)
+
+	res.status(200).json(searchedBrandEvent.photos)
+}
+
+export const getBrandEventNews = (req, res) => {
+	const brandEventId = req.params.id
+	const { q, y } = req.query
+	const searchedBrandEvent = brandEvents.find((brandEvent) => brandEvent.id === brandEventId)
+	const filteredNews = searchedBrandEvent.news.filter((el) => {
+		if (y) {
+			return String(new Date(el.date).getFullYear()) === y && el.title.toLowerCase().includes(q)
+		}
+		return el.title.toLowerCase().includes(q)
+	})
+
+	res.status(200).json(filteredNews)
+}
+
+export const getBrandEventNewsVideos = (req, res) => {
+	const brandEventId = req.params.id
+	const searchedBrandEvent = brandEvents.find((brandEvent) => brandEvent.id === brandEventId)
+	res.status(200).json(searchedBrandEvent.newsVideos)
+}
+
+export const getBrandEventNewsVideoById = (req, res) => {
+	const brandEventId = req.params.id
+	const videoId = req.params.videoId
+	const searchedBrandEvent = brandEvents.find((brandEvent) => brandEvent.id === brandEventId)
+	const foundVideoNews = searchedBrandEvent.newsVideos.find((videoItem) => videoItem.id === videoId)
+
+	res.status(200).json(foundVideoNews)
+}
+
+export const getBrandEventNewsById = (req, res) => {
+	const brandEventId = req.params.id
+	const newsId = req.params.newsId
+	const searchedBrandEvent = brandEvents.find((brandEvent) => brandEvent.id === brandEventId)
+
+	const foundNews = searchedBrandEvent.news.find((newsItem) => newsItem.id === newsId)
 
 	res.status(200).json(foundNews)
 }

@@ -8,7 +8,6 @@ export enum AppRoute {
 	AboutMediakit = 'about-mediakit',
 	Departments = 'departments-list',
 	DepartmentsAbout = 'departments-about',
-	DepartmentsDetailsNews = 'departments-details-news',
 	DepartmentsDetailsHistory = 'departments-details-history',
 	DepartmentsDetailsParticipant = 'departments-details-participants',
 	DepartmentsDetailsEvents = 'departments-details-events',
@@ -40,4 +39,8 @@ export enum AppRoute {
 	News = 'news',
 	Videos = 'videos',
 	Events = 'events',
+	Brands = 'brand-events',
+	BrandInfo = 'brand-info',
+	BrandEventsList = 'brand-events-list',
+	BrandGallery = 'brand-gallery',
 }

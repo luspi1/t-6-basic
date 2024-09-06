@@ -1,11 +1,19 @@
 import {
 	deleteNews,
+	getAllBrandEvents,
 	getAllDisciplines,
+	getBrandEventById,
+	getBrandEventNews,
+	getBrandEventNewsById,
+	getBrandEventNewsVideoById,
+	getBrandEventNewsVideos,
+	getBrandEventPhotos,
 	getDisciplineById,
 	getEthnosportById,
 	getEthnosportGlobal,
 	getEventById,
 	getEvents,
+	getEventsByBrands,
 	getGroupById,
 	getGroupDisciplinesById,
 	getGroupEvent,
@@ -96,3 +104,11 @@ router.get('/groups/:id/news', getGroupNews)
 router.get('/groups/:id/news-videos', getGroupNewsVideos)
 router.get('/groups/:id/news/:newsId', getGroupNewsById)
 router.get('/groups/:id/news-videos/:videoId', getGroupNewsVideoById)
+router.get('/brand-events', getAllBrandEvents)
+router.get('/brand-events/:id', getBrandEventById)
+router.get('/brand-events/:id/news', getBrandEventNews)
+router.get('/brand-events/:id/news-videos', getBrandEventNewsVideos)
+router.get('/brand-events/:id/news/:newsId', getBrandEventNewsById)
+router.get('/brand-events/:id/news-videos/:videoId', getBrandEventNewsVideoById)
+router.get('/brand-events/:id/events', getEventsByBrands)
+router.get('/brand-events/:id/photos', getBrandEventPhotos)

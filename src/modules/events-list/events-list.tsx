@@ -9,21 +9,78 @@ import { ControlledInput } from 'src/components/controlled-input/controlled-inpu
 import { MainButton } from 'src/UI/MainButton/MainButton'
 import { Link } from 'react-router-dom'
 import { formatDateRange } from 'src/helpers/utils'
+import { InfoRow } from 'src/UI/InfoRow/InfoRow'
 
 import styles from './index.module.scss'
+
+type TypesEventInfo = 'registration' | 'designation' | 'brand'
 
 type EventsListProps = {
 	eventsData?: EventsItem[]
 	className?: string
-	eventDesignation?: boolean
+	typeEventInfo?: TypesEventInfo
 }
-export const EventsList: FC<EventsListProps> = ({ eventsData, className, eventDesignation }) => {
+export const EventsList: FC<EventsListProps> = ({
+	eventsData,
+	className,
+	typeEventInfo = 'registration',
+}) => {
 	const methods = useForm<EventSearchInputs>({
 		mode: 'onBlur',
 	})
 
 	const onSubmit: SubmitHandler<EventSearchInputs> = (data) => {
 		console.log(data)
+	}
+
+	const renderEventInfo = (eventEl: EventsItem, typeInfo: TypesEventInfo) => {
+		switch (typeInfo) {
+			case 'registration':
+				return (
+					<div className={styles.eventElInfo}>
+						<p>
+							<span>{formatDateRange(eventEl.dates)}</span>
+						</p>
+						<span className={styles.eventLocation}>{eventEl.location}</span>
+						<Link to={`/events/${eventEl.id}`}>Регистрация</Link>
+					</div>
+				)
+			case 'designation':
+				return (
+					<div className={styles.eventElInfo}>
+						<p>
+							<span>{formatDateRange(eventEl.dates)}</span>
+						</p>
+						<span className={styles.eventLocation}>{eventEl.location}</span>
+						<span className={styles.eventDesignation}>{eventEl?.designation}</span>
+					</div>
+				)
+			case 'brand':
+				return (
+					<div className={cn(styles.eventElInfo, styles.eventElInfoBrand)}>
+						<span className={styles.brandInterval}>{eventEl.eventsInterval}</span>
+						<InfoRow
+							titleClassname={styles.brandInfoHeldTitle}
+							wrapperClassname={styles.brandInfoHeldRow}
+							title='Проведено:'
+							label={eventEl.countHeld}
+							$gap='5px'
+							$titleWidth='72px'
+							$margin='0'
+						/>
+						<InfoRow
+							titleClassname={styles.brandInfoHeldTitle}
+							wrapperClassname={styles.brandInfoHeldRow}
+							title='В планах:'
+							label={eventEl.countHeldPlan}
+							$gap='5px'
+							$titleWidth='72px'
+							$margin='0 0 0 0'
+						/>
+						<span className={styles.eventBrandLocation}>{eventEl.location}</span>
+					</div>
+				)
+		}
 	}
 
 	if (!eventsData?.length) return null
@@ -63,17 +120,7 @@ export const EventsList: FC<EventsListProps> = ({ eventsData, className, eventDe
 			<ul className={styles.eventsList}>
 				{eventsData?.map((eventEl) => (
 					<li key={eventEl.id}>
-						<div className={styles.eventElInfo}>
-							<p>
-								<span>{formatDateRange(eventEl.dates)}</span>
-							</p>
-							<span className={styles.eventLocation}>{eventEl.location}</span>
-							{eventDesignation ? (
-								<span className={styles.eventDesignation}>{eventEl?.designation}</span>
-							) : (
-								<Link to={`/events/${eventEl.id}`}>Регистрация</Link>
-							)}
-						</div>
+						{renderEventInfo(eventEl, typeEventInfo)}
 						<div className={styles.eventElContent}>
 							<h5>{eventEl.title}</h5>
 							<div className={styles.eventElOrganizers}>

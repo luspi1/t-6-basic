@@ -84,6 +84,18 @@ import { Videos } from 'src/pages/videos-page/layout/videos/videos'
 import { VideoDetails } from 'src/pages/videos-page/layout/video-details/video-details'
 import { News } from 'src/pages/news-page/layout/news/news'
 
+import { BrandsLayout } from 'src/pages/brands-page/layout/brands-layout'
+import { BrandsList } from 'src/pages/brands-page/layout/brands-list/brands-list'
+import { BrandDetailsLayout } from 'src/pages/brands-page/layout/brand-details/layout/brand-details-layout'
+import { BrandNewsLayout } from 'src/pages/brands-page/layout/brand-details/layout/brand-news/layout/brand-news-layout'
+import { BrandNewsList } from 'src/pages/brands-page/layout/brand-details/layout/brand-news/layout/brand-news-list/brand-news-list'
+import { BrandNewsVideos } from 'src/pages/brands-page/layout/brand-details/layout/brand-news/layout/brand-news-videos/brand-news-videos'
+import { BrandNewsVideoDetails } from 'src/pages/brands-page/layout/brand-details/layout/brand-news/layout/brand-news-video-details/brand-news-video-details'
+import { BrandNewsDetails } from 'src/pages/brands-page/layout/brand-details/layout/brand-news/layout/brand-news-details/brand-news-details'
+import { BrandDetails } from 'src/pages/brands-page/layout/brand-details/layout/brand-details/brand-details'
+import { BrandEvents } from 'src/pages/brands-page/layout/brand-details/layout/brand-events/brand-events'
+import { BrandGallery } from 'src/pages/brands-page/layout/brand-details/layout/brand-gallery/brand-gallery'
+
 export const MainRoutes = () => {
 	return (
 		<Routes>
@@ -184,6 +196,20 @@ export const MainRoutes = () => {
 				<Route path={AppRoute.Events} element={<EventsLayout />}>
 					<Route index element={<EventsListPage />} />
 					<Route path=':id' element={<EventDetails />} />
+				</Route>
+			</Route>
+			<Route path={AppRoute.Brands} element={<BrandsLayout />}>
+				<Route index element={<BrandsList />} />
+				<Route path=':id' element={<BrandDetailsLayout />}>
+					<Route path={AppRoute.News} element={<BrandNewsLayout />}>
+						<Route index element={<BrandNewsList />} />
+						<Route path={AppRoute.Videos} element={<BrandNewsVideos />} />
+						<Route path={`${AppRoute.Videos}/:vidId`} element={<BrandNewsVideoDetails />} />
+						<Route path=':newsId' element={<BrandNewsDetails />} />
+					</Route>
+					<Route path={AppRoute.BrandInfo} element={<BrandDetails />} />
+					<Route path={AppRoute.BrandEventsList} element={<BrandEvents />} />
+					<Route path={AppRoute.BrandGallery} element={<BrandGallery />} />
 				</Route>
 			</Route>
 		</Routes>

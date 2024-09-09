@@ -1,7 +1,7 @@
 import { type FC } from 'react'
 import { type ContentNav } from 'src/types/navigation'
 
-import { Outlet, Navigate } from 'react-router-dom'
+import { Outlet, Navigate, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 
 import { PageContent } from 'src/components/page-content/page-content'
@@ -29,6 +29,9 @@ export const BrandDetailsLayout: FC = () => {
 			<BrandInfo />
 			<TabNav className={styles.brandTabs} navItems={BrandInfoNavItems} />
 			<Outlet />
+			<Link className={styles.brandsListLink} to={`/${AppRoute.Brands}`}>
+				На страницу списка брендов событий
+			</Link>
 		</PageContent>
 	)
 }

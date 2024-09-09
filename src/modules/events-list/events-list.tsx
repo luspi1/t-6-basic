@@ -122,7 +122,14 @@ export const EventsList: FC<EventsListProps> = ({
 					<li key={eventEl.id}>
 						{renderEventInfo(eventEl, typeEventInfo)}
 						<div className={styles.eventElContent}>
-							<h5>{eventEl.title}</h5>
+							{typeEventInfo === 'brand' ? (
+								<Link className={styles.titleLink} to={eventEl.id}>
+									{eventEl.title}
+								</Link>
+							) : (
+								<h5>{eventEl.title}</h5>
+							)}
+
 							<div className={styles.eventElOrganizers}>
 								{eventEl?.organizerLinks?.map((orgLink, idx) => (
 									<a key={idx} href={orgLink.link}>

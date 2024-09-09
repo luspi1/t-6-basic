@@ -134,12 +134,14 @@
 .eventElContent {
   flex-grow: 1;
 
-  h5 {
+  .titleLink, h5 {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 11px;
     white-space: nowrap;
+    display: inline-block;
     line-height: 1.2;
+    color: #000000;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 570px;

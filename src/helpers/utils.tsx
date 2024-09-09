@@ -148,7 +148,8 @@ export const formatDateRange = ([startDate, endDate]: [Date, Date]): string | nu
 
 // функция, которая возвращает правильно склонение, в зависимости от числа
 
-export const getCorrectWordForm = (number: number, wordForms: string[]) => {
+export const getCorrectWordForm = (number: number | undefined, wordForms: string[]) => {
+	if (!number) return
 	const cases = [2, 0, 1, 1, 1, 2]
 	const wordIndex =
 		number % 100 > 4 && number % 100 < 20 ? 2 : cases[number % 10 < 5 ? number % 10 : 5]

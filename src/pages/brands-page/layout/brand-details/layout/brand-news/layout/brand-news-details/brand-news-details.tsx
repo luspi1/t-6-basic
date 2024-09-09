@@ -41,9 +41,6 @@ export const BrandNewsDetails = () => {
 					</li>
 				))}
 			</ul>
-			<div className={styles.allBrandsBlock}>
-				<Link to={`/${AppRoute.Brands}`}>На страницу списка брендов событий</Link>
-			</div>
 		</div>
 	)
 }

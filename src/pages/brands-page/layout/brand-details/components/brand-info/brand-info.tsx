@@ -17,7 +17,7 @@ export const BrandInfo = () => {
 	return (
 		<div className={styles.brandInfoWrapper}>
 			<h2>{brandEventData?.title}</h2>
-			<CustomText $fontSize='16px' $fontStyle='italic' $margin='0 20px 0 0'>
+			<CustomText $fontSize='16px' $fontStyle='italic' $margin='0 0 25px 0'>
 				Бренд события
 			</CustomText>
 			<div className={styles.mainInfo}>
@@ -25,7 +25,13 @@ export const BrandInfo = () => {
 					<img src={brandEventData?.preview} alt={brandEventData?.title} />
 				</div>
 				<div className={styles.infoBlock}>
-					<CustomText $fontSize='16px' $fontStyle='italic' $lineHeight='1.45' $margin='0 0 20px 0'>
+					<CustomText
+						$fontSize='16px'
+						$fontStyle='italic'
+						$lineHeight='1.45'
+						$maxWidth='950px'
+						$margin='-7px 0 20px 0'
+					>
 						{brandEventData?.desc}
 					</CustomText>
 					<InfoRow title='Категория:' label={brandEventData?.category} $titleWidth='85px' />

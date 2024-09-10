@@ -258,26 +258,6 @@ export const deleteNews = (req, res) => {
 	res.status(200).json(deleteIdx)
 }
 
-export const getEvents = (req, res) => {
-	const { q, y } = req.query
-
-	const filteredEvents = events.filter((el) => {
-		if (y) {
-			return String(new Date(el.dates[0]).getFullYear()) === y && el.title.toLowerCase().includes(q)
-		}
-		return el.title.toLowerCase().includes(q)
-	})
-
-	res.status(200).json(filteredEvents)
-}
-
-export const getEventById = (req, res) => {
-	const eventId = req.params.id
-	const foundEvent = events.find((eventItem) => eventItem.id === eventId)
-
-	res.status(200).json(foundEvent)
-}
-
 export const getEthnosportGlobal = (req, res) => {
 	res.status(200).json(ethnosport)
 }
@@ -465,6 +445,92 @@ export const getBrandEventNewsById = (req, res) => {
 	const searchedBrandEvent = brandEvents.find((brandEvent) => brandEvent.id === brandEventId)
 
 	const foundNews = searchedBrandEvent.news.find((newsItem) => newsItem.id === newsId)
+
+	res.status(200).json(foundNews)
+}
+
+export const getEvents = (req, res) => {
+	const { q, y } = req.query
+
+	const filteredEvents = events.filter((el) => {
+		if (y) {
+			return String(new Date(el.dates[0]).getFullYear()) === y && el.title.toLowerCase().includes(q)
+		}
+		return el.title.toLowerCase().includes(q)
+	})
+
+	res.status(200).json(filteredEvents)
+}
+
+export const getEventById = (req, res) => {
+	const eventId = req.params.id
+	const foundEvent = events.find((eventItem) => eventItem.id === eventId)
+
+	res.status(200).json(foundEvent)
+}
+
+export const getEventParticipantes = (req, res) => {
+	const { q } = req.query
+	const eventId = req.params.id
+
+	const searchedEvent = events.find((event) => event.id === eventId)
+	const filteredParticipantes = searchedEvent.participants.filter((participant) =>
+		participant.fullname.toLowerCase().includes(q),
+	)
+
+	res.status(200).json(filteredParticipantes)
+}
+
+export const getEventDisciplinesById = (req, res) => {
+	const eventId = req.params.id
+	const searchedEvent = events.find((event) => event.id === eventId)
+
+	res.status(200).json(searchedEvent.disciplines)
+}
+
+export const getEventPhotos = (req, res) => {
+	const eventId = req.params.id
+
+	const searchedEvent = events.find((event) => event.id === eventId)
+
+	res.status(200).json(searchedEvent.photos)
+}
+
+export const getEventNews = (req, res) => {
+	const eventId = req.params.id
+	const { q, y } = req.query
+	const searchedEvent = events.find((event) => event.id === eventId)
+	const filteredNews = searchedEvent.news.filter((el) => {
+		if (y) {
+			return String(new Date(el.date).getFullYear()) === y && el.title.toLowerCase().includes(q)
+		}
+		return el.title.toLowerCase().includes(q)
+	})
+
+	res.status(200).json(filteredNews)
+}
+
+export const getEventNewsVideos = (req, res) => {
+	const eventId = req.params.id
+	const searchedEvent = events.find((event) => event.id === eventId)
+	res.status(200).json(searchedEvent.newsVideos)
+}
+
+export const getEventNewsVideoById = (req, res) => {
+	const eventId = req.params.id
+	const videoId = req.params.videoId
+	const searchedEvent = events.find((event) => event.id === eventId)
+	const foundVideoNews = searchedEvent.newsVideos.find((videoItem) => videoItem.id === videoId)
+
+	res.status(200).json(foundVideoNews)
+}
+
+export const getEventNewsById = (req, res) => {
+	const eventId = req.params.id
+	const newsId = req.params.newsId
+	const searchedEvent = events.find((event) => event.id === eventId)
+
+	const foundNews = searchedEvent.news.find((newsItem) => newsItem.id === newsId)
 
 	res.status(200).json(foundNews)
 }

@@ -1,5 +1,5 @@
 import { type ShortDocument } from './document'
-import { type RelatedLink, type SourceLink } from 'src/types/global'
+import { type ChronologyItem, type RelatedLink, type SourceLink } from 'src/types/global'
 import { type UserItem } from './users'
 import { type EventsItem } from 'src/types/events'
 
@@ -28,7 +28,7 @@ export type RegionItem = {
 	participants: UserItem[]
 	history: {
 		mainDesc: string
-		chronology: Array<{ date: Date; text: string; hiddenText: string }>
+		chronology: ChronologyItem[]
 	}
 }
 

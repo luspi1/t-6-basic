@@ -18,6 +18,7 @@ export type UserItem = {
 	birthday: Date
 	position: string
 	role: string
+	side: string
 	group: string
 	regDate: string
 	locality: string

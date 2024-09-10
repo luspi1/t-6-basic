@@ -12,6 +12,13 @@ import {
 	getEthnosportById,
 	getEthnosportGlobal,
 	getEventById,
+	getEventDisciplinesById,
+	getEventNews,
+	getEventNewsById,
+	getEventNewsVideoById,
+	getEventNewsVideos,
+	getEventParticipantes,
+	getEventPhotos,
 	getEvents,
 	getEventsByBrands,
 	getGroupById,
@@ -89,6 +96,13 @@ router.get('/news/:id', getNewsById)
 router.delete('/newsDelete/:id', deleteNews)
 router.get('/events', getEvents)
 router.get('/events/:id', getEventById)
+router.get('/events/:id/participantes', getEventParticipantes)
+router.get('/events/:id/disciplines', getEventDisciplinesById)
+router.get('/events/:id/photos', getEventPhotos)
+router.get('/events/:id/news', getEventNews)
+router.get('/events/:id/news-videos', getEventNewsVideos)
+router.get('/events/:id/news/:newsId', getEventNewsById)
+router.get('/events/:id/news-videos/:videoId', getEventNewsVideoById)
 router.get('/ethnosport', getEthnosportGlobal)
 router.get('/ethnosport/:id', getEthnosportById)
 router.get('/disciplines', getAllDisciplines)

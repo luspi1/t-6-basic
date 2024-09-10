@@ -59,10 +59,6 @@ import { UserAuthors } from 'src/pages/participation-page/layout/user-details/la
 
 import { NewsDetails } from 'src/pages/news-page/layout/news-details/news-details'
 
-import { EventsLayout } from 'src/pages/events-page/events-layout'
-import { EventsListPage } from 'src/pages/events-page/layout/events-list-page/events-list-page'
-import { EventDetails } from 'src/pages/events-page/layout/events-details/event-details'
-
 import { GroupsLayout } from 'src/pages/groups-page/layout/groups-layout'
 import { GroupsList } from 'src/pages/groups-page/layout/groups-list/groups-list'
 import { GroupDetailsLayout } from 'src/pages/groups-page/layout/group-details/layout/group-details-layout'
@@ -95,6 +91,15 @@ import { BrandNewsDetails } from 'src/pages/brands-page/layout/brand-details/lay
 import { BrandDetails } from 'src/pages/brands-page/layout/brand-details/layout/brand-details/brand-details'
 import { BrandEvents } from 'src/pages/brands-page/layout/brand-details/layout/brand-events/brand-events'
 import { BrandGallery } from 'src/pages/brands-page/layout/brand-details/layout/brand-gallery/brand-gallery'
+
+import { EventsLayout } from 'src/pages/events-page/events-layout'
+import { EventsListPage } from 'src/pages/events-page/layout/events-list-page/events-list-page'
+import { EventDetailsLayout } from 'src/pages/events-page/layout/events-details/layout/event-details-layout'
+import { EventNewsList } from 'src/pages/events-page/layout/events-details/layout/group-news/layout/event-news-list/event-news-list'
+import { EventNewsVideos } from 'src/pages/events-page/layout/events-details/layout/group-news/layout/news-videos/event-news-videos'
+import { EventNewsVideoDetails } from 'src/pages/events-page/layout/events-details/layout/group-news/layout/event-news-video-details/event-news-video-details'
+import { EventNewsDetails } from 'src/pages/events-page/layout/events-details/layout/group-news/layout/event-news-details/event-news-details'
+import { EventNewsLayout } from 'src/pages/events-page/layout/events-details/layout/group-news/layout/event-news-layout'
 
 export const MainRoutes = () => {
 	return (
@@ -195,7 +200,14 @@ export const MainRoutes = () => {
 				</Route>
 				<Route path={AppRoute.Events} element={<EventsLayout />}>
 					<Route index element={<EventsListPage />} />
-					<Route path=':id' element={<EventDetails />} />
+					<Route path=':id' element={<EventDetailsLayout />}>
+						<Route path={AppRoute.News} element={<EventNewsLayout />}>
+							<Route index element={<EventNewsList />} />
+							<Route path={AppRoute.Videos} element={<EventNewsVideos />} />
+							<Route path={`${AppRoute.Videos}/:vidId`} element={<EventNewsVideoDetails />} />
+							<Route path=':newsId' element={<EventNewsDetails />} />
+						</Route>
+					</Route>
 				</Route>
 			</Route>
 			<Route path={AppRoute.Brands} element={<BrandsLayout />}>

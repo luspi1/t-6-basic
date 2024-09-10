@@ -24,3 +24,8 @@ export type SourceLink = {
 	date: string
 	source: string
 }
+export type ChronologyItem = {
+	date: Date
+	text: string
+	hiddenText: string
+}

@@ -129,7 +129,7 @@ export const mainFormatDate = (
 	return format(date, dateFormat, { locale: ru })
 }
 
-export const formatDateRange = ([startDate, endDate]: [Date, Date]): string | null => {
+export const formatDateRange = ([startDate, endDate]: [Date, Date] | []): string | null => {
 	if (!startDate || !endDate) return null
 
 	const startMonth = format(startDate, 'MMMM', { locale: ru })

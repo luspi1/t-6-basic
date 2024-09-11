@@ -1,4 +1,4 @@
-import { type ChronologyItem, type SimpleLink, type SourceLink } from 'src/types/global'
+import { type ChronologyItem, type SimpleLinkType, type SourceLink } from 'src/types/global'
 import { type NewsItem } from 'src/types/news'
 import { type VideoItem } from 'src/types/videos'
 import { type ImageItem } from 'src/types/photos'
@@ -27,7 +27,7 @@ export type EventsItem = {
 	region: string
 	relevance: string
 	title: string
-	mainBrand: SimpleLink
+	mainBrand: SimpleLinkType
 	contactPerson: string
 	partGroup: string
 	location: string
@@ -47,8 +47,8 @@ export type EventsItem = {
 	desc: string
 	descs: string[]
 	sideDocs: ShortDocument[]
-	organizerLinks: SimpleLink[]
-	partnerLinks: SimpleLink[]
+	organizerLinks: SimpleLinkType[]
+	partnerLinks: SimpleLinkType[]
 	news: NewsItem[]
 	newsVideos: VideoItem[]
 	events: EventsItem[]

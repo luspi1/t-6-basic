@@ -1,7 +1,8 @@
-import { type ElementType, type FC } from 'react'
+import { type ElementType, type FC, Fragment, type ReactNode } from 'react'
 
 type RenderedArrayProps = {
-	strArray: string[] | undefined
+	elArray?: ReactNode[]
+	strArray?: string[]
 	separator?: string
 	as?: ElementType
 	asStr?: ElementType
@@ -13,11 +14,25 @@ export const RenderedArray: FC<RenderedArrayProps> = ({
 	as: Component = 'p',
 	asStr: StrComponent,
 	className,
-	strArray,
+	strArray = [],
+	elArray = [],
 	separator = ', ',
 	limit,
 }) => {
-	if (!strArray?.length) return null
+	if (!strArray?.length && !elArray?.length) return null
+
+	if (elArray?.length) {
+		return (
+			<>
+				{elArray.map((el, idx) => (
+					<Fragment key={idx}>
+						{el}
+						{idx < elArray.length - 1 && separator}
+					</Fragment>
+				))}
+			</>
+		)
+	}
 
 	const limitedStrings = limit ? strArray.slice(0, limit) : strArray
 	const remainingStrings = limit && strArray.length > limit ? strArray.length - limit : 0

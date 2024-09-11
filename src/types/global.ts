@@ -12,7 +12,7 @@ export type LinkItem = {
 	label?: ReactNode | ReactNode[]
 }
 
-export type SimpleLink = {
+export type SimpleLinkType = {
 	title: string
 	link: string
 }

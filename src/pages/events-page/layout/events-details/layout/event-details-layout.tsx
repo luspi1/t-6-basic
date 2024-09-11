@@ -1,7 +1,7 @@
 import { type FC } from 'react'
 import { type ContentNav } from 'src/types/navigation'
 
-import { Outlet, Navigate } from 'react-router-dom'
+import { Outlet, Navigate, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 
 import { PageContent } from 'src/components/page-content/page-content'
@@ -9,7 +9,7 @@ import { useLocationMatch } from 'src/hooks/location-match'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { TabNav } from 'src/components/tab-nav/tab-nav'
 import { EventInfoNavItems } from 'src/pages/events-page/layout/events-details/layout/consts'
-import { EventInfo } from 'src/pages/events-page/layout/events-details/components/group-info/event-info'
+import { EventInfo } from 'src/pages/events-page/layout/events-details/components/event-info/event-info'
 
 import styles from './index.module.scss'
 
@@ -29,6 +29,9 @@ export const EventDetailsLayout: FC = () => {
 			<EventInfo />
 			<TabNav className={styles.eventTabs} navItems={EventInfoNavItems} />
 			<Outlet />
+			<Link className={styles.allEventsLink} to={`/${AppRoute.Events}`}>
+				На страницу списка событий
+			</Link>
 		</PageContent>
 	)
 }

@@ -8,6 +8,7 @@ import { useGetEventByIdQuery } from 'src/store/events/events.api'
 import styles from './index.module.scss'
 import { RenderedArray } from 'src/components/rendered-array/rendered-array'
 import { formatDateRange } from 'src/helpers/utils'
+import { SimpleLink } from 'src/components/simple-link/simple-link'
 
 export const EventInfo = () => {
 	const { id } = useParams()
@@ -30,26 +31,31 @@ export const EventInfo = () => {
 					<CustomText $fontSize='16px' $fontStyle='italic' $lineHeight='1.45' $margin='0 0 20px 0'>
 						{eventData?.desc}
 					</CustomText>
-					<InfoRow title='Категория:' label={eventData?.category} $titleWidth='85px' />
+					<InfoRow title='Категория:' label={eventData?.category} $titleWidth='180px' $gap='24px' />
 					<InfoRow
 						title='Разделы:'
 						label={<RenderedArray strArray={eventData?.sections} as='span' />}
-						$titleWidth='85px'
+						$titleWidth='180px'
+						$gap='24px'
 					/>
-					<InfoRow title='Регион:' label={eventData?.location} $titleWidth='85px' />
+					<InfoRow title='Регион:' label={eventData?.location} $titleWidth='180px' $gap='24px' />
 					<InfoRow
-						title='Разделы:'
-						label={eventData?.organizerLinks?.map((link, idx) => (
-							<a href={link.link} key={idx}>
-								{link.title}
-							</a>
-						))}
-						$titleWidth='85px'
+						title='Организаторы:'
+						label={
+							<RenderedArray
+								elArray={eventData?.organizerLinks.map((link, idx) => (
+									<SimpleLink key={idx} title={link.title} link={link.link} />
+								))}
+							/>
+						}
+						$titleWidth='180px'
+						$gap='24px'
 					/>
 					<InfoRow
 						title='Бренд событий:'
 						label={<a href={eventData?.mainBrand.link}>{eventData?.mainBrand.title}</a>}
-						$titleWidth='85px'
+						$titleWidth='180px'
+						$gap='24px'
 					/>
 				</div>
 			</div>

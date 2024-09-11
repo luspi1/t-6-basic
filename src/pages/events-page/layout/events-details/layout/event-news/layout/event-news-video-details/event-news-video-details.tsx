@@ -1,24 +1,23 @@
 import React, { type FC } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import cn from 'classnames'
 
-import { useGetGroupNewsVideoByIdQuery } from 'src/store/groups/groups.api'
 import { CustomText } from 'src/components/custom-text/custom-text'
 import { mainFormatDate } from 'src/helpers/utils'
 import { AsideVideos } from 'src/components/aside-videos/aside-videos'
-import { AppRoute } from 'src/routes/main-routes/consts'
+import { useGetEventNewsVideoByIdQuery } from 'src/store/events/events.api'
 
-import mainGroupsStyles from 'src/pages/groups-page/layout/group-details/layout/index.module.scss'
+import mainEventsStyles from '../index.module.scss'
 import styles from './index.module.scss'
 
 export const EventNewsVideoDetails: FC = () => {
 	const { id, vidId } = useParams()
-	const { data: videoDetails } = useGetGroupNewsVideoByIdQuery({ groupId: id, videoId: vidId })
+	const { data: videoDetails } = useGetEventNewsVideoByIdQuery({ eventId: id, videoId: vidId })
 
 	if (!videoDetails) return
 
 	return (
-		<div className={cn(mainGroupsStyles.groupTabContent, styles.videoDetailTab)}>
+		<div className={cn(mainEventsStyles.groupTabContent, styles.videoDetailTab)}>
 			<h2>{videoDetails?.title}</h2>
 			<CustomText $fontSize='16px' $color='#9D9D9D' $margin='0 0 28px 0'>
 				{mainFormatDate(videoDetails?.date)}
@@ -33,12 +32,6 @@ export const EventNewsVideoDetails: FC = () => {
 				</div>
 				<AsideVideos videosList={videoDetails.similarVideos} />
 			</div>
-			<Link
-				className={mainGroupsStyles.groupsListLink}
-				to={`/${AppRoute.Groups}/${id}/${AppRoute.News}/${AppRoute.Videos}`}
-			>
-				К видеозаписям группы
-			</Link>
 		</div>
 	)
 }

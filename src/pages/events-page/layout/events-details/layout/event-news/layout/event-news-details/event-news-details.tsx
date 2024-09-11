@@ -1,18 +1,17 @@
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import { customFormatDate } from 'src/helpers/utils'
 import { Loader } from 'src/components/loader/loader'
-import { AppRoute } from 'src/routes/main-routes/consts'
 
-import styles from './index.module.scss'
-import { useGetGroupAllNewsQuery, useGetGroupNewsByIdQuery } from 'src/store/groups/groups.api'
 import { AsideNews } from 'src/components/aside-news/aside-news'
+import { useGetEventAllNewsQuery, useGetEventNewsByIdQuery } from 'src/store/events/events.api'
+import styles from './index.module.scss'
 
 export const EventNewsDetails = () => {
 	const { id, newsId } = useParams()
-	const { data: newsList } = useGetGroupAllNewsQuery({ groupId: id })
-	const { data: newsItemData, isLoading } = useGetGroupNewsByIdQuery({
-		groupId: id,
+	const { data: newsList } = useGetEventAllNewsQuery({ eventId: id })
+	const { data: newsItemData, isLoading } = useGetEventNewsByIdQuery({
+		eventId: id,
 		newsId,
 	})
 
@@ -44,9 +43,6 @@ export const EventNewsDetails = () => {
 						</li>
 					))}
 				</ul>
-				<div className={styles.allNewsBlock}>
-					<Link to={`/${AppRoute.Groups}/${id}/${AppRoute.News}`}>К новостям группы</Link>
-				</div>
 			</div>
 			<AsideNews currentNewsId={newsId} newsList={newsList} previewCount={4} />
 		</div>

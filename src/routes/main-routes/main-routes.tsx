@@ -95,11 +95,11 @@ import { BrandGallery } from 'src/pages/brands-page/layout/brand-details/layout/
 import { EventsLayout } from 'src/pages/events-page/events-layout'
 import { EventsListPage } from 'src/pages/events-page/layout/events-list-page/events-list-page'
 import { EventDetailsLayout } from 'src/pages/events-page/layout/events-details/layout/event-details-layout'
-import { EventNewsList } from 'src/pages/events-page/layout/events-details/layout/group-news/layout/event-news-list/event-news-list'
-import { EventNewsVideos } from 'src/pages/events-page/layout/events-details/layout/group-news/layout/news-videos/event-news-videos'
-import { EventNewsVideoDetails } from 'src/pages/events-page/layout/events-details/layout/group-news/layout/event-news-video-details/event-news-video-details'
-import { EventNewsDetails } from 'src/pages/events-page/layout/events-details/layout/group-news/layout/event-news-details/event-news-details'
-import { EventNewsLayout } from 'src/pages/events-page/layout/events-details/layout/group-news/layout/event-news-layout'
+import { EventNewsLayout } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-layout'
+import { EventNewsList } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-list/event-news-list'
+import { EventNewsVideos } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/news-videos/event-news-videos'
+import { EventNewsVideoDetails } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-video-details/event-news-video-details'
+import { EventNewsDetails } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-details/event-news-details'
 
 export const MainRoutes = () => {
 	return (

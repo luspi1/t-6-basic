@@ -100,6 +100,7 @@ import { EventNewsList } from 'src/pages/events-page/layout/events-details/layou
 import { EventNewsVideos } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/news-videos/event-news-videos'
 import { EventNewsVideoDetails } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-video-details/event-news-video-details'
 import { EventNewsDetails } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-details/event-news-details'
+import { EventHistory } from 'src/pages/events-page/layout/events-details/layout/event-history/event-history'
 
 export const MainRoutes = () => {
 	return (
@@ -207,6 +208,7 @@ export const MainRoutes = () => {
 							<Route path={`${AppRoute.Videos}/:vidId`} element={<EventNewsVideoDetails />} />
 							<Route path=':newsId' element={<EventNewsDetails />} />
 						</Route>
+						<Route path={AppRoute.EventHistory} element={<EventHistory />} />
 					</Route>
 				</Route>
 			</Route>

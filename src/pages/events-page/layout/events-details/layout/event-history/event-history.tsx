@@ -1,31 +1,25 @@
 import { type FC } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { useGetEthnosportByIdQuery } from 'src/store/ethnosport/ethnosport.api'
 import { Loader } from 'src/components/loader/loader'
-import { CustomText } from 'src/components/custom-text/custom-text'
 import { InfoRow } from 'src/UI/InfoRow/InfoRow'
 
 import { AccordionItem } from 'src/components/accordion-item/accordion-item'
 import { mainFormatDate } from 'src/helpers/utils'
+import { useGetEventByIdQuery } from 'src/store/events/events.api'
 
 import styles from './index.module.scss'
 
 export const EventHistory: FC = () => {
 	const { id } = useParams()
-	const { data: ethnoDetails, isLoading } = useGetEthnosportByIdQuery(id ?? '')
+	const { data: eventInfo, isLoading } = useGetEventByIdQuery(id ?? '')
 
 	if (isLoading) return <Loader />
-	if (!ethnoDetails) return null
-
-	const { history: directionHistory } = ethnoDetails
+	if (!eventInfo) return null
 
 	return (
 		<section>
-			<CustomText $margin='0 0 25px 0' $fontSize='16px' $lineHeight='1.4'>
-				{directionHistory?.mainDesc ?? ''}
-			</CustomText>
-			{directionHistory?.chronology?.map((el, idx) => (
+			{eventInfo?.chronology?.map((el, idx) => (
 				<AccordionItem
 					key={idx}
 					className={styles.chronologyAccordion}

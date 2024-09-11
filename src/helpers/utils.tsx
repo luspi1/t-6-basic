@@ -1,12 +1,10 @@
-import { type LinkItem, type RelatedLink, type SourceLink } from 'src/types/global'
+import { type LinkItem, type SourceLink } from 'src/types/global'
 import { type ShortDocument } from 'src/types/document'
 import { type SelOption } from 'src/types/select'
 import { type DateTimeFormatOptions } from 'src/types/date'
 
 import { format } from 'date-fns'
 import { ru } from 'date-fns/locale'
-
-import { Link } from 'react-router-dom'
 
 // утилитарная функция для кастомного селекта
 export const getValue = (value: string, options: SelOption[]) => {
@@ -73,16 +71,6 @@ export const calculateAge = (birthDate?: Date | string, isDateOnly?: boolean) =>
 // форматирование номера телефона
 export const formatPhoneNumber = (number: string) => {
 	return number.replace(/[-()\s]/g, '')
-}
-
-// Форматирование ссылок-связей
-export const formatRelatedLinks = (data: RelatedLink[] | undefined, link: string) => {
-	if (!data) return
-	return data.map((linkEl) => (
-		<Link to={`/${link}/${linkEl.id}`} key={linkEl.id}>
-			{linkEl.title}
-		</Link>
-	))
 }
 
 // Форматирование ссылок на документы

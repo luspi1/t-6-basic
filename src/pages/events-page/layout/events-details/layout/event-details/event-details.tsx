@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import { LinksList } from 'src/components/links-list/links-list'
 
@@ -8,7 +8,6 @@ import { useGetGroupByIdQuery } from 'src/store/groups/groups.api'
 import { formatDocumentLinks, formatSourceLinks } from 'src/helpers/utils'
 import { InfoRow } from 'src/UI/InfoRow/InfoRow'
 import { CustomText } from 'src/components/custom-text/custom-text'
-import { AppRoute } from 'src/routes/main-routes/consts'
 
 import mainGroupsStyles from '../index.module.scss'
 
@@ -35,9 +34,6 @@ export const EventDetails: FC = () => {
 			<section>
 				<LinksList dataList={formatSourceLinks(groupInfo?.relatedLinks)} title='Массив ссылок' />
 			</section>
-			<Link className={mainGroupsStyles.groupsListLink} to={`/${AppRoute.Groups}`}>
-				На страницу списка групп
-			</Link>
 		</div>
 	)
 }

@@ -39,6 +39,7 @@ export enum AppRoute {
 	News = 'news',
 	Videos = 'videos',
 	Events = 'events',
+	EventHistory = 'event-history',
 	Brands = 'brand-events',
 	BrandInfo = 'brand-info',
 	BrandEventsList = 'brand-events-list',

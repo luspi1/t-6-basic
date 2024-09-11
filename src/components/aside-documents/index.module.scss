@@ -2,7 +2,11 @@
   max-width: 203px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
+
+  li {
+    line-height: 1.2;
+  }
 
   .documentLink {
     font-size: 14px;

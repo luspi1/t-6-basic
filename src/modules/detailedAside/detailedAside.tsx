@@ -1,9 +1,14 @@
 import { type FC } from 'react'
+import { type ShortDocument } from 'src/types/document'
+import { type SimpleLinkType, type SourceLink } from 'src/types/global'
 import cn from 'classnames'
 
-import styles from './index.module.scss'
-import { type SimpleLinkType } from 'src/types/global'
 import { SimpleLink } from 'src/components/simple-link/simple-link'
+import { AsideDocuments } from 'src/components/aside-documents/aside-documents'
+import { formatSourceLinks } from 'src/helpers/utils'
+import { LinksList } from 'src/components/links-list/links-list'
+
+import styles from './index.module.scss'
 
 type DetailedAsideProps = {
 	className?: string
@@ -11,6 +16,8 @@ type DetailedAsideProps = {
 	genPartnerImg?: string
 	partners?: SimpleLinkType[]
 	organizers?: SimpleLinkType[]
+	documents?: ShortDocument[]
+	links?: SourceLink[]
 }
 
 export const DetailedAside: FC<DetailedAsideProps> = ({
@@ -19,6 +26,8 @@ export const DetailedAside: FC<DetailedAsideProps> = ({
 	genPartnerImg,
 	partners,
 	organizers,
+	documents,
+	links,
 }) => {
 	return (
 		<aside className={cn(styles.detailedAside, className)}>
@@ -62,6 +71,12 @@ export const DetailedAside: FC<DetailedAsideProps> = ({
 					</ul>
 				</div>
 			)}
+			<AsideDocuments documents={documents} />
+			<LinksList
+				className={styles.detailedAsideLinks}
+				dataList={formatSourceLinks(links)}
+				title='Ссылки'
+			/>
 		</aside>
 	)
 }

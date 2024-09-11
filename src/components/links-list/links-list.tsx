@@ -9,16 +9,19 @@ import { PDFIconSvg } from 'src/UI/icons/pdfIconSVG'
 import styles from './index.module.scss'
 
 type LinksListProps = {
-	title: string
+	title?: string
 	className?: string
 	dataList?: LinkItem[]
 }
 export const LinksList: FC<LinksListProps> = ({ dataList, title, className }) => {
+	if (!dataList?.length) return null
 	return (
 		<div className={cn(styles.linksListWrapper, className)}>
-			<h4>
-				{title} ({dataList?.length ?? 0})
-			</h4>
+			{title && (
+				<h4>
+					{title} <span>({dataList?.length ?? 0})</span>
+				</h4>
+			)}
 
 			{!!dataList?.length && (
 				<ul>

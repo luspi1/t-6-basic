@@ -101,6 +101,11 @@ import { EventNewsVideos } from 'src/pages/events-page/layout/events-details/lay
 import { EventNewsVideoDetails } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-video-details/event-news-video-details'
 import { EventNewsDetails } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-details/event-news-details'
 import { EventHistory } from 'src/pages/events-page/layout/events-details/layout/event-history/event-history'
+import { EventDisciplines } from 'src/pages/events-page/layout/events-details/layout/event-disciplines/event-disciplines'
+import { EventParticipantesLayout } from 'src/pages/events-page/layout/events-details/layout/event-participantes/layout/event-participantes-layout'
+import { TeamsParticipantesTable } from 'src/pages/events-page/layout/events-details/layout/event-participantes/layout/teams-participantes-table/teams-participantes-table'
+import { LonesParticipantesTable } from 'src/pages/events-page/layout/events-details/layout/event-participantes/layout/lones-participantes-table/lones-participantes-table'
+import { EventGallery } from 'src/pages/events-page/layout/events-details/layout/event-gallery/event-gallery'
 
 export const MainRoutes = () => {
 	return (
@@ -209,6 +214,15 @@ export const MainRoutes = () => {
 							<Route path=':newsId' element={<EventNewsDetails />} />
 						</Route>
 						<Route path={AppRoute.EventHistory} element={<EventHistory />} />
+						<Route path={AppRoute.EventDisciplines} element={<EventDisciplines />} />
+						<Route path={AppRoute.EventParticipantes} element={<EventParticipantesLayout />}>
+							<Route index element={<TeamsParticipantesTable />} />
+							<Route
+								path={AppRoute.EventLonesParticipantes}
+								element={<LonesParticipantesTable />}
+							/>
+						</Route>
+						<Route path={AppRoute.EventGallery} element={<EventGallery />} />
 					</Route>
 				</Route>
 			</Route>

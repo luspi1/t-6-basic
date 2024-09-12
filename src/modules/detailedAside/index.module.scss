@@ -4,9 +4,19 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  @media (max-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 50px;
+  }
 }
 
 .asideEl {
+  @media (max-width: 768px) {
+    width: 30%;
+    min-width: 205px;
+  }
   h6 {
     font-size: 14px;
     font-weight: 700;

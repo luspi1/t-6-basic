@@ -480,6 +480,15 @@ export const getEventParticipantes = (req, res) => {
 
 	res.status(200).json(filteredParticipantes)
 }
+export const getEventTeams = (req, res) => {
+	const { q } = req.query
+	const eventId = req.params.id
+
+	const searchedEvent = events.find((event) => event.id === eventId)
+	const filteredTeams = searchedEvent.teams.filter((team) => team.title.toLowerCase().includes(q))
+
+	res.status(200).json(filteredTeams)
+}
 
 export const getEventDisciplinesById = (req, res) => {
 	const eventId = req.params.id

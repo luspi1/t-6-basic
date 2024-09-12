@@ -11,6 +11,7 @@ export type GroupItem = {
 	region: string
 	avatar: string
 	leader: string
+	side: string
 	phones: string[]
 	email: string
 	website: SimpleLinkType

@@ -18,14 +18,14 @@ export const EventHistory: FC = () => {
 	if (!eventInfo) return null
 
 	return (
-		<section>
+		<div className={styles.chronologyTab}>
 			{eventInfo?.chronology?.map((el, idx) => (
 				<AccordionItem
 					key={idx}
 					className={styles.chronologyAccordion}
 					trigger={
 						<InfoRow
-							title={mainFormatDate(el.date) ?? ''}
+							title={mainFormatDate(el.date, 'dd MMMM yyyy года') ?? ''}
 							label={el.text}
 							$titleWidth='87px'
 							$gap='10px'
@@ -35,6 +35,6 @@ export const EventHistory: FC = () => {
 					content={<InfoRow title='' label={el.hiddenText} $titleWidth='87px' $gap='10px' />}
 				/>
 			))}
-		</section>
+		</div>
 	)
 }

@@ -21,6 +21,7 @@ import {
 	getEventPhotos,
 	getEvents,
 	getEventsByBrands,
+	getEventTeams,
 	getGroupById,
 	getGroupDisciplinesById,
 	getGroupEvent,
@@ -97,6 +98,7 @@ router.delete('/newsDelete/:id', deleteNews)
 router.get('/events', getEvents)
 router.get('/events/:id', getEventById)
 router.get('/events/:id/participantes', getEventParticipantes)
+router.get('/events/:id/teams', getEventTeams)
 router.get('/events/:id/disciplines', getEventDisciplinesById)
 router.get('/events/:id/photos', getEventPhotos)
 router.get('/events/:id/news', getEventNews)

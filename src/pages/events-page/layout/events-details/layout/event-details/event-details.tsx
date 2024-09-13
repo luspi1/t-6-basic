@@ -2,37 +2,45 @@ import { type FC } from 'react'
 
 import { useParams } from 'react-router-dom'
 
-import { LinksList } from 'src/components/links-list/links-list'
-
-import { useGetGroupByIdQuery } from 'src/store/groups/groups.api'
-import { formatDocumentLinks, formatSourceLinks } from 'src/helpers/utils'
-import { InfoRow } from 'src/UI/InfoRow/InfoRow'
-import { CustomText } from 'src/components/custom-text/custom-text'
-
-import mainGroupsStyles from '../index.module.scss'
+import { useGetEventByIdQuery } from 'src/store/events/events.api'
+import { RenderedArray } from 'src/components/rendered-array/rendered-array'
+import { Placement } from 'src/modules/placement/placement'
+import { AccordionItem } from 'src/components/accordion-item/accordion-item'
+import styles from './index.module.scss'
 
 export const EventDetails: FC = () => {
 	const { id } = useParams()
 
-	const { data: groupInfo } = useGetGroupByIdQuery(id ?? '')
+	const { data: eventInfo } = useGetEventByIdQuery(id ?? '')
 	return (
-		<div className={mainGroupsStyles.groupTabContent}>
+		<div className={styles.eventDetailTab}>
 			<section>
-				<InfoRow
-					title='Руководитель группы:'
-					label={<a href='#'>{groupInfo?.leader}</a>}
-					$titleWidth='165px'
-					$margin='0 0 20px 0'
+				<RenderedArray
+					className={styles.eventDescs}
+					strArray={eventInfo?.descs}
+					as='div'
+					asStr='p'
+					separator=''
 				/>
-				<CustomText $fontSize='16px' $lineHeight='1.45'>
-					{groupInfo?.mainDesc}
-				</CustomText>
 			</section>
 			<section>
-				<LinksList dataList={formatDocumentLinks(groupInfo?.documents)} title='Документы группы' />
+				<Placement placeVariants={eventInfo?.pathways} title='Как добраться' />
 			</section>
 			<section>
-				<LinksList dataList={formatSourceLinks(groupInfo?.relatedLinks)} title='Массив ссылок' />
+				<Placement placeVariants={eventInfo?.placement} title='Размещение' />
+			</section>
+			<section>
+				<h4>Часто задаваемые вопросы</h4>
+				<div className={styles.faqList}>
+					{eventInfo?.faq?.map((faqEl, idx) => (
+						<AccordionItem
+							className={styles.eventFaqItem}
+							key={idx}
+							trigger={faqEl.title}
+							content={faqEl.content}
+						/>
+					))}
+				</div>
 			</section>
 		</div>
 	)

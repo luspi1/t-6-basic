@@ -108,6 +108,7 @@ import { LonesParticipantesTable } from 'src/pages/events-page/layout/events-det
 import { EventGallery } from 'src/pages/events-page/layout/events-details/layout/event-gallery/event-gallery'
 import { EventProgramLayout } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-layout'
 import { EventProgramDay } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-day/event-program-day'
+import { EventDetails } from 'src/pages/events-page/layout/events-details/layout/event-details/event-details'
 
 export const MainRoutes = () => {
 	return (
@@ -215,6 +216,7 @@ export const MainRoutes = () => {
 							<Route path={`${AppRoute.Videos}/:vidId`} element={<EventNewsVideoDetails />} />
 							<Route path=':newsId' element={<EventNewsDetails />} />
 						</Route>
+						<Route path={AppRoute.EventInfo} element={<EventDetails />} />
 						<Route path={AppRoute.EventHistory} element={<EventHistory />} />
 						<Route path={`${AppRoute.EventProgram}`} element={<EventProgramLayout />}>
 							<Route path=':dayId' element={<EventProgramDay />} />

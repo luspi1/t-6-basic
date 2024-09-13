@@ -44,6 +44,7 @@ export enum AppRoute {
 	EventParticipantes = 'event-participantes',
 	EventLonesParticipantes = 'lones-participantes',
 	EventGallery = 'event-gallery',
+	EventProgram = 'event-program',
 	Brands = 'brand-events',
 	BrandInfo = 'brand-info',
 	BrandEventsList = 'brand-events-list',

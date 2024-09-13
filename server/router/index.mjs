@@ -19,6 +19,7 @@ import {
 	getEventNewsVideos,
 	getEventParticipantes,
 	getEventPhotos,
+	getEventProgramById,
 	getEvents,
 	getEventsByBrands,
 	getEventTeams,
@@ -105,6 +106,7 @@ router.get('/events/:id/news', getEventNews)
 router.get('/events/:id/news-videos', getEventNewsVideos)
 router.get('/events/:id/news/:newsId', getEventNewsById)
 router.get('/events/:id/news-videos/:videoId', getEventNewsVideoById)
+router.get('/events/:id/program/:dayId', getEventProgramById)
 router.get('/ethnosport', getEthnosportGlobal)
 router.get('/ethnosport/:id', getEthnosportById)
 router.get('/disciplines', getAllDisciplines)

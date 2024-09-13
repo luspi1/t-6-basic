@@ -543,3 +543,13 @@ export const getEventNewsById = (req, res) => {
 
 	res.status(200).json(foundNews)
 }
+
+export const getEventProgramById = (req, res) => {
+	const eventId = req.params.id
+	const dayId = req.params.dayId
+	const searchedEvent = events.find((event) => event.id === eventId)
+
+	const searchedProgramList = searchedEvent.program.find((programEl) => programEl.id === dayId)
+
+	res.status(200).json(searchedProgramList.programList)
+}

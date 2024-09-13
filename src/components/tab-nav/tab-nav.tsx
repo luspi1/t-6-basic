@@ -6,7 +6,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 import styles from './index.module.scss'
 
 type TabNavProps = {
-	navItems: TabNavigationItem[]
+	navItems: TabNavigationItem[] | undefined
 	isTitle?: boolean
 	className?: string
 	customLocations?: string[]
@@ -18,6 +18,8 @@ export const TabNav: FC<TabNavProps> = ({
 	className,
 	activeClassName,
 }) => {
+	if (!navItems?.length) return
+
 	const location = useLocation()
 
 	const [activeTitle, setActiveTitle] = useState<string>(navItems[0].title)

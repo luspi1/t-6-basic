@@ -5,6 +5,7 @@ import type { ImageItem } from 'src/types/photos'
 import type { NewsItem } from 'src/types/news'
 import type { VideoItem } from 'src/types/videos'
 import { type GroupItem } from 'src/types/groups'
+import { type ProgramListItem } from 'src/types/program'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { BASE_URL, ReducerPath } from 'src/helpers/consts'
@@ -82,6 +83,11 @@ export const eventsApi = createApi({
 				url: `events/${eventId}/news-videos/${videoId}`,
 			}),
 		}),
+		getEventProgramById: build.query<ProgramListItem[], { eventId?: string; dayId?: string }>({
+			query: ({ eventId = '', dayId = '' }) => ({
+				url: `events/${eventId}/program/${dayId}`,
+			}),
+		}),
 	}),
 })
 
@@ -96,4 +102,5 @@ export const {
 	useGetEventNewsVideosQuery,
 	useGetEventNewsByIdQuery,
 	useGetEventNewsVideoByIdQuery,
+	useGetEventProgramByIdQuery,
 } = eventsApi

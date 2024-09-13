@@ -10,6 +10,7 @@
 
 div.eventDetailsContent {
   flex-grow: 1;
+  overflow-x: auto;
   @media (max-width: 768px) {
     margin: 0 0 20px 0;
   }

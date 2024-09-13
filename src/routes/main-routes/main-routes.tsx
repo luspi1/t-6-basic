@@ -106,6 +106,8 @@ import { EventParticipantesLayout } from 'src/pages/events-page/layout/events-de
 import { TeamsParticipantesTable } from 'src/pages/events-page/layout/events-details/layout/event-participantes/layout/teams-participantes-table/teams-participantes-table'
 import { LonesParticipantesTable } from 'src/pages/events-page/layout/events-details/layout/event-participantes/layout/lones-participantes-table/lones-participantes-table'
 import { EventGallery } from 'src/pages/events-page/layout/events-details/layout/event-gallery/event-gallery'
+import { EventProgramLayout } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-layout'
+import { EventProgramDay } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-day/event-program-day'
 
 export const MainRoutes = () => {
 	return (
@@ -214,6 +216,9 @@ export const MainRoutes = () => {
 							<Route path=':newsId' element={<EventNewsDetails />} />
 						</Route>
 						<Route path={AppRoute.EventHistory} element={<EventHistory />} />
+						<Route path={`${AppRoute.EventProgram}`} element={<EventProgramLayout />}>
+							<Route path=':dayId' element={<EventProgramDay />} />
+						</Route>
 						<Route path={AppRoute.EventDisciplines} element={<EventDisciplines />} />
 						<Route path={AppRoute.EventParticipantes} element={<EventParticipantesLayout />}>
 							<Route index element={<TeamsParticipantesTable />} />
